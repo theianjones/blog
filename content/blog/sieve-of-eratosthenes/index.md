@@ -34,21 +34,21 @@ I will show you _one_ way. This solution could definitely use some performance o
 
 First, we want to get the user's input: 
 
-{% highlight ruby%}
+```ruby
 puts "Enter the end of the range:"
 end_of_range_ = gets.chomp.to_i
-{% endhighlight %}
+```
 
 With this we can create an array of numbers:
 
-{% highlight ruby%}
+```ruby
 n = (2..end_of_range).to_a
-{% endhighlight %}
+```
 
 Now we need to set up some variables to keep track of what numbers we have checked
 and what numbers we need to check next.
 
-{% highlight ruby%}
+```ruby
 # 2 is the smallest prime, we always start with it
 p = 2
 
@@ -56,23 +56,23 @@ numbers_to_remove = []
 primes_used = []
 
 sieve_is_running = true
-{% endhighlight %}
+```
 
 Now here is the meat of the program. We want to run a loop that will end when we have
 searched through the whole array, `n`, and have removed all non-primes. We will use a
 while loop to get things going.
 
-{% highlight ruby%}
+```ruby
 while(sieve_is_running) 
 
 end
-{% endhighlight %}
+```
 
 The first thing that we need to do is add each number that we need to remove to an
 array. This is where I got caught up at first. I started by removing the numbers as I
 went but this will make skip numbers that we need to check!
 
-{% highlight ruby%}
+```ruby
 while(sieve_is_running) 
   n.each do |num|
     numbers_to_remove << num * p
@@ -82,11 +82,11 @@ while(sieve_is_running)
   # If the user entered ten you will get:
   # => [4, 6, 8, 10]
 end
-{% endhighlight %}
+```
 
 Next, we need to actually remove the numbers from our original array.
 
-{% highlight ruby%}
+```ruby
 while(sieve_is_running) 
   n.each do |num|
     numbers_to_remove << num * p
@@ -100,12 +100,12 @@ while(sieve_is_running)
   # Again, if user enters 10:
   # => [2,3,5,7,9]
 end
-{% endhighlight %}
+```
 
 After this, we need to keep track of the prime that we have used and find
 the next prime to check the array with:
 
-{% highlight ruby%}
+```ruby
 while(sieve_is_running) 
   n.each do |num|
     numbers_to_remove << num * p
@@ -125,13 +125,13 @@ while(sieve_is_running)
     end
   end
 end
-{% endhighlight %}
+```
 
 Now this works! The only problem is that our while loop will continue to run 
 forever. We need to tell it to stop by checking if the length of the `primes_used`
 array and `n` are the same and set `sieve_is_running = false`
 
-{% highlight ruby%}
+```ruby
 while(sieve_is_running) 
   n.each do |num|
     numbers_to_remove << num * p
@@ -153,11 +153,11 @@ while(sieve_is_running)
     end
   end
 end
-{% endhighlight %}
+```
 
 And there it is! Heres the whole script for an overview:
 
-{% highlight ruby%}
+```ruby
 # get user input
 puts "Enter the end of the range"
 end_of_range = gets.chomp.to_i
@@ -196,7 +196,7 @@ end
 puts n.inspect
 # if user enters 10
 # => [2,3,5,7]
-{% endhighlight %}
+```
 
 Cool! One thing that I have found with this script is that if you enter 1000 as 
 the `end_of_range` it will take a while. Some optimizations that you could make 

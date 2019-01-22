@@ -9,7 +9,7 @@ categories: functional javascript
 Understanding JavaScript's Array.forEach method is essential to getting a grasp of functional programming in Javascript.
 The forEach method allows you to iterate over an array just like you could with a for-loop.
 
-{% highlight javascript %}
+```js
     const array = ['foo', 'bar', 'baz'];
     
     for(let i = 0; i < array.length(); i += 1){
@@ -30,7 +30,7 @@ The forEach method allows you to iterate over an array just like you could with 
     // => 'bar'
     // => 'baz'
 
-{% endhighlight%}
+```
 
 ForEach() takes a callback function to be executed once per item in the array. No more writing for-loops to iterate over
 an array! Learning forEach() is the first step to learning how to use functional programming in JavaScript because many methods

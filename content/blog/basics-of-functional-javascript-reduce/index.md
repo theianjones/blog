@@ -8,20 +8,22 @@ categories: functional javascript
 
 Reduce is one of the most powerful functions that you can use on an array. When you
 call reduce on an array, you have to give reduce a callback function.
-{% highlight javascript %}
+
+```js
 var array = [1, 2];
 array.reduce(function(){});
 // this will return nothing
-{% endhighlight %}
+```
 
 A simple reduce function would look something like this:
-{% highlight javascript %}
+
+```js
 array.reduce(function(prevItem, currItem, index, array){
     return prevItem + currItem;
 });
 
 // => 3
-{% endhighlight %}
+```
 
 In this case, reduce takes the contents of array and adds each one
 together. To understand how reduce does this, you have to understand its arguments and how they reference the array. In this case, prevItem is equal to the first
@@ -29,7 +31,7 @@ index of the array while currItem is equal to the second element in the array.
 
 Consider this case:
 
-{% highlight javascript%}
+```js
 var array = [1,2,3,4]
 
 array.reduce(function(prevItem, currItem, index, array){
@@ -41,7 +43,7 @@ array.reduce(function(prevItem, currItem, index, array){
 // 3 3
 // 6 4
 // => 10
-{% endhighlight %}
+```
 
 When reduce is called on the first element of the array, prevItem is 1 and currItem is 2.
 The next time throuhg, prevItem is equal to the last return value of the callback so,
@@ -52,7 +54,7 @@ the sum of this array.
 Reduce also has an optional argument that allows you to set the initial value of
 prevItem:
 
-{% highlight javascript%}
+```js
 var array = [1,2,3,4]
 
 array.reduce(function(prevItem, currItem, index, array){
@@ -65,7 +67,7 @@ array.reduce(function(prevItem, currItem, index, array){
 // 13 3
 // 16 4
 // => 20
-{% endhighlight %}
+```
 
 10 is the initial value for this reduce call. This changes the value of prevItem to
 be the initial value of 10. CurrValue now changes to be the first element of the
@@ -75,19 +77,19 @@ The initial value of reduce can be any value. You can set it to 0, {}, [], or an
 
 An example of this from [Nodeschool's functional-javascript-workshop](https://github.com/timoxley/functional-javascript-workshop):
 
-{% highlight javascript %}
+```js
 function countWords(inputWords) {
    return inputWords.reduce(function(countMap, word){
      countMap[word] = ++countMap[word] || 1;
      return countMap;
    }, {})
  }
-{% endhighlight %}
+```
 
 This function will take an array of words, inputWords, and return an object that counts each
 word in that array. CountMap is set to the initial value of {}.
 
-{% highlight javascript %}
+```js
 var inputWords = ['Reduce', 'is', 'awesome', 'It', 'is', 'something',
 'that', 'every', 'developer', 'should', 'know!'];
 
@@ -104,6 +106,6 @@ countWords(inputWords);
 //  developer: 1,
 //  should: 1,
 //  'know!': 1 }
-{% endhighlight%}
+```
 
 Be sure to read the [MDN doc's on reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce).

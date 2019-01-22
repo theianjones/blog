@@ -12,7 +12,7 @@ It took me a while to figure out the issue to this error:
 
 Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.
 
-{% highlight bash %}
+```bash
 gyp ERR! build error 
 gyp ERR! stack Error: `make` failed with exit code: 69
 gyp ERR! stack at ChildProcess.onExit (/Users/ianjones/.nvm/versions/node/v4.2.1/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:270:23)
@@ -27,6 +27,6 @@ gyp ERR! node-gyp -v v3.0.3
 gyp ERR! not ok 
 npm WARN install:bufferutil@1.2.1 bufferutil@1.2.1 install: `node-gyp rebuild`
 npm WARN install:bufferutil@1.2.1 Exit status 1
-{%endhighlight%}
+```
 
 After some googling the first line I came to this issue on stack overflow. I had thought there was a problem with nvm but it turns out all I needed to do was agree to the new Xcode/iOS license.

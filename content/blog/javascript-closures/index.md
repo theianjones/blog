@@ -8,7 +8,7 @@ categories: javascript fundamentals
 
 Closures are critical to the success to any Javascript application. Simply put, a closure in Javascript is a way to keep data private, scoped on an object. Lets say you created an function called person:
 
-{% highlight javascript %}
+```js
 var person = function person (){
   var fName = "Ian",
       getFirstName;
@@ -19,7 +19,7 @@ var person = function person (){
    getFirstName: getFirstName
  };
 };
-{% endhighlight %}
+```
 
 This function has two members: a variable and a method. The variable is not accessible to anything outside of this function. What creates the closure is that you are returning the method getFirstName(). So, if you called person.getFirstName() it would return “Ian”.
 

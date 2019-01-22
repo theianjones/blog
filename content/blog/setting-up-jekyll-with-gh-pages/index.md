@@ -15,13 +15,12 @@ it up and running. To truly customize it you might have to dive in and learn som
 
 Jekyll lets you start blogging in 4 simple commands:
 
-
-{% highlight bash %}
+```bash
 gem install jekyll
 jekyll new myAwesomeNewBlog
 cd myAwesomeNewBlog
 jekyll serve
-{% endhighlight %}
+```
 
 These commands get your local instance of Jekyll running. But the real question is:
 how do I get this awesome new blog hosted and available to see on the interwebs? This
@@ -30,15 +29,17 @@ is where [Github Pages](https://pages.github.com/) comes in.
 Github Pages hosts static files for you for free. Given that you have a Github account,
 they give you a default domain of {GITHUB ACCOUNT}.github.io. To get your Jekyll blog up
 on Github Pages, to set up a Gemfile like this (code provided from [github-pages docs](https://help.github.com/articles/using-jekyll-with-pages/)):
-{% highlight bash %}
+
+```bash
 source 'https://rubygems.org'
 gem 'github-pages'
-{%endhighlight%}
+```
 
 Next you need to run:
-{% highlight bash %}
+
+```bash
 bundle install
-{% endhighlight %}
+```
 
 Next comes creating the github repository that your code will live in. Creating a repository
 with the name of your github account name tells github that you want to use Github Pages.

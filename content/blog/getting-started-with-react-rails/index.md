@@ -21,10 +21,10 @@ be fun to change out the ERB templates with React components!
 
 The first thing that we need to do is install the react-rails gem. 
 
-{% highlight ruby %}
+```ruby
 # /Gemfile
 gem 'react-rails'
-{% endhighlight %}
+```
 
 Of course we will need to make sure to `bundle install` after this. Following the `react-rails`
 documentation, we need to `rails g react:install`. This should create the components directory
@@ -33,16 +33,17 @@ and add the correct requirements to `application.js` but make sure all of this h
 We should have a `components.js` manifest file, and a `app/assets/javascript/components/` directory. 
 This is where all of our React components will live. Next, In `application.js` should have the following:
 
-{% highlight javascript %}
+```js
 //= require react
 //= require react_ujs
 //= require components
-{% endhighlight %}
+```
 
-Lets test this out! 
+Lets test this out!
 
 First lets add a simple React component.
-{% highlight javascript %}
+
+```js
 // /app/assets/javascripts/components/_hello_world.js.jsx
 
 var HelloWorld = React.createClass({
@@ -52,11 +53,11 @@ var HelloWorld = React.createClass({
     );
   }
 });
-{% endhighlight %}
+```
 
 Then, our index file:
 
-{% highlight erb %}
+```html
 <h2>
   <span>Splurty / No. <%= @quote.id %></span>
   Here's the <u>best advice about the universe</u> you can get!
@@ -71,7 +72,7 @@ Then, our index file:
 <br />
 <br />
 <br />
-{% endhighlight %}
+```
 
 That was easy! One thing that I had problems with was getting react-rails to recognize
 my component. If you want to use JSX, It is important to have the .jsx extension on the 
@@ -83,7 +84,7 @@ object down into the component for it to use it as props.
 
 This component will be called `QuotesIndex`:
 
-{% highlight javascript %}
+```js
 // /app/assets/javascripts/components/_quotes_index.js.jsx
 
 var QuotesIndex = React.createClass({
@@ -106,23 +107,25 @@ var QuotesIndex = React.createClass({
     );
   }
 });
-{% endhighlight %}
+```
 
 Now, add the React component to the Rails view:
-{% highlight erb %}
+
+```html
 <%= react_component('QuotesIndex') %>
-{% endhighlight%}
+```
 
 If you reload the page, You will notice that the component is broken. We did not pass
 the quotes object to React. 
-{% highlight erb %}
+
+```html
 <%= react_component('QuotesIndex', {quote: @ quote}) %>
-{% endhighlight%}
+```
 
 We should add `propTypes` to our React component to let the ourselves know, in the future, that 
 this component requires a quote object as props to render correctly.
 
-{% highlight javascript %}
+```js
 // /app/assets/javascripts/components/_quotes_index.js.jsx
 
 var QuotesIndex = React.createClass({
@@ -149,13 +152,13 @@ var QuotesIndex = React.createClass({
     );
   }
 });
-{% endhighlight %}
+```
 
 There is one more thing that needs to be added to this component: *Styles*! Since
 we already have styles defined, we can just add them to our components with reacts
 `className`.
 
-{% highlight javascript %}
+```js
 // /app/assets/javascripts/components/_quotes_index.js.jsx
 
 var QuotesIndex = React.createClass({
@@ -182,7 +185,7 @@ var QuotesIndex = React.createClass({
     );
   }
 });
-{% endhighlight %}
+```
 
 Awesome. We have successfully replaced our ERB template with a React component. Lets take a stab
 at replacing the quotes `about.html.erb` page. This one is inherently more complex because it is 
@@ -191,7 +194,7 @@ using the asset pipeline.
 The key thing with this component is in the name of the file itself. Lets add `_quotes_about.js.jsx.erb`
 to our `/components` directory. 
 
-{% highlight javascript %}
+```js
 // /assets/javascripts/components/_quotes_about.js.jsx.erb
 
 var QuotesAbout = React.createClass({
@@ -240,7 +243,7 @@ var QuotesAbout = React.createClass({
   }
 });
 
-{% endhighlight %}
+```
 
 The reason we needed to add the .erb extension to this file is that we need to access
 Rails' asset pipeline. We can do this by inserting `src="<%= asset_url('ian.jpeg') %>"` 
