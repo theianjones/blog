@@ -1,9 +1,9 @@
 ---
-layout: post
-title:  XCode's License Issue with Node
-date:   2015-11-9 13:12:21
-comments: true
-categories: node
+title: XCode's License Issue with Node
+path: '/xcode-license-issue-with-node'
+date: 2015-11-9
+tags:
+  - node
 ---
 
 XCode license issues with node.
@@ -13,7 +13,7 @@ It took me a while to figure out the issue to this error:
 Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.
 
 ```bash
-gyp ERR! build error 
+gyp ERR! build error
 gyp ERR! stack Error: `make` failed with exit code: 69
 gyp ERR! stack at ChildProcess.onExit (/Users/ianjones/.nvm/versions/node/v4.2.1/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:270:23)
 gyp ERR! stack at emitTwo (events.js:87:13)
@@ -24,7 +24,7 @@ gyp ERR! command “/Users/ianjones/.nvm/versions/node/v4.2.1/bin/node” “/Us
 gyp ERR! cwd /Users/ianjones/Desktop/eggheadSeries/github-notetaker-egghead/node_modules/bufferutil
 gyp ERR! node -v v4.2.1
 gyp ERR! node-gyp -v v3.0.3
-gyp ERR! not ok 
+gyp ERR! not ok
 npm WARN install:bufferutil@1.2.1 bufferutil@1.2.1 install: `node-gyp rebuild`
 npm WARN install:bufferutil@1.2.1 Exit status 1
 ```

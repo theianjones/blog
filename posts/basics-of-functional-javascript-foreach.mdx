@@ -1,35 +1,34 @@
 ---
-layout: post
-title:  "Basics of Functional Javascript: Array.forEach"
-date:   2015-10-5 13:12:21
-comments: true
-categories: functional javascript
+title: 'Functional Javascript: Array.forEach'
+path: '/functional-javascript-array-foreach'
+date: 2015-10-5
+tags:
+  - javascript
 ---
 
 Understanding JavaScript's Array.forEach method is essential to getting a grasp of functional programming in Javascript.
 The forEach method allows you to iterate over an array just like you could with a for-loop.
 
 ```js
-    const array = ['foo', 'bar', 'baz'];
-    
-    for(let i = 0; i < array.length(); i += 1){
-        console.log(array[i]);
-    }
-    
-    // => 'foo'
-    // => 'bar'
-    // => 'baz'
-    
-    // The same code written with a forEach
-    
-    array.forEach(function(item){
-        console.log(item);
-    });
-    
-    // => 'foo'
-    // => 'bar'
-    // => 'baz'
+const array = ['foo', 'bar', 'baz']
 
+for (let i = 0; i < array.length(); i += 1) {
+  console.log(array[i])
+}
+
+// => 'foo'
+// => 'bar'
+// => 'baz'
+
+// The same code written with a forEach
+
+array.forEach(function(item) {
+  console.log(item)
+})
+
+// => 'foo'
+// => 'bar'
+// => 'baz'
 ```
 
 ForEach() takes a callback function to be executed once per item in the array. No more writing for-loops to iterate over
@@ -39,4 +38,4 @@ at @jhusain's [introduction to functional programming](http://reactivex.io/learn
 reduce, zip) from the group up!
 
 Also, take a look at the [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
- for Array.prototype.forEach() on MDN.
+for Array.prototype.forEach() on MDN.
