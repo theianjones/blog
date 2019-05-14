@@ -33,11 +33,10 @@ function Bio() {
               />
             )}
             <p>
-              Written by <strong>{author}</strong> who lives and works remotely
-              in Arlington, VA building eggheadio.
+              I live and work remotely in Arlington, VA building eggheadio.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+                @_jonesian on twitter
               </a>
             </p>
           </div>
