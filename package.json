@@ -1,23 +1,33 @@
 {
-  "name": "ian-jones-blog",
-  "private": true,
-  "description": "My Blog",
-  "version": "0.1.0",
-  "author": "Ian Jones",
-  "bugs": {
-    "url": "https://github.com/ijones16/blog/issues"
-  },
+  "name": "gatsby-starter-egghead-blog",
+  "description": "This is a starter for egghead content creator blogs",
+  "version": "1.0.0",
+  "author": "egghead.io <support@egghead.io> (https://egghead.io)",
+  "repository": "https://github.com/eggheadio/gatsby-starter-egghead-blog",
   "dependencies": {
     "@emotion/core": "^10.0.10",
-    "@mdx-js/mdx": "^1.0.19",
+    "@emotion/styled": "^10.0.11",
+    "@mdx-js/mdx": "^1.0.18",
     "@mdx-js/react": "^1.0.16",
-    "gatsby": "^2.5.0",
+    "@mdx-js/tag": "^0.20.3",
+    "core-js": "^2.6.1",
+    "dotenv": "^8.0.0",
+    "dotenv-parse-variables": "^0.2.0",
+    "emotion": "^10.0.9",
+    "emotion-server": "^10.0.9",
+    "emotion-theming": "^10.0.10",
+    "formik": "^1.5.4",
+    "gatsby": "^2.4.3",
+    "gatsby-awesome-pagination": "^0.3.4",
     "gatsby-image": "^2.0.41",
+    "gatsby-link": "^2.1.1",
     "gatsby-mdx": "^0.6.3",
+    "gatsby-plugin-catch-links": "^2.0.13",
     "gatsby-plugin-emotion": "^4.0.6",
     "gatsby-plugin-feed": "^2.2.0",
-    "gatsby-plugin-google-analytics": "^2.0.20",
+    "gatsby-plugin-google-analytics": "^2.0.19",
     "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-offline": "^2.1.0",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.0.37",
@@ -25,45 +35,40 @@
     "gatsby-remark-copy-linked-files": "^2.0.12",
     "gatsby-remark-images": "^3.0.11",
     "gatsby-remark-prismjs": "^3.2.9",
-    "gatsby-remark-responsive-iframe": "^2.1.1",
-    "gatsby-remark-smartypants": "^2.0.9",
-    "gatsby-source-filesystem": "^2.0.35",
+    "gatsby-source-filesystem": "^2.0.33",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.19",
+    "mdx-utils": "0.1.1",
+    "polished": "^2.3.3",
+    "prism-react-renderer": "^0.1.6",
+    "prism-theme-night-owl": "^1.0.1",
+    "prism-themes": "^1.1.0",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "~5.2.1",
+    "react-live": "^1.12.0",
+    "react-markdown": "^4.0.8",
+    "react-share": "^2.4.0",
     "react-typography": "^0.16.19",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.54",
+    "serve": "^10.1.1",
+    "typescript": "^3.4.5",
     "typography": "^0.16.19",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "yup": "^0.27.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.13.0",
-    "prettier": "^1.17.1"
-    
+    "babel-preset-gatsby": "^0.1.11",
+    "prettier": "1.14.3"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
   "scripts": {
-    "dev": "gatsby develop",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
     "build": "gatsby build",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "develop": "gatsby develop",
+    "start": "serve public/",
+    "now-build": "npm run build"
   }
 }

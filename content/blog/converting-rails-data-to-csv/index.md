@@ -1,13 +1,17 @@
 ---
 layout: post
+slug: '/converting-rails-data-to-csv'
 title: Using Rails Console To Turn Data Into a CSV
 date: 2017-09-10 11:02:21
-comments: true
+published: true
+keywords: []
+author: Ian Jones
+description: ''
 ---
 
 Say you have data in a Rails [4.2.8] postgres [9.6] database that you need to turn into a [CSV](https://en.wikipedia.org/wiki/Comma-separated_values). Rails makes it super easy to extract data through rails console.
 
-First we want to start the console up. 
+First we want to start the console up.
 
 `rails c`
 
@@ -23,14 +27,14 @@ With rails model helpers, thats super simple:
 
 Now that we have all the lessons we want to extract data from, lets extract some data.
 
-``` ruby
+```ruby
 require 'csv'
-     
-# I used the rails public folder for convinience.      
+
+# I used the rails public folder for convinience.
 file = "#{Rails.root}/public/data.csv"
-    
+
 lessons = Lesson.where.not('gist_url' => nil, 'gist_url' => '')
-    
+
 CSV.open( file, 'w' ) do |writer|
     lessons.each do |l|
     writer << [l.id, l.title, l.gist_url]
@@ -38,13 +42,13 @@ CSV.open( file, 'w' ) do |writer|
 end
 ```
 
-Now you'll have a CSV file in your `/public` folder named `data.csv`. 
+Now you'll have a CSV file in your `/public` folder named `data.csv`.
 
 Lets say you already have a CSV file that you want to access from the Rails console.
 
 Heres how you load the CSV into memory:
 
-``` ruby
+```ruby
 require 'csv' # not required if you already did this
 csv_text = File.read("#{Rails.root}/public/data.csv")
 csv = CSV.parse(csv_text, :headers => true)
@@ -54,4 +58,4 @@ csv.each do |row|
 end
 ```
 
-Row will be an array of the values that are in that row. You're CSV had `[id, title, gist_url]` you could access id with `row[0]`, title with `row[1]` and gist_url with `row[2]` ect. 
+Row will be an array of the values that are in that row. You're CSV had `[id, title, gist_url]` you could access id with `row[0]`, title with `row[1]` and gist_url with `row[2]` ect.

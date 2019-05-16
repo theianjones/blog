@@ -2,8 +2,12 @@
 layout: post
 title:  "Javascript's <em>this</em> keyword"
 date:   2015-10-6 13:12:21
-comments: true
+published: true
+keywords: []
+author: Ian Jones
+description: ''
 categories: javascript fundamentals
+slug: '/javascript-this-keyword'
 ---
 
 Javascript's :sparkles:*this*:sparkles: object could very well be one of the most miss understood concept in the language. 

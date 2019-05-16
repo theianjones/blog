@@ -2,7 +2,11 @@
 layout: post
 title: Traveling Throughout Europe
 date: 2016-10-10 13:12:21
-comments: true
+published: true
+keywords: []
+author: Ian Jones
+description: ''
+slug: '/traveling-europe'
 ---
 
 # Traveling is amazing.
