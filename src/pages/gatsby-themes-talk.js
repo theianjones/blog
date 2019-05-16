@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
 import theme from '../../config/theme'
-function Abstract({ data: { site, allMdx } }) {
+function Abstract({ data: { site } }) {
   return (
     <Layout site={site} headerColor={theme.colors.primary_dark}>
       <Container>
