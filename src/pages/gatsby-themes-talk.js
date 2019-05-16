@@ -7,7 +7,7 @@ function Abstract({ data: { site } }) {
   return (
     <Layout site={site} headerColor={theme.colors.primary_dark}>
       <Container>
-        <h1>What is a Gatsby Theme?</h1>
+        <h1>What is a Gatsby theme?</h1>
         <p>
           Gatsby themes are a new abstraction that allow the you build a full
           blown Gatsby site with minimal configuration. We will go over what a
