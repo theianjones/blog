@@ -2,8 +2,12 @@
 layout: post
 title:  "Javascript Arrays"
 date:   2015-07-27 13:12:21
-comments: true
+published: true
+keywords: []
+author: Ian Jones
+description: ''
 categories: javascript fundamentals
+slug: '/javascript-arrays'
 ---
 Array’s are the foundation of everything that you do in Javascript. They are one of the main ways that you can store data.
 

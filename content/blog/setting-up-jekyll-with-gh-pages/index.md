@@ -2,8 +2,12 @@
 layout: post
 title:  "Setting Up Jekyll With Github Pages"
 date:   2015-08-14 13:12:21
-comments: true
+published: true
+keywords: []
+author: Ian Jones
+description: ''
 categories: jekyll
+slug: '/setting-up-jekyll-with-gh-pages'
 ---
 
 ![alt text](../../../../images/blog/host-jekyll-blog-github.jpg "Jekyll")

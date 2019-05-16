@@ -2,8 +2,12 @@
 layout: post
 title:  "Learning Javascript the Right Way"
 date:   2015-07-26 13:12:21
-comments: true
+published: true
+keywords: []
+author: Ian Jones
+description: ''
 categories: javascript fundamentals
+slug: '/learning-javascript-the-right-way'
 ---
 In this blog, I am going to document what I have been interested in lately. I’ve heard that writing things down can help solidify what you have been thinking about. _Hopefully this turns out to be true and maybe I will be able to improve my writing skills while I’m at it._
 

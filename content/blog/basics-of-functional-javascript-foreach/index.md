@@ -1,8 +1,12 @@
 ---
 layout: post
+slug: '/basics-of-functional-javascript-foreach'
 title:  "Basics of Functional Javascript: Array.forEach"
 date:   2015-10-5 13:12:21
-comments: true
+published: true
+keywords: []
+author: Ian Jones
+description: ''
 categories: functional javascript
 ---
 

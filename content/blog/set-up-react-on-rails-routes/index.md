@@ -2,7 +2,11 @@
 layout: post
 title: Set Up React Router in Rails
 date: 2017-09-22 11:02:21
-comments: true
+published: true
+keywords: []
+author: Ian Jones
+description: ''
+slug: '/set-up-react-on-rails-routes'
 ---
 
 Heres the situation: We have a react screen that has been developed using mock data. It's finished, now you need to get it into production. At [egghead.io](https://egghead.io), we are using [React on Rails](https://github.com/shakacode/react_on_rails) to communicate between Rails and React. I'll be stepping through how to replace an old Rails feature with React.
