@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Ian Jones' Blog`,
+    title: `Ian Jones`,
     author: `Ian Jones`,
     description: `I write on things that interest me, mostly web development.`,
-    siteUrl: `https://ianjones.rocks/`,
+    siteUrl: `https://ianjones.us/`,
     social: {
       twitter: `_jonesian`,
+      github: `ijones16`,
+      eggheadSlug: `ian-jones`,
     },
   },
   plugins: [
@@ -46,6 +48,23 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        extensions: ['.mdx', '.md', '.markdown'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              backgroundColor: '#fafafa',
+              maxWidth: 1035,
+              sizeByPixelDensity: true,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -53,7 +72,6 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

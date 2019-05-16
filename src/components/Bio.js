@@ -32,11 +32,19 @@ function Bio() {
                 }}
               />
             )}
-            <p>
+            <p
+              css={{
+                a: {
+                  marginLeft: 20,
+                },
+              }}
+            >
               I live and work remotely in Arlington, VA building eggheadio.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                @_jonesian on twitter
+              <a href={`https://twitter.com/${social.twitter}`}>twitter</a>
+              <a href={`https://github.com/${social.github}`}>github</a>
+              <a href={`https://egghead.io/instructors/${social.eggheadSlug}`}>
+                egghead
               </a>
             </p>
           </div>
@@ -60,6 +68,8 @@ const bioQuery = graphql`
         author
         social {
           twitter
+          github
+          eggheadSlug
         }
       }
     }
