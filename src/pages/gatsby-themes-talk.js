@@ -11,9 +11,9 @@ function Abstract({ data: { site } }) {
         <p>
           Gatsby themes are a new abstraction that allow the you build a full
           blown Gatsby site with minimal configuration. We will go over what a
-          Gatsby theme is, how themes are a different concept than themes from
-          the past (Wordpress, Hugo, etc.). Then we will dive in and look at how
-          you can use a theme today.
+          Gatsby theme is and how themes are a different concept than themes
+          from the past (Wordpress, Hugo, etc.). Then we will dive in and look
+          at how you can use a theme today.
         </p>
       </Container>
     </Layout>
