@@ -2,7 +2,11 @@
 layout: post
 title: Mobx Window Size Store
 date: 2017-09-18 11:02:21
-comments: true
+published: true
+keywords: []
+author: Ian Jones
+description: ''
+slug: '/mobx-window-size-store'
 ---
 
 We will create a store that keeps track of the window size in an application. We will call this store `WindowSizeStore`.

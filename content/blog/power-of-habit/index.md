@@ -2,7 +2,11 @@
 layout: post
 title: The Power Of Habit
 date: 2016-12-28 13:12:21
-comments: true
+published: true
+keywords: []
+author: Ian Jones
+description: ''
+slug: '/power-of-habit'
 ---
 
 I have been ending this year with quite a bit of reading. The list is: The Power of Habit by Charles Duhigg, Linchpin, Are you Indispensable by Seth Gobin, Do the Work by Steven Pressfield, and So Good They Can't Ignore You by Cal Newport.

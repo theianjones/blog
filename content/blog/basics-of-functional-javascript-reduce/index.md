@@ -1,8 +1,12 @@
 ---
 layout: post
+slug: '/basics-of-functional-javascript-reduce'
 title:  "Basics of Functional Javascript: Array.reduce"
 date:   2015-08-29 13:12:21
-comments: true
+published: true
+keywords: []
+author: Ian Jones
+description: ''
 categories: functional javascript
 ---
 
