@@ -4,47 +4,55 @@ import theme from 'prism-react-renderer/themes/nightOwl'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 
-const Code = ({ codeString, language, ...props }) => {
-  if (props['react-live']) {
+export default ({
+  children,
+  className = 'language-js',
+  live,
+  render,
+  ...props
+}) => {
+  const language = className.replace(/language-/, '')
+
+  if (live || props['react-live']) {
     return (
-      <LiveProvider code={codeString} noInline={true}>
-        <LiveEditor />
-        <LiveError />
-        <LivePreview />
-      </LiveProvider>
-    )
-  } else {
-    return (
-      <Highlight
-        {...defaultProps}
-        code={codeString}
-        language={language}
-        theme={theme}
-      >
-        {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={className} style={style}>
-            {tokens.map((line, i) => (
-              <div {...getLineProps({ line, key: i })}>
-                <span
-                  css={css`
-                    display: inline-block;
-                    width: 2em;
-                    user-select: none;
-                    opacity: 0.3;
-                  `}
-                >
-                  {i + 1}
-                </span>
-                {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
-                ))}
-              </div>
-            ))}
-          </pre>
-        )}
-      </Highlight>
+      <div style={{ marginTop: '40px', backgroundColor: 'black' }}>
+        <LiveProvider code={children.trim()} theme={theme}>
+          <LivePreview />
+          <LiveEditor />
+          <LiveError />
+        </LiveProvider>
+      </div>
     )
   }
-}
 
-export default Code
+  if (render) {
+    return (
+      <div style={{ marginTop: '40px' }}>
+        <LiveProvider code={children} theme={theme}>
+          <LivePreview />
+        </LiveProvider>
+      </div>
+    )
+  }
+
+  return (
+    <Highlight
+      {...defaultProps}
+      code={children}
+      language={language}
+      theme={theme}
+    >
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <pre className={className} style={{ ...style, padding: '20px' }}>
+          {tokens.map((line, i) => (
+            <div key={i} {...getLineProps({ line, key: i })}>
+              {line.map((token, key) => (
+                <span key={key} {...getTokenProps({ token, key })} />
+              ))}
+            </div>
+          ))}
+        </pre>
+      )}
+    </Highlight>
+  )
+}
