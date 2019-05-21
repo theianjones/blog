@@ -53,6 +53,8 @@ Head over to your `src/pages` directory and add an [`mdx`](https://github.com/md
 # Hello from MDX!
 ```
 
+![docz](./hello-docz.png)
+
 Now, you can spin up your gatsby site:
 
 ```bash
@@ -72,6 +74,7 @@ export default ({children}) => <Layout>{children}</Layout>
 
 Now you will see the default `<Layout/>` wrapping your `mdx` file.
 
+![docz with layout](docz-with-layout.png)
 
 ## More Resources
 
