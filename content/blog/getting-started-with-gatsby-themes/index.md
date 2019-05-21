@@ -11,11 +11,11 @@ author: 'Ian Jones'
 
 ## What is a Gatsby Theme
 
-Gatsby themes are not just visual paint to a gatsby site or a preset design like a wordpress or hugo theme.
-
 Themes allow you to package up the functionality of any gatsby site in a sharable and extenible way.
 
 > Themes are NPM installable Gatsby sites - Chris Biscardi
+
+Gatsby themes are not just visual paint to a gatsby site or a preset design like a wordpress or hugo theme.
 
 ## Why would you use a Gatsby theme
 
