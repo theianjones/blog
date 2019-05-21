@@ -8,6 +8,7 @@ keywords: ['gatsby', 'themes', 'mdx', 'docz']
 published: true
 author: 'Ian Jones'
 ---
+
 ## What is a Gatsby Theme?
 
 Gatsby themes are not just visual paint to a gatsby site or a preset design like a wordpress or hugo theme.
@@ -16,9 +17,10 @@ Themes allow you to package up the functionality of any gatsby site in a sharabl
 
 > Themes are NPM installable Gatsby sites - Chris Biscardi
 
-## Why would you use a Gatsby theme?
+## Why would you use a Gatsby theme
 
 A Gatsby theme can be many different things:
+
 - preset, configurable `gatsby-config`
 - ui theme (dark mode vs light mode)
 - data sourcing (from contentful, json files etc)
@@ -28,7 +30,7 @@ You can install as many themes in one gatsby site as you need. When you are deve
 
 ## How to use a theme (docz)
 
-(_here is the docz theme repo_)[https://github.com/pedronauck/docz/tree/master/core/gatsby-theme-docz]
+[_here is the docz theme repo_](https://github.com/pedronauck/docz/tree/master/core/gatsby-theme-docz)
 
 
 Generate a new site and install `gatsby-theme-docz`.
@@ -47,7 +49,7 @@ module.exports = {
 }
 ```
 
-Head over to your `src/pages` directory and add an `mdx` file.
+Head over to your `src/pages` directory and add an [`mdx`](https://github.com/mdx-js/mdx) file.
 
 ```markdown
 // src/pages/helloworld.mdx
@@ -55,6 +57,7 @@ Head over to your `src/pages` directory and add an `mdx` file.
 ```
 
 Now, you can spin up your gatsby site:
+
 ```bash
 gatsby develop
 ```
@@ -63,11 +66,20 @@ Now visit localhost:8000/helloworld or whatever you called your new file. The do
 
 Since you are in an mdx file, you can import any React component and use it
 
-```
+```js
 // src/pages/helloworld.mdx
 import Layout from '../Components/Layout'
 
 export default ({children}) => <Layout>{children}</Layout>
 ```
 
-Now you will see the default `<Layout/>` wraping your `mdx` file.
+Now you will see the default `<Layout/>` wrapping your `mdx` file.
+
+
+## More Resources
+
+- [Official Intro to Gatsby Themes](https://www.gatsbyjs.org/blog/2018-11-11-introducing-gatsby-themes/)
+- [Chris Biscardi's Theme Example](https://github.com/ChristopherBiscardi/gatsby-theme-examples)
+- [Kyle Gill's simple guide to Gatsby Themes](https://medium.com/@kyle.robert.gill/a-simple-guide-to-gatsbyjs-themes-a4f9765c5ac7)
+- [MDX docs](https://github.com/mdx-js/mdx)
+- [gatsby-theme-docz](https://github.com/pedronauck/docz/tree/master/core/gatsby-theme-docz)
