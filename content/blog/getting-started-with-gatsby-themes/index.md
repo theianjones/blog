@@ -30,9 +30,6 @@ You can install as many themes in one gatsby site as you need. When you are deve
 
 ## How to use a theme (docz)
 
-[_here is the docz theme repo_](https://github.com/pedronauck/docz/tree/master/core/gatsby-theme-docz)
-
-
 Generate a new site and install `gatsby-theme-docz`.
 
 ```bash
