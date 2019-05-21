@@ -9,7 +9,7 @@ published: true
 author: 'Ian Jones'
 ---
 
-## What is a Gatsby Theme?
+## What is a Gatsby Theme
 
 Gatsby themes are not just visual paint to a gatsby site or a preset design like a wordpress or hugo theme.
 
