@@ -21,10 +21,11 @@ module.exports = {
   backgroundColor: '#2b2e3c',
 
   // Social component
-  twitter: 'https://twitter.com/_jonesian/',
+  twitterUrl: 'https://twitter.com/_jonesian/',
   twitterHandle: '@_jonesian',
-  github: 'https://github.com/ijones16/',
+  githubUrl: 'https://github.com/ijones16/',
   githubHandle: 'ijones16',
   eggheadUrl: 'https://egghead.io/instructors/ian-jones',
   linkedin: '',
+  fbAppID: '',
 }

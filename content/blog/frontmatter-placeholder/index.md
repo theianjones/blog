@@ -7,7 +7,6 @@ categories: ['test']
 keywords: ['test']
 banner: './images/banner.jpg'
 published: false
-author: 'author'
 redirects:
   - '/invisible-post-423123'
 ---

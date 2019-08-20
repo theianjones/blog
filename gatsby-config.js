@@ -10,7 +10,6 @@ module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,
     title: config.siteTitle,
-    twitterHandle: config.twitterHandle,
     description: config.siteDescription,
     keywords: ['Video Blogger'],
     canonicalUrl: config.siteUrl,
@@ -28,44 +27,14 @@ module.exports = {
       url: config.siteUrl,
       logo: config.siteLogo,
     },
-    social: {
-      twitter: config.twitterHandle,
-      github: config.githubHandle,
-      twitterUrl: config.twitter,
-      githubUrl: config.github,
-      eggheadUrl: config.eggheadUrl,
-      fbAppID: '',
-    },
+    twitterUrl: config.twitterUrl,
+    twitterHandle: config.twitterHandle,
+    fbAppID: config.fbAppID,
+    githubUrl: config.githubUrl,
+    githubHandle: config.githubHandle,
   },
   plugins: [
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: 'blog',
-      },
-    },
-    {
-      resolve: `gatsby-mdx`,
-      options: {
-        extensions: ['.mdx', '.md', '.markdown'],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              backgroundColor: '#fafafa',
-              maxWidth: 1035,
-              sizeByPixelDensity: true,
-            },
-          },
-        ],
-      },
-    },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-emotion',
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-react-helmet',
+    '@eggheadio/gatsby-theme-egghead-blog',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -90,73 +59,5 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `GOOGLE_ID`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.fields.date,
-                  url: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
-                })
-              })
-            },
-            query: `
-              {
-                allMdx(
-                  limit: 1000,
-                  filter: { frontmatter: { published: { ne: false } } }
-                  sort: { order: DESC, fields: [frontmatter___date] }
-                ) {
-                  edges {
-                    node {
-                      excerpt(pruneLength: 250)
-                      fields {
-                        slug
-                        date
-                      }
-                      frontmatter {
-                        title
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml',
-            title: 'Blog RSS Feed',
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/lib/typography`,
-      },
-    },
-    'gatsby-plugin-offline',
   ],
 }
