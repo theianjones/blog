@@ -1,15 +1,9 @@
 /** @jsx jsx */
-import React, { Fragment } from 'react'
 import { jsx, ThemeProvider } from 'theme-ui'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import { MDXProvider } from '@mdx-js/react'
-import { Global, css } from '@emotion/core'
-import { bpMaxSM } from '../lib/breakpoints'
 import mdxComponents from './mdx'
 import Header from './Header'
-import reset from '../lib/reset'
-import { fonts } from '../lib/typography'
 import config from '../../config/website'
 import Footer from '../components/Footer'
 import theme from '../gatsby-plugin-theme-ui'
@@ -106,12 +100,12 @@ export default ({
   return (
     <ThemeProvider theme={theme} components={mdxComponents}>
       <div
-        css={css`
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          min-height: 100vh;
-        `}
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '100%',
+          minHeight: '100vh',
+        }}
       >
         <Helmet
           title={config.siteTitle}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Container from '../components/Container'
+import { Container } from 'theme-ui'
 import theme from '../../config/theme'
 function Abstract({ data: { site } }) {
   return (

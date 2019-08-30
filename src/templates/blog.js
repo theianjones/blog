@@ -1,13 +1,12 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx, Container, Styled } from 'theme-ui'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { css } from '@emotion/core'
-import Container from 'components/Container'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
 import { bpMaxSM } from '../lib/breakpoints'
-import theme from '../../config/theme'
 
 const Blog = ({
   data: { site, allMdx },
@@ -27,49 +26,36 @@ const Blog = ({
   return (
     <Layout site={site}>
       <SEO />
-      <Container noVerticalPadding>
+      <Container>
         {posts.map(({ node: post }) => (
           <div
             key={post.id}
-            css={css`
-              :not(:first-of-type) {
-                margin-top: 20px;
-                ${bpMaxSM} {
-                  margin-top: 20px;
-                }
-              }
-              :first-of-type {
-                margin-top: 20px;
-                ${bpMaxSM} {
-                  margin-top: 20px;
-                }
-              }
-              .gatsby-image-wrapper {
-              }
-              background: white;
-              padding: 40px;
-              ${bpMaxSM} {
-                padding: 20px;
-              }
-              display: flex;
-              flex-direction: column;
-            `}
+            sx={{
+              ':not(:first-of-type)': {
+                marginTop: 20,
+              },
+              ':first-of-type': {
+                marginTop: 20,
+              },
+              background: 'white',
+              padding: [40, 20],
+              display: 'flex',
+              flexDirection: 'column',
+            }}
           >
             {post.frontmatter.banner && (
               <div
-                css={css`
-                  padding: 60px 60px 40px 60px;
-                  ${bpMaxSM} {
-                    padding: 20px;
-                  }
-                `}
+                sx={{
+                  padding: ['60px 60px 40px 60px', '20px'],
+                }}
               >
-                <Link
+                <Styled.a
+                  as={Link}
                   aria-label={`View ${post.frontmatter.title} article`}
                   to={post.fields.slug}
                 >
                   <Img sizes={post.frontmatter.banner.childImageSharp.fluid} />
-                </Link>
+                </Styled.a>
               </div>
             )}
             <h2
@@ -78,12 +64,13 @@ const Blog = ({
                 margin-bottom: 10px;
               `}
             >
-              <Link
+              <Styled.a
+                as={Link}
                 aria-label={`View ${post.frontmatter.title} article`}
                 to={post.fields.slug}
               >
                 {post.frontmatter.title}
-              </Link>
+              </Styled.a>
             </h2>
             {/* <small>{post.frontmatter.date}</small> */}
             <p
@@ -93,32 +80,37 @@ const Blog = ({
             >
               {post.excerpt}
             </p>{' '}
-            <Link
+            <Styled.a
+              as={Link}
               to={post.fields.slug}
               aria-label={`view "${post.frontmatter.title}" article`}
             >
               Read Article →
-            </Link>
+            </Styled.a>
           </div>
         ))}
         <br />
         <br />
         <div
-          css={{
+          sx={{
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}
         >
           {previousPagePath && (
-            <Link to={previousPagePath} aria-label="View previous page">
+            <Styled.a
+              as={Link}
+              to={previousPagePath}
+              aria-label="View previous page"
+            >
               ← Previous Page
-            </Link>
+            </Styled.a>
           )}
           {nextPagePath && (
-            <Link to={nextPagePath} aria-label="View next page">
+            <Styled.a as={Link} to={nextPagePath} aria-label="View next page">
               Next Page →
-            </Link>
+            </Styled.a>
           )}
         </div>
         <hr
