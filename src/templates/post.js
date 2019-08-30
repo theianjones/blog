@@ -1,9 +1,9 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx, Styled, Container } from 'theme-ui'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import SEO from 'components/SEO'
 import { css } from '@emotion/core'
-import Container from 'components/Container'
 import Layout from '../components/Layout'
 import { fonts } from '../lib/typography'
 import Share from '../components/Share'
@@ -16,7 +16,6 @@ export default function Post({
   const author = mdx.frontmatter.author || config.author
   const date = mdx.frontmatter.date
   const title = mdx.frontmatter.title
-
   return (
     <Layout site={site} frontmatter={mdx.frontmatter}>
       <SEO frontmatter={mdx.frontmatter} isBlogPost />
@@ -27,14 +26,14 @@ export default function Post({
         `}
       >
         <Container>
-          <h1
+          <Styled.h1
             css={css`
               text-align: center;
               margin-bottom: 20px;
             `}
           >
             {title}
-          </h1>
+          </Styled.h1>
           <div
             css={css`
               display: flex;
@@ -60,7 +59,7 @@ export default function Post({
         </Container>
         {/* <SubscribeForm /> */}
       </article>
-      <Container noVerticalPadding>
+      <Container>
         <Share
           url={`${config.siteUrl}/${mdx.frontmatter.slug}/`}
           title={title}

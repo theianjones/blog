@@ -2,7 +2,7 @@ import React from 'react'
 import { css, keyframes } from '@emotion/core'
 import { fonts } from '../../lib/typography'
 import theme from '../../../config/theme'
-
+console.log({ theme })
 // PleaseConfirmIllustration
 const PaperRollOut = keyframes`
 from, 0% {
@@ -146,7 +146,7 @@ export const PleaseConfirmIllustration = (
         />
         <text
           fill="#FFF"
-          fontFamily={fonts.bold}
+          fontFamily={theme.fonts.body}
           fontSize="10"
           fontWeight="600"
           letterSpacing="1"
@@ -161,7 +161,7 @@ export const PleaseConfirmIllustration = (
           height="16"
           x="26.385"
           y="35.077"
-          fill={theme.brand.primary}
+          fill={theme.colors.primary}
           fillRule="nonzero"
           rx="4.308"
           className="button"
@@ -345,7 +345,7 @@ export const ThankYouIllustration = (
           />
           <path
             className="grass"
-            fill={theme.colors.green}
+            fill={theme.colors.secondary}
             css={css`
               transform: translate(-35px, 0);
             `}
@@ -356,7 +356,7 @@ export const ThankYouIllustration = (
             width="100"
             height="48"
             y="9"
-            fill={theme.brand.primary}
+            fill={theme.colors.primary}
             rx="5"
           />
           <rect
@@ -371,7 +371,7 @@ export const ThankYouIllustration = (
           />
           <text
             fill="#FFF"
-            fontFamily={fonts.regular}
+            fontFamily={theme.fonts.body}
             fontSize="14.3"
             fontWeight="500"
           >

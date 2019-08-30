@@ -5,7 +5,7 @@ import { css } from '@emotion/core'
 import config from '../../config/website'
 
 export const Twitter = ({
-  color = `${theme.colors.body_color}`,
+  color = `${theme.colors.background}`,
   url = `${config.twitter}`,
 }) => (
   <Link
@@ -14,7 +14,7 @@ export const Twitter = ({
       color: ${color};
       margin-left: 10px;
       :hover {
-        color: ${theme.brand.primary};
+        color: ${theme.colors.primary};
       }
     `}
     aria-label="Visit my Twitter"
@@ -35,7 +35,7 @@ export const Twitter = ({
 )
 
 export const LinkedIn = ({
-  color = `${theme.colors.body_color}`,
+  color = `${theme.colors.background}`,
   url = `${config.linkedin}`,
 }) => (
   <Link
@@ -44,7 +44,7 @@ export const LinkedIn = ({
       margin-left: 10px;
       color: ${color};
       :hover {
-        color: ${theme.brand.primary};
+        color: ${theme.colors.primary};
       }
     `}
     aria-label="Visit my LinkedIn"
@@ -64,7 +64,7 @@ export const LinkedIn = ({
 )
 
 export const GitHub = ({
-  color = `${theme.colors.body_color}`,
+  color = `${theme.colors.background}`,
   url = `${config.github}`,
 }) => (
   <Link
@@ -73,7 +73,7 @@ export const GitHub = ({
       margin-left: 10px;
       color: ${color};
       :hover {
-        color: ${theme.brand.primary};
+        color: ${theme.colors.primary};
       }
     `}
     aria-label="Visit my GitHub"

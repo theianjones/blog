@@ -103,7 +103,7 @@ class SignUp extends React.Component {
                     .field-error {
                       display: block
                       //position: absolute
-                      color: ${theme.colors.red}
+                      color: ${theme.colors.muted}
                       font-size: 80%
                     }
                     input,
@@ -183,9 +183,8 @@ class SignUp extends React.Component {
                   </button>
                 </Form>
               )}
-              {submitted && !isSubmitting && (
-                <PostSubmissionMessage response={response} />
-              )}
+              {submitted &&
+                !isSubmitting && <PostSubmissionMessage response={response} />}
               {errorMessage && <div>{errorMessage}</div>}
             </>
           )}

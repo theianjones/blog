@@ -1,65 +1,34 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx, Styled, Container } from 'theme-ui'
 import { Link, graphql } from 'gatsby'
-import { css } from '@emotion/core'
-import theme from '../../config/theme'
 
-import Container from './Container'
-
-const Header = ({
-  dark,
-  bgColor = 'none',
-  siteTitle,
-  headerColor = 'black',
-}) => (
+const Header = ({ siteTitle }) => (
   <header
-    css={css`
-      width: 100%;
-      flex-shrink: 0;
-      background: none;
-      padding: 30px 0 0 0;
-      background: ${dark ? '#090909' : `${bgColor}` || 'none'};
-    `}
+    sx={{
+      width: '100%',
+      flexShrink: 0,
+      padding: '30px 0 0 0',
+      bg: 'background',
+    }}
   >
-    <Container noVerticalPadding>
+    <Container>
       <nav
-        css={css`
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          color: ${headerColor};
-          a {
-            color: ${headerColor ? headerColor : theme.colors.body_color};
-          }
-          a:hover {
-            color: ${headerColor === theme.colors.white
-              ? 'white'
-              : theme.colors.link_color_hover};
-          }
-        `}
+        sx={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          color: 'primary',
+        }}
       >
-        <Link to="/" aria-label="go to homepage" activeClassName="active">
+        <Styled.a
+          as={Link}
+          to="/"
+          aria-label="go to homepage"
+          activeClassName="active"
+        >
           {siteTitle}
-        </Link>
-        <div
-          css={css`
-            font-size: 16px;
-            line-height: 1.25;
-            display: flex;
-            align-items: center;
-            a {
-              color: ${dark ? '#fbfbfb' : 'rgba(0,0,0,0.85)'};
-              text-decoration: none;
-              & + a {
-                margin-left: 32px;
-              }
-            }
-            .active {
-              display: none;
-              visibility: hidden;
-            }
-          `}
-        />
+        </Styled.a>
       </nav>
     </Container>
   </header>

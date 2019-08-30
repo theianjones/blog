@@ -5,7 +5,7 @@ import Container from '../components/Container'
 import theme from '../../config/theme'
 function Abstract({ data: { site } }) {
   return (
-    <Layout site={site} headerColor={theme.colors.primary_dark}>
+    <Layout site={site} headerColor={theme.colors.secondary}>
       <Container>
         <h1>What is a Gatsby theme?</h1>
         <p>

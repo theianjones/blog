@@ -1,126 +1,100 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx, Styled, Container } from 'theme-ui'
 import { graphql } from 'gatsby'
-import { css } from '@emotion/core'
-import styled from '@emotion/styled'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
-import Container from 'components/Container'
-import { rhythm } from '../lib/typography'
-import theme from '../../config/theme'
 
 const Hero = ({ site: { siteMetadata } }) => (
   <section
-    css={css`
-      * {
-        color: ${theme.colors.primary_dark};
-      }
-      width: 100%;
-      background: ${theme.brand.primary};
-      padding: 20px 0 30px 0;
-      display: flex;
-    `}
+    sx={{
+      bg: 'secondary',
+      width: '100%',
+      fontFamily: 'body',
+      padding: '20px 0 30px 0',
+      display: 'flex',
+    }}
   >
-    <Container
-      css={css`
-        display: flex;
-        flex-direction: column;
-      `}
-    >
-      <h1
-        css={css`
-          position: relative;
-          z-index: 5;
-          line-height: 1.5;
-          margin: 0;
-          max-width: ${rhythm(15)};
-        `}
+    <Container>
+      <Styled.h1
+        sx={{
+          position: 'relative',
+          zIndex: 5,
+          lineHeight: 1.5,
+          margin: 0,
+          color: 'white',
+        }}
       >
         I live and work remotely in Arlington, VA building eggheadio.
-      </h1>
+      </Styled.h1>
 
       <div
-        css={{
+        sx={{
           a: {
             marginRight: 10,
+            color: 'white',
+            ':hover': {
+              color: 'primary'
+            }
           },
         }}
       >
-        <a href={siteMetadata.social.twitterUrl}>twitter</a>
-        <a href={siteMetadata.social.githubUrl}>github</a>
-        <a href={siteMetadata.social.eggheadUrl}>egghead</a>
+        <Styled.a href={siteMetadata.social.twitterUrl}>twitter</Styled.a>
+        <Styled.a href={siteMetadata.social.githubUrl}>github</Styled.a>
+        <Styled.a href={siteMetadata.social.eggheadUrl}>egghead</Styled.a>
       </div>
+      <div
+        sx={{
+          height: 150,
+          overflow: 'hidden',
+        }}
+      />
     </Container>
-    <div
-      css={css`
-        height: 150px;
-        overflow: hidden;
-      `}
-    />
   </section>
 )
 
-const Description = styled.p`
-  margin-bottom: 10px;
-  display: inline-block;
-`
-
 export default function Index({ data: { site, allMdx } }) {
   return (
-    <Layout
-      site={site}
-      headerColor={theme.colors.primary_dark}
-      headerBg={theme.brand.primary}
-    >
-      <Hero site={site} />
-      <Container
-        css={css`
-          padding-bottom: 0;
-        `}
-      >
-        {allMdx.edges.map(({ node: post }) => (
-          <div
-            key={post.id}
-            css={css`
-              margin-bottom: 40px;
-            `}
-          >
-            <h2
-              css={css({
-                marginBottom: rhythm(0.3),
-                transition: theme.transition.ease,
-                ':hover': {
-                  color: theme.brand.primary_dark,
-                },
-              })}
+    <Styled.root>
+      <Layout site={site}>
+        <Hero site={site} />
+        <Container>
+          {allMdx.edges.map(({ node: post }) => (
+            <div
+              key={post.id}
+              sx={{
+                marginBottom: 40,
+              }}
             >
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
+              <Styled.h2>
+                <Styled.a as={Link} to={post.frontmatter.slug} aria-label={`View ${post.frontmatter.title}`}>{post.frontmatter.title} </Styled.a>
+              </Styled.h2>
+              <p
+                sx={{
+                  marginBottom: 10,
+                  display: 'inline-block',
+                }}
               >
-                {post.frontmatter.title}
-              </Link>
-            </h2>
-            <Description>
-              {post.excerpt}{' '}
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                Read Article →
-              </Link>
-            </Description>
-          </div>
-        ))}
-        <Link
-          to="/blog"
-          aria-label="Visit blog page"
-          className="button-secondary"
-        >
-          View all articles
-        </Link>
-        <hr />
-      </Container>
-    </Layout>
+                {post.excerpt}{' '}
+                <Styled.a as={Link}
+                  to={post.frontmatter.slug}
+                  aria-label={`View ${post.frontmatter.title}`}
+                >
+                  Read Article →
+                </Styled.a>
+              </p>
+            </div>
+          ))}
+          <Styled.a as={Link}
+            to="/blog"
+            aria-label="Visit blog page"
+            
+          >
+            View all articles
+          </Styled.a>
+          <hr />
+        </Container>
+      </Layout>
+    </Styled.root>
   )
 }
 
