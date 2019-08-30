@@ -2,11 +2,9 @@
 import { jsx, Container, Styled } from 'theme-ui'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { css } from '@emotion/core'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
-import { bpMaxSM } from '../lib/breakpoints'
 
 const Blog = ({
   data: { site, allMdx },
@@ -58,11 +56,11 @@ const Blog = ({
                 </Styled.a>
               </div>
             )}
-            <h2
-              css={css`
-                margin-top: 30px;
-                margin-bottom: 10px;
-              `}
+            <Styled.h2
+              sx={{
+                marginTop: 30,
+                marginBottom: 10,
+              }}
             >
               <Styled.a
                 as={Link}
@@ -71,12 +69,12 @@ const Blog = ({
               >
                 {post.frontmatter.title}
               </Styled.a>
-            </h2>
+            </Styled.h2>
             {/* <small>{post.frontmatter.date}</small> */}
             <p
-              css={css`
-                margin-top: 10px;
-              `}
+              sx={{
+                marginTop: 10,
+              }}
             >
               {post.excerpt}
             </p>{' '}
@@ -114,9 +112,9 @@ const Blog = ({
           )}
         </div>
         <hr
-          css={css`
-            margin: 50px 0;
-          `}
+          sx={{
+            margin: '50px 0',
+          }}
         />
       </Container>
     </Layout>

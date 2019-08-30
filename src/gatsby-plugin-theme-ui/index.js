@@ -26,10 +26,10 @@ export default {
     secondary: '#30c',
     muted: '#f6f6f6',
     modes: {
-      swiss,
-      deep,
-      funk,
-      tosh,
+      swiss: swiss.colors,
+      deep: deep.colors,
+      funk: funk.colors,
+      tosh: tosh.colors,
     },
   },
   styles: {

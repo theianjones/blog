@@ -1,10 +1,15 @@
-import styled from '@emotion/styled'
+/** @jsx jsx */
+import { jsx, Styled } from 'theme-ui'
 
-export default styled.h2`
-  text-align: left;
-  font-size: 18px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-weight: 900;
-  line-height: 1.1;
-`
+export default (
+  <Styled.h2
+    sx={{
+      textAlign: 'left',
+      fontSize: 18,
+      marginTop: 20,
+      marginBottom: 20,
+      fontWeight: 900,
+      lineHeight: 1.1,
+    }}
+  />
+)

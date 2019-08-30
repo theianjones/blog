@@ -1,11 +1,16 @@
-import styled from '@emotion/styled'
+/** @jsx jsx */
+import { jsx, Styled } from 'theme-ui'
 
-export default styled.h1`
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.1;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 30px;
-  padding-bottom: 10px;
-`
+export default (
+  <Styled.h1
+    sx={{
+      fontSize: 24,
+      fontWeight: 400,
+      lineHeight: 1.1,
+      marginTop: 20,
+      marginBottom: 20,
+      paddingTop: 30,
+      paddingBottom: 10,
+    }}
+  />
+)

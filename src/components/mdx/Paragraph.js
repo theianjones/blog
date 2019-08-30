@@ -1,6 +1,11 @@
-import styled from '@emotion/styled'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 
-export default styled.p`
-  text-align: left;
-  line-height: 1.7;
-`
+export default () => (
+  <p
+    sx={{
+      textAlign: 'left',
+      lineHeight: 1.7,
+    }}
+  />
+)

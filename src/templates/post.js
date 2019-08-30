@@ -3,9 +3,7 @@ import { jsx, Styled, Container } from 'theme-ui'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import SEO from 'components/SEO'
-import { css } from '@emotion/core'
 import Layout from '../components/Layout'
-import { fonts } from '../lib/typography'
 import Share from '../components/Share'
 import config from '../../config/website'
 
@@ -20,39 +18,36 @@ export default function Post({
     <Layout site={site} frontmatter={mdx.frontmatter}>
       <SEO frontmatter={mdx.frontmatter} isBlogPost />
       <article
-        css={css`
-          width: 100%;
-          display: flex;
-        `}
+        sx={{
+          width: '100%',
+          display: 'flex',
+        }}
       >
         <Container>
           <Styled.h1
-            css={css`
-              text-align: center;
-              margin-bottom: 20px;
-            `}
+            sx={{
+              textAlign: 'center',
+              marginBottom: 20,
+            }}
           >
             {title}
           </Styled.h1>
           <div
-            css={css`
-              display: flex;
-              justify-content: center;
-              margin-bottom: 20px;
-              h3,
-              span {
-                text-align: center;
-                font-size: 15px;
-                opacity: 0.6;
-                font-family: ${fonts.regular}, sans-serif;
-                font-weight: normal;
-                margin: 0 5px;
-              }
-            `}
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginBottom: 20,
+              'h3,span': {
+                textAlign: 'center',
+                fontSize: 15,
+                opacity: 0.6,
+                margin: '0 5px',
+              },
+            }}
           >
-            {author && <h3>{author}</h3>}
+            {author && <Styled.h3>{author}</Styled.h3>}
             {author && <span>—</span>}
-            {date && <h3>{date}</h3>}
+            {date && <Styled.h3>{date}</Styled.h3>}
           </div>
           <br />
           <MDXRenderer>{mdx.body}</MDXRenderer>

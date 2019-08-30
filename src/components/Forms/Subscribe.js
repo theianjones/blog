@@ -1,8 +1,8 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import { css } from '@emotion/core'
-import theme from '../../../config/theme'
 import { rhythm } from '../../lib/typography'
 import { bpMaxSM } from '../../lib/breakpoints'
 import Message from '../ConfirmMessage/Message'
@@ -73,10 +73,10 @@ class SignUp extends React.Component {
       <div>
         {!successful && (
           <h2
-            css={css`
-              margin-bottom: ${rhythm(1)}
-              margin-top: 0
-            `}
+            sx={{
+              marginBottom: rhythm(1),
+              marginTop: 0,
+            }}
           >
             Join the Newsletter
           </h2>
@@ -93,47 +93,43 @@ class SignUp extends React.Component {
             <>
               {!successful && (
                 <Form
-                  css={css`
-                    display: flex
-                    align-items: flex-end
-                    label:not(:first-of-type),
-                    button {
-                      margin-left: 10px
-                    }
-                    .field-error {
-                      display: block
-                      //position: absolute
-                      color: ${theme.colors.muted}
-                      font-size: 80%
-                    }
-                    input,
-                    label {
-                      width: 100%
-                    }
-                    ${bpMaxSM} {
-                      flex-direction: column
-                      align-items: flex-start
-                      width: auto
-                      label,
-                      input {
-                        margin: 5px 0 0 0 !important
-                        width: 100%
-                        display: flex
-                        flex-direction: column
-                      }
-                      button {
-                        margin: 20px 0 0 0
-                      }
-                    }
-                  `}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'flex-end',
+                    'label:not(:first-of-type),button': {
+                      marginLeft: 10,
+                    },
+                    '.field-error': {
+                      display: 'block',
+                      color: 'muted',
+                      fontSize: '80%',
+                    },
+                    'input,label': {
+                      width: '100%',
+                    },
+                    [bpMaxSM]: {
+                      flexDirection: 'column',
+                      alignItems: 'flex-start',
+                      width: 'auto',
+                      'label,input': {
+                        margin: '5px 0 0 0 !important',
+                        width: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                      },
+                      button: {
+                        margin: '20px 0 0 0',
+                      },
+                    },
+                  }}
                 >
                   <label htmlFor="first_name">
                     <div
-                      css={css`
-                        display: flex
-                        justify-content: space-between
-                        align-items: flex-end
-                      `}
+                      sx={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-end',
+                      }}
                     >
                       First Name
                       <ErrorMessage
@@ -152,11 +148,11 @@ class SignUp extends React.Component {
                   </label>
                   <label htmlFor="email">
                     <div
-                      css={css`
-                        display: flex
-                        justify-content: space-between
-                        align-items: flex-end
-                      `}
+                      sx={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-end',
+                      }}
                     >
                       Email
                       <ErrorMessage
