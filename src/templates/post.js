@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import SEO from 'components/SEO'
 import { css } from '@emotion/core'
 import Container from 'components/Container'
@@ -56,7 +56,7 @@ export default function Post({
             {date && <h3>{date}</h3>}
           </div>
           <br />
-          <MDXRenderer>{mdx.code.body}</MDXRenderer>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
         </Container>
         {/* <SubscribeForm /> */}
       </article>
@@ -85,9 +85,7 @@ export const pageQuery = graphql`
         slug
         keywords
       }
-      code {
-        body
-      }
+      body
     }
   }
 `

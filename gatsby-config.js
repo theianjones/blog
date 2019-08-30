@@ -46,7 +46,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md', '.markdown'],
         gatsbyRemarkPlugins: [
@@ -55,7 +55,6 @@ module.exports = {
             options: {
               backgroundColor: '#fafafa',
               maxWidth: 1035,
-              sizeByPixelDensity: true,
             },
           },
         ],
