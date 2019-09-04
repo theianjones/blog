@@ -1,69 +1,58 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx, Styled, Container, useColorMode } from 'theme-ui'
 import { Link, graphql } from 'gatsby'
-import { css } from '@emotion/core'
-import theme from '../../config/theme'
+import Button from './Button'
 
-import Container from './Container'
+const themeModes = ['light', 'swiss', 'deep', 'funk', 'tosh']
 
-const Header = ({
-  dark,
-  bgColor = 'none',
-  siteTitle,
-  headerColor = 'black',
-}) => (
-  <header
-    css={css`
-      width: 100%;
-      flex-shrink: 0;
-      background: none;
-      padding: 30px 0 0 0;
-      background: ${dark ? '#090909' : `${bgColor}` || 'none'};
-    `}
-  >
-    <Container noVerticalPadding>
-      <nav
-        css={css`
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          color: ${headerColor};
-          a {
-            color: ${headerColor ? headerColor : theme.colors.body_color};
-          }
-          a:hover {
-            color: ${headerColor === theme.colors.white
-              ? 'white'
-              : theme.colors.link_color_hover};
-          }
-        `}
-      >
-        <Link to="/" aria-label="go to homepage" activeClassName="active">
-          {siteTitle}
-        </Link>
-        <div
-          css={css`
-            font-size: 16px;
-            line-height: 1.25;
-            display: flex;
-            align-items: center;
-            a {
-              color: ${dark ? '#fbfbfb' : 'rgba(0,0,0,0.85)'};
-              text-decoration: none;
-              & + a {
-                margin-left: 32px;
-              }
-            }
-            .active {
-              display: none;
-              visibility: hidden;
-            }
-          `}
-        />
-      </nav>
-    </Container>
-  </header>
-)
+const Header = ({ siteTitle }) => {
+  const [mode, setMode] = useColorMode()
+
+  const cycleMode = e => {
+    const i = themeModes.indexOf(mode)
+    const next = themeModes[(i + 1) % themeModes.length]
+    setMode(next)
+  }
+  return (
+    <header
+      sx={{
+        width: '100%',
+        flexShrink: 0,
+        padding: '30px 0 0 0',
+        bg: 'background',
+      }}
+    >
+      <Container>
+        <nav
+          sx={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            color: 'primary',
+          }}
+        >
+          <Styled.a
+            as={Link}
+            to="/"
+            aria-label="go to homepage"
+            activeClassName="active"
+          >
+            {siteTitle}
+          </Styled.a>
+          <Button
+            sx={{
+              ml: 2,
+            }}
+            onClick={cycleMode}
+          >
+            {mode}
+          </Button>
+        </nav>
+      </Container>
+    </header>
+  )
+}
 
 export default Header
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Container from '../components/Container'
+import { Container } from 'theme-ui'
 import Subscribe from '../components/Forms/Subscribe'
 
 export default ({ data: { site } }) => (
