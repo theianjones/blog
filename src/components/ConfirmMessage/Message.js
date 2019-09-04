@@ -12,7 +12,7 @@ export default ({
   articleTitle,
   articleSlug,
 }) => (
-  <Center
+  <div
     sx={{
       minHeight: fullscreen ? '70vh' : 'auto',
       width: '100vw',
@@ -64,5 +64,5 @@ export default ({
         {articleTitle}
       </Styled.a>
     )}
-  </Center>
+  </div>
 )
