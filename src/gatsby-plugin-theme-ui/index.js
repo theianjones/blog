@@ -1,4 +1,6 @@
 import { swiss, deep, funk, tosh } from '@theme-ui/presets'
+export { default as components } from './components'
+import prism from '@theme-ui/prism/presets/theme-ui'
 
 export default {
   initialColorMode: 'light',
@@ -91,10 +93,15 @@ export default {
     },
     pre: {
       fontFamily: 'monospace',
-      overflowX: 'auto',
+      fontSize: 1,
+      p: 3,
+      color: 'text',
+      bg: 'muted',
+      overflow: 'auto',
       code: {
         color: 'inherit',
       },
+      variant: 'prism',
     },
     code: {
       fontFamily: 'monospace',
@@ -117,4 +124,5 @@ export default {
       maxWidth: '100%',
     },
   },
+  prism,
 }

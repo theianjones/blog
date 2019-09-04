@@ -21,6 +21,7 @@ export default function Post({
         sx={{
           width: '100%',
           display: 'flex',
+          bg: 'background',
         }}
       >
         <Container>

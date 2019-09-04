@@ -1,11 +1,12 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { Container } from 'theme-ui'
-import theme from '../../config/theme'
+
 function Abstract({ data: { site } }) {
   return (
-    <Layout site={site} headerColor={theme.colors.secondary}>
+    <Layout site={site}>
       <Container>
         <h1>What is a Gatsby theme?</h1>
         <p>

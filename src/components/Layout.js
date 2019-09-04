@@ -2,11 +2,9 @@
 import { jsx } from 'theme-ui'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import mdxComponents from './mdx'
 import Header from './Header'
 import config from '../../config/website'
 import Footer from '../components/Footer'
-import theme from '../gatsby-plugin-theme-ui'
 
 export default ({
   site,
