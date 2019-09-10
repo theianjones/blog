@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Everyday Information Architecture Take Aways"
-date:   2019-05-13
+title: '📝 Everyday Information Architecture'
+date: 2019-05-13
 categories: reading
 slug: '/information-architecture'
 ---
@@ -9,7 +9,6 @@ slug: '/information-architecture'
 ## Introduction
 
 [Everyday Information Architecture](https://everydayia.com/), written by [Lisa Maria Martin (LMM)](https://thefutureislikepie.com/), starts off by explaining how constraints make things easier to find. When you are designing how your information is structured in your website, you need constraints to work within.
-
 
 This book breaks down how we define and evaluate different constraints for our data.
 
