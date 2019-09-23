@@ -60,3 +60,11 @@ When using `Lambda`s in FQL, you all ways have to give the variable a name. This
 ### [Accessing fields through Refs with Select](https://egghead.io/lessons/egghead-accessing-fields-through-refs-with-select?pl=the-complete-guide-to-faunadb-74bef44b)
 
 This lesson shows us how to map over an array of data and select on property off of the resulting data (the first name). We use `Select`, passing the path of the attribute we want to access, to grab the `firstName` of the user. This function is passed to `Lambda` which is used to `Map` over the paginated `all_customers` index.
+
+### [FaunaDB + Netlify Livestream](https://www.twitch.tv/videos/484133337)
+
+You have to use the CLI to add the FaunaDB add on.
+
+Consistent transactions over geo-distributed graphs.
+
+Chris looks for what issues Jepson test finds and sees if that service acknowledges the flaws and goes back and fixes them.
