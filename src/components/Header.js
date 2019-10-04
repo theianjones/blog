@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => {
         width: '100%',
         flexShrink: 0,
         padding: '30px 0 0 0',
-        bg: 'background',
+        bg: 'secondary',
       }}
     >
       <Container>
@@ -29,7 +29,6 @@ const Header = ({ siteTitle }) => {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            color: 'primary',
           }}
         >
           <Styled.a
@@ -37,6 +36,7 @@ const Header = ({ siteTitle }) => {
             to="/"
             aria-label="go to homepage"
             activeClassName="active"
+            sx={{ color: 'white', textDecoration: 'none' }}
           >
             {siteTitle}
           </Styled.a>

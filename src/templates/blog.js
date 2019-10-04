@@ -8,18 +8,8 @@ import Link from '../components/Link'
 
 const Blog = ({
   data: { site, allMdx },
-  pageContext: { pagination, categories },
 }) => {
-  const { page, nextPagePath, previousPagePath } = pagination
-
-  const posts = page
-    .map(id =>
-      allMdx.edges.find(
-        edge =>
-          edge.node.id === id && edge.node.parent.sourceInstanceName !== 'pages'
-      )
-    )
-    .filter(post => post !== undefined)
+  const posts = allMdx.edges.filter(post => post !== undefined)
 
   return (
     <Layout site={site}>
@@ -35,7 +25,7 @@ const Blog = ({
               ':first-of-type': {
                 marginTop: 20,
               },
-              background: 'white',
+              backgroundColor: 'muted',
               padding: [40, 20],
               display: 'flex',
               flexDirection: 'column',
@@ -70,7 +60,6 @@ const Blog = ({
                 {post.frontmatter.title}
               </Styled.a>
             </Styled.h2>
-            {/* <small>{post.frontmatter.date}</small> */}
             <p
               sx={{
                 marginTop: 10,
@@ -87,30 +76,6 @@ const Blog = ({
             </Styled.a>
           </div>
         ))}
-        <br />
-        <br />
-        <div
-          sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-          }}
-        >
-          {previousPagePath && (
-            <Styled.a
-              as={Link}
-              to={previousPagePath}
-              aria-label="View previous page"
-            >
-              ← Previous Page
-            </Styled.a>
-          )}
-          {nextPagePath && (
-            <Styled.a as={Link} to={nextPagePath} aria-label="View next page">
-              Next Page →
-            </Styled.a>
-          )}
-        </div>
         <hr
           sx={{
             margin: '50px 0',
