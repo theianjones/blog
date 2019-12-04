@@ -162,3 +162,5 @@ const result = INPUT_RANGE.filter(numberIncreasesLeftToRight).filter(
   numberHasPair
 )
 ```
+
+If you filter the other way, you code will take about 25% longer to do so. I found this out by using quokka's `//?.` comment which tells you how long a line took to execute.
