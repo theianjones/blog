@@ -30,23 +30,23 @@ const PostSubmissionMessage = ({ response }) => {
 
 class SignUp extends React.Component {
   state = {
-    submitted: false,
+    response: null,
+    msg: null,
+    errorMessage: null,
+    updateSubscriptionUrl: null,
   }
 
   async handleSubmit(values) {
-    this.setState({ submitted: true })
     try {
       const result = await addToMailchimp(values.email_address, {
         FNAME: values.first_name,
       })
       let errorMessage
-      let submitted = true
       let msg = result.msg
       let response = result.result
       let updateSubscriptionUrl
       if (response === 'error') {
         errorMessage = result.msg
-        submitted = false
 
         if (errorMessage.includes('is already subscribed to list')) {
           const URL_REGEX = /(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/gim
@@ -55,7 +55,6 @@ class SignUp extends React.Component {
         }
       }
       this.setState({
-        submitted,
         response,
         msg,
         errorMessage,
@@ -63,7 +62,6 @@ class SignUp extends React.Component {
       })
     } catch (error) {
       this.setState({
-        submitted: false,
         errorMessage: 'Something went wrong!',
       })
     }
