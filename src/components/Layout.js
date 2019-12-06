@@ -55,9 +55,7 @@ export default ({
         headerColor={headerColor}
       />
       {children}
-      {!noFooter && (
-        <Footer author={site.siteMetadata.author.name} noSubscribeForm />
-      )}
+      {!noFooter && <Footer author={site.siteMetadata.author.name} />}
     </div>
   )
 }

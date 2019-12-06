@@ -7,8 +7,7 @@ import { rhythm } from '../../lib/typography'
 import { bpMaxSM } from '../../lib/breakpoints'
 import Message from '../ConfirmMessage/Message'
 import { PleaseConfirmIllustration } from '../ConfirmMessage/Illustrations'
-
-const FORM_ID = process.env.CONVERTKIT_SIGNUP_FORM
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 const SubscribeSchema = Yup.object().shape({
   email_address: Yup.string()
@@ -19,14 +18,12 @@ const SubscribeSchema = Yup.object().shape({
 
 const PostSubmissionMessage = ({ response }) => {
   return (
-    <div>
-      <Message
-        illustration={PleaseConfirmIllustration}
-        title={`Great, one last thing...`}
-        body={`I just sent you an email with the confirmation link. 
+    <Message
+      illustration={PleaseConfirmIllustration}
+      title={`Great, one last thing...`}
+      body={`I just sent you an email with the confirmation link. 
           **Please check your inbox!**`}
-      />
-    </div>
+    />
   )
 }
 
@@ -38,23 +35,14 @@ class SignUp extends React.Component {
   async handleSubmit(values) {
     this.setState({ submitted: true })
     try {
-      const response = await fetch(
-        `https://app.convertkit.com/forms/${FORM_ID}/subscriptions`,
-        {
-          method: 'post',
-          body: JSON.stringify(values, null, 2),
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-        }
-      )
-
-      const responseJson = await response.json()
+      const result = await addToMailchimp(values.email_address, {
+        FNAME: values.first_name,
+      })
 
       this.setState({
         submitted: true,
-        response: responseJson,
+        response: result.result,
+        msg: result.msg,
         errorMessage: null,
       })
     } catch (error) {
@@ -101,7 +89,7 @@ class SignUp extends React.Component {
                     },
                     '.field-error': {
                       display: 'block',
-                      color: 'muted',
+                      color: 'secondary',
                       fontSize: '80%',
                     },
                     'input,label': {
@@ -144,6 +132,17 @@ class SignUp extends React.Component {
                       name="first_name"
                       placeholder="Jane"
                       type="text"
+                      sx={{
+                        boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 3px',
+                        fontFamily: 'Inter UI Regular',
+                        marginTop: 2,
+                        borderRadius: 4,
+                        borderWidth: 1,
+                        borderStyle: 'solid',
+                        borderColor: 'rgb(250, 250, 250)',
+                        borderImage: 'initial',
+                        padding: '5px 10px',
+                      }}
                     />
                   </label>
                   <label htmlFor="email">
@@ -167,20 +166,44 @@ class SignUp extends React.Component {
                       name="email_address"
                       placeholder="jane@acme.com"
                       type="email"
+                      sx={{
+                        boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 3px',
+                        fontFamily: 'Inter UI Regular',
+                        marginTop: 2,
+                        borderRadius: 4,
+                        borderWidth: 1,
+                        borderStyle: 'solid',
+                        borderColor: 'rgb(250, 250, 250)',
+                        borderImage: 'initial',
+                        padding: '5px 10px',
+                      }}
                     />
                   </label>
                   <button
                     data-element="submit"
                     type="submit"
                     disabled={isSubmitting}
+                    sx={{
+                      backgroundColor: 'primary',
+                      color: 'rgb(255, 255, 255)',
+                      cursor: 'pointer',
+                      borderRadius: 4,
+                      padding: '5px 10px',
+                      borderWidth: 1,
+                      borderStyle: 'solid',
+                      borderColor: 'secondary',
+                      borderImage: 'initial',
+                      transition: 'all 150ms ease 0s',
+                    }}
                   >
                     {!isSubmitting && 'Submit'}
                     {isSubmitting && 'Submitting...'}
                   </button>
                 </Form>
               )}
-              {submitted &&
-                !isSubmitting && <PostSubmissionMessage response={response} />}
+              {submitted && !isSubmitting && (
+                <PostSubmissionMessage response={response} />
+              )}
               {errorMessage && <div>{errorMessage}</div>}
             </>
           )}

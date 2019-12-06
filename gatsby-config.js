@@ -157,5 +157,11 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-theme-ui',
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: process.env.MAILCHIMP_URL,
+      },
+    },
   ],
 }
