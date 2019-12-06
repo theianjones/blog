@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import isEmpty from 'lodash'
 import { rhythm } from '../../lib/typography'
 import { bpMaxSM } from '../../lib/breakpoints'
 import Message from '../ConfirmMessage/Message'
@@ -38,12 +39,27 @@ class SignUp extends React.Component {
       const result = await addToMailchimp(values.email_address, {
         FNAME: values.first_name,
       })
+      let errorMessage
+      let submitted = true
+      let msg = result.msg
+      let response = result.result
+      let updateSubscriptionUrl
+      if (response === 'error') {
+        errorMessage = result.msg
+        submitted = false
 
+        if (errorMessage.includes('is already subscribed to list')) {
+          const URL_REGEX = /(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/gim
+          updateSubscriptionUrl = errorMessage.match(URL_REGEX)[0]
+          errorMessage = `${errorMessage.split('. ')[0]}.`
+        }
+      }
       this.setState({
-        submitted: true,
-        response: result.result,
-        msg: result.msg,
-        errorMessage: null,
+        submitted,
+        response,
+        msg,
+        errorMessage,
+        updateSubscriptionUrl,
       })
     } catch (error) {
       this.setState({
@@ -54,8 +70,8 @@ class SignUp extends React.Component {
   }
 
   render() {
-    const { submitted, response, errorMessage } = this.state
-    const successful = response && response.status === 'success'
+    const { response, errorMessage, updateSubscriptionUrl } = this.state
+    const successful = response === 'success'
 
     return (
       <div>
@@ -76,8 +92,12 @@ class SignUp extends React.Component {
             first_name: '',
           }}
           validationSchema={SubscribeSchema}
-          onSubmit={values => this.handleSubmit(values)}
-          render={({ errors, touched, isSubmitting }) => (
+          onSubmit={(values, actions) => {
+            this.handleSubmit(values)
+
+            actions.setSubmitting(!isEmpty(errorMessage))
+          }}
+          render={({ isSubmitting }) => (
             <>
               {!successful && (
                 <Form
@@ -201,10 +221,21 @@ class SignUp extends React.Component {
                   </button>
                 </Form>
               )}
-              {submitted && !isSubmitting && (
-                <PostSubmissionMessage response={response} />
+              {successful && <PostSubmissionMessage response={response} />}
+              {errorMessage && (
+                <div
+                  sx={{
+                    color: 'primary',
+                  }}
+                >
+                  {errorMessage}
+                </div>
               )}
-              {errorMessage && <div>{errorMessage}</div>}
+              {updateSubscriptionUrl && (
+                <Styled.a href={updateSubscriptionUrl}>
+                  Click here to update your profile
+                </Styled.a>
+              )}
             </>
           )}
         />
