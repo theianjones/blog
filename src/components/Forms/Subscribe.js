@@ -7,7 +7,6 @@ import isEmpty from 'lodash'
 import { rhythm } from '../../lib/typography'
 import { bpMaxSM } from '../../lib/breakpoints'
 import Message from '../ConfirmMessage/Message'
-import { PleaseConfirmIllustration } from '../ConfirmMessage/Illustrations'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 const SubscribeSchema = Yup.object().shape({
@@ -18,14 +17,7 @@ const SubscribeSchema = Yup.object().shape({
 })
 
 const PostSubmissionMessage = ({ response }) => {
-  return (
-    <Message
-      illustration={PleaseConfirmIllustration}
-      title={`Great, one last thing...`}
-      body={`I just sent you an email with the confirmation link. 
-          **Please check your inbox!**`}
-    />
-  )
+  return <Message title={`🥳🥳🥳`} body={`Thank you for subscribing!`} />
 }
 
 class SignUp extends React.Component {
