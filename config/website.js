@@ -5,7 +5,7 @@ module.exports = {
   siteTitleShort: `Ian's Blog`, // short_name for manifest
   siteUrl: `https://ianjones.us`, // Domain of your site. No trailing slash!
   siteLanguage: `en`, // Language Tag on <html> element
-  siteLogo: `images/logo.png`, // Used for SEO and manifest, path to your image you placed in the 'static' folder
+  siteLogo: `logo.png`, // Used for SEO and manifest, path to your image you placed in the 'static' folder
   siteDescription: `I work remotely building eggheadio.`,
   author: `Ian Jones`, // Author for schemaORGJSONLD
   organization: ``,
