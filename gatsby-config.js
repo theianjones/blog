@@ -163,5 +163,6 @@ module.exports = {
         endpoint: process.env.MAILCHIMP_URL,
       },
     },
+    'gatsby-remark-images',
   ],
 }
