@@ -5,10 +5,9 @@ import Img from 'gatsby-image'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
+import Markdown from 'react-markdown'
 
-const Blog = ({
-  data: { site, allMdx },
-}) => {
+const Blog = ({ data: { site, allMdx } }) => {
   const posts = allMdx.edges.filter(post => post !== undefined)
 
   return (
@@ -113,6 +112,18 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             slug
             keywords
+            banner {
+              childImageSharp {
+                fluid(
+                  maxWidth: 720
+                  traceSVG: { color: "#573ede" }
+                  quality: 75
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+            bannerCredit
           }
         }
       }

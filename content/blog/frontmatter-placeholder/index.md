@@ -6,6 +6,7 @@ description: 'this post has all of the right fields'
 categories: ['test']
 keywords: ['test']
 banner: './images/banner.jpg'
+bannerCredit: 'Credit the author!'
 published: false
 author: 'author'
 redirects:

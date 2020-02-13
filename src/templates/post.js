@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { jsx, Styled, Container } from 'theme-ui'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import SEO from 'components/SEO'
 import Layout from '../components/Layout'
 import Share from '../components/Share'
 import config from '../../config/website'
-
+import Markdown from 'react-markdown'
 export default function Post({
   data: { site, mdx },
   pageContext: { next, prev },
@@ -14,6 +15,9 @@ export default function Post({
   const author = mdx.frontmatter.author || config.author
   const date = mdx.frontmatter.date
   const title = mdx.frontmatter.title
+  const banner = mdx.frontmatter.banner
+  const bannerCredit = mdx.frontmatter.bannerCredit
+  console.log({ banner })
   return (
     <Layout site={site} frontmatter={mdx.frontmatter}>
       <SEO frontmatter={mdx.frontmatter} isBlogPost />
@@ -33,6 +37,23 @@ export default function Post({
           >
             {title}
           </Styled.h1>
+          {banner && (
+            <div
+              sx={{
+                textAlign: 'center',
+                p: { marginTop: 0 },
+                a: {
+                  color: 'primary',
+                },
+              }}
+            >
+              <Img
+                fluid={banner.childImageSharp.fluid}
+                alt={site.siteMetadata.keywords.join(', ')}
+              />
+              {bannerCredit ? <Markdown>{bannerCredit}</Markdown> : null}
+            </div>
+          )}
           <div
             sx={{
               display: 'flex',
@@ -79,6 +100,14 @@ export const pageQuery = graphql`
         author
         slug
         keywords
+        banner {
+          childImageSharp {
+            fluid(maxWidth: 720, traceSVG: { color: "#573ede" }, quality: 75) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+        bannerCredit
       }
       body
     }

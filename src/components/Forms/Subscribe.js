@@ -70,6 +70,7 @@ class SignUp extends React.Component {
             sx={{
               marginBottom: rhythm(1),
               marginTop: 0,
+              color: 'primary',
             }}
           >
             Join the Newsletter
