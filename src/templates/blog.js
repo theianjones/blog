@@ -92,7 +92,10 @@ export const pageQuery = graphql`
     site {
       ...site
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { published: { eq: true } } }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 300)

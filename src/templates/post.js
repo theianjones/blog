@@ -8,16 +8,19 @@ import Layout from '../components/Layout'
 import Share from '../components/Share'
 import config from '../../config/website'
 import Markdown from 'react-markdown'
-export default function Post({
-  data: { site, mdx },
-  pageContext: { next, prev },
-}) {
-  const author = mdx.frontmatter.author || config.author
-  const date = mdx.frontmatter.date
-  const title = mdx.frontmatter.title
-  const banner = mdx.frontmatter.banner
-  const bannerCredit = mdx.frontmatter.bannerCredit
-  console.log({ banner })
+export default function Post({ data: { site, mdx } }) {
+  const {
+    author = config.author,
+    date,
+    title,
+    banner,
+    slug,
+    bannerCredit,
+    editLink
+  } = mdx.fields
+  
+  const blogPostUrl = `${config.siteUrl}/${slug}`
+
   return (
     <Layout site={site} frontmatter={mdx.frontmatter}>
       <SEO frontmatter={mdx.frontmatter} isBlogPost />
@@ -76,9 +79,28 @@ export default function Post({
         </Container>
         {/* <SubscribeForm /> */}
       </article>
+      <Container mv="0" pv="0">
+        <p sx={{ textAlign: 'right', marginBottom: 0 }}>
+          <Styled.a
+            target="_blank"
+            rel="noopener noreferrer"
+            // using mobile.twitter.com because if people haven't upgraded
+            // to the new experience, the regular URL wont work for them
+            href={`https://mobile.twitter.com/search?q=${encodeURIComponent(
+              blogPostUrl
+            )}`}
+          >
+            Discuss on Twitter
+          </Styled.a>
+          <span sx={{ marginLeft: 10, marginRight: 10 }}>{` • `}</span>
+          <Styled.a target="_blank" rel="noopener noreferrer" href={editLink}>
+            Edit post on GitHub
+          </Styled.a>
+        </p>
+      </Container>
       <Container>
         <Share
-          url={`${config.siteUrl}/${mdx.frontmatter.slug}/`}
+          url={blogPostUrl}
           title={title}
           twitterHandle={config.twitterHandle}
         />
@@ -94,12 +116,13 @@ export const pageQuery = graphql`
       ...site
     }
     mdx(fields: { id: { eq: $id } }) {
-      frontmatter {
+      fields {
         title
         date(formatString: "MMMM DD, YYYY")
         author
         slug
         keywords
+        editLink
         banner {
           childImageSharp {
             fluid(maxWidth: 720, traceSVG: { color: "#573ede" }, quality: 75) {

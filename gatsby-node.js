@@ -158,6 +158,27 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
 
     createNodeField({
+      name: 'author',
+      node,
+      value: node.frontmatter.author || 'Ian Jones',
+    })
+
+    createNodeField({
+      name: 'bannerCredit',
+      node,
+      value: node.frontmatter.bannerCredit,
+    })
+
+    createNodeField({
+      name: 'editLink',
+      node,
+      value: `https://github.com/theianjones/blog/edit/master${node.fileAbsolutePath.replace(
+        __dirname,
+        ''
+      )}`,
+    })
+
+    createNodeField({
       name: 'redirects',
       node,
       value: node.frontmatter.redirects,
