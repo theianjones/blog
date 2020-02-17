@@ -100,3 +100,80 @@ Given this html:
 ```
 
 We can grab our `<li id="movie-2">Knives Out</li>` by calling `document.getElementById('movie-2')`.
+
+## Add a node to the HTML document
+
+Given the current state of our HTML:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Select an Element with document.querySelector</title>
+  </head>
+  <body>
+    <ul id="movies">
+      <li id="movie-1">Peanut Butter Falcon</li>
+      <li id="movie-2">Knives Out</li>
+    </ul>
+  </body>
+</html>
+```
+
+To add a movie to this list, we will need to first get the surrounding parent ul node from the document.
+
+`const moviesElem = document.getElementById('movies')`
+
+Now we need to actually create the element that we want to append to this list.
+
+```js
+const uncutGems = document.createElement('li')
+
+uncutGems.textContent = 'Uncut Gems'
+```
+
+We've created an element but it is not actually been added to our HTML. To do so we will call `moviesElem.appendChild(uncutGems)`
+
+In the browser, you will see that our movie has been added to our list.
+
+```html
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Select an Element with document.querySelector</title>
+  </head>
+  <body>
+    <ul id="movies">
+      <li id="movie-1">Peanut Butter Falcon</li>
+      <li id="movie-2">Knives Out</li>
+    </ul>
+
+    <script>
+      const moviesElem = document.getElementById('movies')
+      const uncutGems = document.createElement('li')
+      uncutGems.textContent = 'Uncut Gems'
+    </script>
+  </body>
+</html>
+```
+
+## Remove a node from the HTML document
+
+What if we wanted to remove an element from the document? What do you think needs to happen first?
+We always need to find the element we are operating on first. Lets remove "Knives out" from our list.
+
+`const knivesOut = document.getElementById('movie-2')`
+
+Now that we have a reference to the element we want to remove, we just need to call `knivesOut.remove()`.
+
+```html
+<script>
+  const knivesOut = document.getElementById('movie-2')
+  knivesOut.remove()
+</script>
+```
+
+Now when you reload the page, knives out won't be included in the list!
