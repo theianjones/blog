@@ -44,6 +44,8 @@ When you save and reload the page in the browser, you'll see that our JavaScript
 
 ## Select an Element with document.querySelector
 
+If you would prefer to watch this post, you can do so with this [community resource lesson on egghead.io](https://egghead.io/lessons/javascript-select-an-html-element-with-document-queryselector?pl=introduction-to-client-side-web-apis-72d0&af=ay44db)
+
 You may not always want to select the first child of an element. `document.querySelector` will match elements based on a pattern you give it. Say we have a page that looks like this:
 
 ```html
@@ -82,6 +84,8 @@ Now we can call `document.querySelector('#movie-2')` to get our `<li id="movie-2
 Note that this id should be unique in this DOM tree. You never want to give two elements the same id. This will cause some frustrating bugs!
 
 ## select an element with document.getElementById
+
+If you would prefer to watch this post, you can do so with this [community resource lesson on egghead.io](https://egghead.io/lessons/javascript-select-a-dom-element-with-document-getelementbyid?pl=introduction-to-client-side-web-apis-72d0&af=ay44db)
 
 Getting an element by id is so common that the `document` object has a helper function for us to use.
 
