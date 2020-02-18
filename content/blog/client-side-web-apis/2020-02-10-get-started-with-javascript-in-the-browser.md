@@ -7,9 +7,13 @@ categories: []
 keywords: ['DOM', 'JavaScript']
 published: true
 author: 'Ian Jones'
+banner: './images/01.jpg'
+bannerCredit: 'Photo by [Arnaud Mesureur](https://unsplash.com/photos/7EqQ1s3wIAI)'
 ---
 
 ## What is the DOM?
+
+If you would prefer to watch this post, you can do so with this [community resource lesson on egghead.io](https://egghead.io/lessons/javascript-wtf-is-the-dom?pl=introduction-to-client-side-web-apis-72d0&af=ay44db).
 
 DOM stands for Document Object Model. It's the interface that JavaScript uses to interact with the current HTML page. The DOM is a tree 🌲This means there is a root node that everything is nested under. In this example, you can see that we have a single paragraph tag with `Peanut Butter Falcon` in this inner text.
 
