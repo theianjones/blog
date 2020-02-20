@@ -163,9 +163,64 @@ In the browser, you will see that our movie has been added to our list.
       const moviesElem = document.getElementById('movies')
       const uncutGems = document.createElement('li')
       uncutGems.textContent = 'Uncut Gems'
+      moviesElem.appendChild(uncutGems)
     </script>
   </body>
 </html>
+```
+
+We don't want to hard code adding a movie in this script though. Lets create a button that will add a list element when we click it.
+
+```html
+<body>
+  <ul id="movies">
+    <li id="movie-1">Peanut Butter Falcon</li>
+    <li id="movie-2">Knives Out</li>
+  </ul>
+
+  <button>Add Uncut Gems</button>
+</body>
+```
+
+Now we can create a function in our script tag. We'll move the code we currently have into the body of that function.
+
+```html
+<script>
+  const addMovie = () => {
+    const moviesElem = document.getElementById('movies')
+    const uncutGems = document.createElement('li')
+    uncutGems.textContent = 'Uncut Gems'
+    moviesElem.appendChild(uncutGems)
+  }
+</script>
+```
+
+Now we have to tell the browser to run our function anytime a user clicks our button. We do this by adding an `onclick` attribute to our button element.
+
+```html
+<button onclick="addMovie()">Add Uncut Gems</button>
+```
+
+The other way to do this is to add an onclick attribute through our javascript. We would have to grab our button and and assign our function to `onclick` directly (If you added the `onclick` attribute to you button in the html, you will want to remove it before trying this way).
+
+```html
+<body>
+  <ul id="movies">
+    <li id="movie-1">Peanut Butter Falcon</li>
+    <li id="movie-2">Knives Out</li>
+  </ul>
+
+  <button>Add Uncut Gems</button>
+  <script>
+    const addMovieButton = document.querySelector('button')
+    addMovieButton.onclick = () => {
+      const moviesElem = document.getElementById('movies')
+      const uncutGems = document.createElement('li')
+      uncutGems.textContent = 'Uncut Gems'
+      moviesElem.appendChild(uncutGems)
+    }
+  </script>
+</body>
 ```
 
 ## Remove a node from the HTML document
