@@ -111,6 +111,8 @@ We can grab our `<li id="movie-2">Knives Out</li>` by calling `document.getEleme
 
 ## Add a node to the HTML document
 
+If you would prefer to watch this post, you can do so with this [community resource lesson on egghead.io](https://egghead.io/lessons/javascript-add-a-node-to-your-html-with-document-appendchild?pl=introduction-to-client-side-web-apis-72d0&af=ay44db)
+
 Given the current state of our HTML:
 
 ```html
