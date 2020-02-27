@@ -134,3 +134,144 @@ function App() {
 Lastly, if all of these checks return false, you can presume that the query loaded successfully.
 
 As you've seen before, you can access the data with `result.data` and display the result to your users!
+
+## Pass Parameters to useQuery
+
+[Watch "Pass Parameters to urql's useQuery React Hook" (community resource) on egghead.](https://egghead.io/lessons/graphql-pass-parameters-to-urql-s-usequery-react-hook?pl=introduction-to-urql-a-react-graphql-client-faaa2bf5&af=ay44db)
+
+We have this GraphQL Query:
+
+```js
+const courseQuery = `
+  query courses {
+    courses {
+      title
+    }
+  }
+`
+```
+
+To pass a parameter to a graphql query, we will add `(limit: 2)` to `courses`.
+
+```js
+const courseQuery = `
+  query courses {
+    courses(limit: 2) {
+      title
+    }
+  }
+`
+```
+
+This parameter will limit the number of courses that come back. Next we are going to pass an `offset` to this query. Offset is 0 based so we will pass get our first page of courses with `0`.
+
+```js
+const courseQuery = `
+  query courses {
+    courses(limit: 2, offset: 0) {
+      title
+    }
+  }
+`
+```
+
+Incrementing offset to `1` will give use the next page of courses and so on. We dont want to hard code our query like this though. We need to pass a variable from our React component to our GraphQL query. Just as a reminder, here's what our component looks like right now:
+
+```js
+function App() {
+  const [result] = useQuery({
+    query: courseQuery,
+  })
+
+  if (result.fetching) {
+    return 'Loading...'
+  } else if (result.error) {
+    return 'There was an error :('
+  }
+
+  return (
+    <div>
+      <h1>egghead courses</h1>
+      <button onClick={() => setOffset(offset + 2)}>Next Page</button>
+      {result && result.data && (
+        <ul style={{ listStyle: 'none' }}>
+          {result.data.courses.map(({ title }) => (
+            <li
+              key={title}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                fontSize: 16,
+                fontFamily: 'sans-serif',
+                marginBottom: 10,
+              }}
+            >
+              {title}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
+```
+
+The first thing we need to do is update our `coursesQuery` to accept a variable. We will declare an `$offset: Int` variable in our query declaration. GraphQL query variables are always denoted with a `$`. They also always need to be assigned a type. In this case, we are using an integer (`Int` is the syntax).
+
+```js
+const courseQuery = `
+  query courses($offset: Int) {
+  }
+`
+```
+
+Now that we have a parameter of `$offset` declared, we are going to pass this parameter to our query with `courses(offset: $offset)`.
+
+```js
+const courseQuery = `
+  query courses($offset: Int) {
+    courses(offset: $offset, limit: 2) {
+      title
+    }
+  }
+`
+```
+
+Inside of our component, we need to pass a `variables` object with a key of `offset` to our `useQuery` hook.
+
+```js
+const [result] = useQuery({
+  query: courseQuery,
+  variables: {
+    offset: 0,
+  },
+})
+```
+
+Urql will handle running the query for us every time this offset variable changes. So if we create some local component state and pass that state to our useQuery hook, any time this variable is updated Urql will run our query.
+
+```js
+const [offset, setOffset] = React.useState(0)
+const [result] = useQuery({
+  query: courseQuery,
+  variables: {
+    offset,
+  },
+})
+```
+
+Now lets increment the offset every time someone clicks our `Next Page` button.
+
+```js
+return (
+    <div>
+      <h1>egghead courses</h1>
+      <button onClick={() => setOffset(offset + 1)}>Next Page</button>
+      {result && result.data && (
+        //...
+      )}
+    </div>
+  )
+```
+
+And thats it! now we have pagination set up with a couple simple hooks.
