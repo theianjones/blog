@@ -275,3 +275,74 @@ return (
 ```
 
 And thats it! now we have pagination set up with a couple simple hooks.
+
+## Write a GraphQL Mutation using React Hooks with Urql
+
+[Watch "Write a GraphQL Mutation using React Hooks with Urql" (community resource) on egghead.](https://egghead.io/lessons/graphql-write-a-graphql-mutation-using-react-hooks-with-urql?pl=introduction-to-urql-a-react-graphql-client-faaa2bf5&af=ay44db)
+
+The first thing we need to do is `import {useMutation} from 'urql'`.
+
+We will call the `useMutation` hook in our component. This hook returns an array with the result in the first slot and a function to execute the mutation in the second.
+
+```js
+const App = () => {
+  const [res, executeMutation] = useMutation()
+}
+```
+
+Now we need to define a query that we are going to use. Here is the one I am going to use:
+
+```js
+const addCourse = `
+  mutation addCourse($slug: String!, $title: String!){
+    insert_courses(objects: {slug: $slug, title: $title}) {
+      returning {
+        title
+        slug
+      }
+    }
+  }
+```
+
+This query takes a slug and a title as a string (they are both required). The Hasura api I am using defines are `returning` object. So we will grab the title and slug off of the returned object.
+
+Now we can pass this query to our `useMutation` hook.
+
+```js
+const [res, executeMutation] = useMutation(addCourse)
+```
+
+Lets wire up the wire up the execution method to a button. `executeMutation` takes an object with keys `slug` and `title`. These are the variables we defined in our GraphQL query earlier. We are going to log our `res` variable to see whats returned.
+
+```js
+const App = () => {
+  const [res, executeMutation] = useMutation(addCourse)
+  console.log({ res })
+  return (
+    <button
+      onClick={() => executeMutation({ title: 'My Course', slug: 'my-course' })}
+    >
+      Create Course
+    </button>
+  )
+}
+```
+
+```js
+{res: {fetching: true, stale: false, error: undefined, data: undefined, extensions: undefined}}
+{res: {fetching: false, stale: false, data: {…}, error: undefined, extensions: undefined}}
+```
+
+You can see the result updates when the request starts and again when the query returns the data. This is what the data object looks like:
+
+```js
+console.log(res.data)
+{
+  insert_courses: {
+    returning: {
+      slug: 'my-course',
+      title: 'My Course'
+    }
+  }
+}
+```
