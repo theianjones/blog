@@ -58,8 +58,8 @@ export default function Index({ data: { site, allMdx } }) {
                 sx={{
                   color: 'white',
                   textDecoration: 'none',
-                  padding: '1rem',
-                  margin: '0 -1rem',
+                  padding: '.5rem',
+                  margin: '0 -0.5rem',
                   ':hover': {
                     backgroundColor: 'muted',
                   },
