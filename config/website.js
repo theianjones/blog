@@ -23,8 +23,8 @@ module.exports = {
   // Social component
   twitter: 'https://twitter.com/_jonesian/',
   twitterHandle: '@_jonesian',
-  github: 'https://github.com/ijones16/',
-  githubHandle: 'ijones16',
+  github: 'https://github.com/theianjones/',
+  githubHandle: 'theianjones',
   eggheadUrl: 'https://egghead.io/instructors/ian-jones',
   linkedin: '',
 }
