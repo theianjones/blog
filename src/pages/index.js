@@ -20,6 +20,7 @@ const Hero = ({ site: { siteMetadata } }) => (
           zIndex: 5,
           lineHeight: 1.5,
           margin: 0,
+          color: 'text',
         }}
       >
         My name is Ian Jones. I live and work remotely in Northern Virginia
@@ -56,12 +57,12 @@ export default function Index({ data: { site, allMdx } }) {
                 key={post.id}
                 as={Link}
                 sx={{
-                  color: 'white',
+                  color: 'text',
                   textDecoration: 'none',
                   padding: '.5rem',
                   margin: '0 -0.5rem',
                   ':hover': {
-                    backgroundColor: 'muted',
+                    backgroundColor: 'highlight',
                   },
                 }}
                 to={post.frontmatter.slug}

@@ -28,7 +28,6 @@ const Header = ({ siteImage }) => {
             aria-label="go to homepage"
             activeClassName="active"
             sx={{
-              color: 'white',
               textDecoration: 'none',
               width: 50,
               height: 50,
