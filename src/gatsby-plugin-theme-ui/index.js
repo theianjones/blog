@@ -1,9 +1,9 @@
-import { swiss, deep, funk, tosh } from '@theme-ui/presets'
+import { deep } from '@theme-ui/presets'
 export { default as components } from './components'
 import prism from '@theme-ui/prism/presets/theme-ui'
 
 export default {
-  initialColorMode: 'light',
+  initialColorMode: 'deep',
   useCustomProperties: true,
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
@@ -28,10 +28,7 @@ export default {
     secondary: '#30c',
     muted: '#f6f6f6',
     modes: {
-      swiss: swiss.colors,
       deep: deep.colors,
-      funk: funk.colors,
-      tosh: tosh.colors,
     },
   },
   styles: {

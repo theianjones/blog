@@ -35,7 +35,8 @@ export default ({
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
-        minHeight: '100vh',
+        maxWidth: 800,
+        margin: 'auto',
       }}
     >
       <Helmet
@@ -49,7 +50,7 @@ export default ({
         <noscript>This site runs best with JavaScript enabled.</noscript>
       </Helmet>
       <Header
-        siteTitle={site.siteMetadata.title}
+        siteImage={site.siteMetadata.image}
         dark={dark}
         bgColor={headerBg}
         headerColor={headerColor}
@@ -64,6 +65,7 @@ export const pageQuery = graphql`
   fragment site on Site {
     siteMetadata {
       title
+      image
       description
       author {
         name

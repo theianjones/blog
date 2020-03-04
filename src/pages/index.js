@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, Container } from 'theme-ui'
+import { jsx, Styled, Container, Flex } from 'theme-ui'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
@@ -7,10 +7,9 @@ import Link from '../components/Link'
 const Hero = ({ site: { siteMetadata } }) => (
   <section
     sx={{
-      bg: 'secondary',
+      bg: 'background',
       width: '100%',
       fontFamily: 'body',
-      padding: '20px 0 30px 0',
       display: 'flex',
     }}
   >
@@ -21,33 +20,12 @@ const Hero = ({ site: { siteMetadata } }) => (
           zIndex: 5,
           lineHeight: 1.5,
           margin: 0,
-          color: 'white',
         }}
       >
-        I live and work remotely in Arlington, VA building eggheadio.
+        My name is Ian Jones. I live and work remotely in Northern Virginia
+        building{' '}
+        <Styled.a href={siteMetadata.social.eggheadUrl}>egghead.io</Styled.a>.
       </Styled.h1>
-
-      <div
-        sx={{
-          a: {
-            marginRight: 10,
-            color: 'white',
-            ':hover': {
-              color: 'primary'
-            }
-          },
-        }}
-      >
-        <Styled.a href={siteMetadata.social.twitterUrl}>twitter</Styled.a>
-        <Styled.a href={siteMetadata.social.githubUrl}>github</Styled.a>
-        <Styled.a href={siteMetadata.social.eggheadUrl}>egghead</Styled.a>
-      </div>
-      <div
-        sx={{
-          height: 150,
-          overflow: 'hidden',
-        }}
-      />
     </Container>
   </section>
 )
@@ -58,39 +36,42 @@ export default function Index({ data: { site, allMdx } }) {
       <Layout site={site}>
         <Hero site={site} />
         <Container>
-          {allMdx.edges.map(({ node: post }) => (
-            <div
-              key={post.id}
-              sx={{
-                marginBottom: 40,
-              }}
-            >
-              <Styled.h2>
-                <Styled.a as={Link} to={post.frontmatter.slug} aria-label={`View ${post.frontmatter.title}`}>{post.frontmatter.title} </Styled.a>
-              </Styled.h2>
-              <p
-                sx={{
-                  marginBottom: 10,
-                  display: 'inline-block',
-                }}
-              >
-                {post.excerpt}{' '}
-                <Styled.a as={Link}
-                  to={post.frontmatter.slug}
-                  aria-label={`View ${post.frontmatter.title}`}
-                >
-                  Read Article →
-                </Styled.a>
-              </p>
-            </div>
-          ))}
-          <Styled.a as={Link}
-            to="/blog"
-            aria-label="Visit blog page"
-            
+          <Flex
+            sx={{
+              alignItems: 'center',
+              marginBottom: 10,
+              justifyContent: 'space-between',
+            }}
           >
-            View all articles
-          </Styled.a>
+            <Styled.h2 sx={{ margin: 0, color: 'primary' }}>
+              Latest Articles
+            </Styled.h2>
+            <Styled.a sx={{}} as={Link} to="/blog" aria-label="Visit blog page">
+              all articles
+            </Styled.a>
+          </Flex>
+          <Flex sx={{ flexDirection: 'column', marginBottom: 40 }}>
+            {allMdx.edges.map(({ node: post }) => (
+              <Styled.a
+                key={post.id}
+                as={Link}
+                sx={{
+                  color: 'white',
+                  textDecoration: 'none',
+                  padding: '1rem',
+                  margin: '0 -1rem',
+                  ':hover': {
+                    backgroundColor: 'muted',
+                  },
+                }}
+                to={post.frontmatter.slug}
+                aria-label={`View ${post.frontmatter.title}`}
+              >
+                {post.frontmatter.title}{' '}
+              </Styled.a>
+            ))}
+          </Flex>
+
           <hr />
         </Container>
       </Layout>
