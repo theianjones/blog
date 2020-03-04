@@ -1,9 +1,10 @@
 /** @jsx jsx */
-import { jsx, Styled, Container } from 'theme-ui'
+import { jsx, Styled, Container, useColorMode } from 'theme-ui'
 import { Link } from 'gatsby'
-import Button from './Button'
 
 const Header = ({ siteImage }) => {
+  const [colorMode, setColorMode] = useColorMode()
+  setColorMode('deep')
   return (
     <header
       sx={{
