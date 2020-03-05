@@ -12,8 +12,9 @@ export default function List({ collections = [] }) {
             alignItems: 'center',
             padding: '.5rem',
             margin: '0 -0.5rem',
+            borderRadius: 5,
             ':hover': {
-              backgroundColor: 'highlight',
+              backgroundColor: 'muted',
             },
           }}
         >

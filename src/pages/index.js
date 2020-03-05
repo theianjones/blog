@@ -65,8 +65,9 @@ export default function Index({ data: { site, allMdx } }) {
                   textDecoration: 'none',
                   padding: '.5rem',
                   margin: '0 -0.5rem',
+                  borderRadius: 5,
                   ':hover': {
-                    backgroundColor: 'highlight',
+                    backgroundColor: 'muted',
                   },
                 }}
                 to={post.frontmatter.slug}
