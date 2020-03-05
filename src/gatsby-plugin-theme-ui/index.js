@@ -3,7 +3,7 @@ export { default as components } from './components'
 import prism from '@theme-ui/prism/presets/theme-ui'
 
 export default {
-  initialColorMode: 'deep',
+  initialColorModeName: 'deep',
   useCustomProperties: true,
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
@@ -119,6 +119,13 @@ export default {
     },
     img: {
       maxWidth: '100%',
+    },
+  },
+  images: {
+    tiny: {
+      width: 25,
+      height: 25,
+      borderRadius: 99999,
     },
   },
   prism,

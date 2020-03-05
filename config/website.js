@@ -25,6 +25,6 @@ module.exports = {
   twitterHandle: '@_jonesian',
   github: 'https://github.com/theianjones/',
   githubHandle: 'theianjones',
-  eggheadUrl: 'https://egghead.io/instructors/ian-jones',
+  eggheadUrl: 'https://egghead.io/instructors/ian-jones?af=ay44db',
   linkedin: '',
 }

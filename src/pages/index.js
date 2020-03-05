@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import { jsx, Styled, Container, Flex } from 'theme-ui'
+import { jsx, Styled, Container, Flex, Box } from 'theme-ui'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
+import { EggheadCollections } from '../components/EggheadCollections'
 
 const Hero = ({ site: { siteMetadata } }) => (
   <section
@@ -35,12 +36,15 @@ export default function Index({ data: { site, allMdx } }) {
   return (
     <Styled.root>
       <Layout site={site}>
-        <Hero site={site} />
+        <Box sx={{ marginTop: 40 }}>
+          <Hero site={site} />
+        </Box>
         <Container>
           <Flex
             sx={{
               alignItems: 'center',
               marginBottom: 10,
+              marginTop: 30,
               justifyContent: 'space-between',
             }}
           >
@@ -71,6 +75,26 @@ export default function Index({ data: { site, allMdx } }) {
                 {post.frontmatter.title}{' '}
               </Styled.a>
             ))}
+          </Flex>
+          <Flex
+            sx={{
+              alignItems: 'center',
+              marginBottom: 10,
+              justifyContent: 'space-between',
+            }}
+          >
+            <Styled.h2 sx={{ margin: 0, color: 'primary' }}>
+              Latest egghead Collections
+            </Styled.h2>
+            <Styled.a
+              href={site.siteMetadata.social.eggheadUrl}
+              aria-label="Visit Ian's Collections"
+            >
+              all collections
+            </Styled.a>
+          </Flex>
+          <Flex sx={{ flexDirection: 'column', marginBottom: 40 }}>
+            <EggheadCollections />
           </Flex>
 
           <hr />
