@@ -346,3 +346,77 @@ console.log(res.data)
   }
 }
 ```
+
+## Write a GraphQL Subscription with React Hooks using Urql
+
+[Watch "Write a GraphQL Subscription with React Hooks using Urql" (community resource) on egghead.](https://egghead.io/lessons/graphql-write-a-graphql-subscription-with-react-hooks-using-urql?pl=introduction-to-urql-a-react-graphql-client-faaa2bf5&af=ay44db)
+
+Urql provides a `useSubscription` hook for us to subscribe to a GraphQL subscription. The first thing we need to do is `import {useSubscription} from 'urql'`.
+`useSubscription` takes an object, like `useQuery` this object expects a property of `query` and `variables` to be defined on it. In our particularly query, we are subscribing to the comments on a course. So we need to pass the slug of the course to our subscription query.
+
+```js
+function App(){
+  const course_slug = 'usesubscription-example'
+  useSubscription({
+    query: commentSubscriptionQuery,
+    variables: {course_slug}
+  })
+  return (
+    // ...
+  )
+}
+```
+
+Heres what our subscription query looks like:
+
+```js
+const commentSubscriptionQuery = `
+  subscription subscribeToComments($course_slug: String!) {
+    comments(where: {course_slug: {_eq: $course_slug}}){
+      text
+    }
+}`
+```
+
+`useSubscription` returns an array with the first element in that array being the `result`.
+`const [result] = useSubscription({})`
+Like the the result of `useQuery`, this result has a couple methods on it that are useful to use.
+We can use `result.error` to display any errors that the my have ran into.
+
+```js
+const commentSubscriptionQuery = `
+  subscription subscribeToComments($course_slug: String!) {
+    comments(where: {course_slug: {_eq: $course_slug}}){
+      text
+    }
+  }
+`
+
+function App(){
+  const course_slug = 'usesubscription-example'
+  const [result] useSubscription({
+    query: commentSubscriptionQuery,
+    variables: {course_slug}
+  })
+
+  if (result.error !== undefined) {
+    return <div>{res.error.message}</div>
+  }
+  return (
+    // ...
+  )
+}
+```
+
+Next, we need to tell the user if the query is fetching or if the data hasn't arrived yet.
+
+```js
+function App(){
+  // ...
+  if (!res.fetching && res.data === undefined) {
+    return <p>Loading...</p>
+  }
+  return (//...)
+```
+
+If `result` passes all of these checks, we know that we have `result.data.comments` and we can display them in a list.
