@@ -1,11 +1,9 @@
 /** @jsx jsx */
-import { jsx, Container, Styled } from 'theme-ui'
+import { jsx, Container, Styled, Flex } from 'theme-ui'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
-import Markdown from 'react-markdown'
 
 const Blog = ({ data: { site, allMdx } }) => {
   const posts = allMdx.edges.filter(post => post !== undefined)
@@ -14,67 +12,29 @@ const Blog = ({ data: { site, allMdx } }) => {
     <Layout site={site}>
       <SEO />
       <Container>
-        {posts.map(({ node: post }) => (
-          <div
-            key={post.id}
-            sx={{
-              ':not(:first-of-type)': {
-                marginTop: 20,
-              },
-              ':first-of-type': {
-                marginTop: 20,
-              },
-              backgroundColor: 'muted',
-              padding: [40, 20],
-              display: 'flex',
-              flexDirection: 'column',
-            }}
-          >
-            {post.frontmatter.banner && (
-              <div
-                sx={{
-                  padding: ['60px 60px 40px 60px', '20px'],
-                }}
-              >
-                <Styled.a
-                  as={Link}
-                  aria-label={`View ${post.frontmatter.title} article`}
-                  to={post.fields.slug}
-                >
-                  <Img sizes={post.frontmatter.banner.childImageSharp.fluid} />
-                </Styled.a>
-              </div>
-            )}
-            <Styled.h2
-              sx={{
-                marginTop: 30,
-                marginBottom: 10,
-              }}
-            >
-              <Styled.a
-                as={Link}
-                aria-label={`View ${post.frontmatter.title} article`}
-                to={post.fields.slug}
-              >
-                {post.frontmatter.title}
-              </Styled.a>
-            </Styled.h2>
-            <p
-              sx={{
-                marginTop: 10,
-              }}
-            >
-              {post.excerpt}
-            </p>{' '}
+        <Styled.h1>All Articles</Styled.h1>
+        <Flex sx={{ flexDirection: 'column', marginBottom: 40 }}>
+          {posts.map(({ node: post }) => (
             <Styled.a
+              key={post.id}
+              sx={{
+                color: 'text',
+                textDecoration: 'none',
+                padding: '.5rem',
+                margin: '0 -0.5rem',
+                borderRadius: 5,
+                ':hover': {
+                  backgroundColor: 'muted',
+                },
+              }}
               as={Link}
+              aria-label={`View ${post.fields.title} article`}
               to={post.fields.slug}
-              aria-label={`view "${post.frontmatter.title}" article`}
             >
-              Read Article →
+              {post.fields.title}
             </Styled.a>
-          </div>
-        ))}
+          ))}
+        </Flex>
         <hr
           sx={{
             margin: '50px 0',
@@ -98,35 +58,10 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 300)
           id
           fields {
             title
             slug
-            date
-          }
-          parent {
-            ... on File {
-              sourceInstanceName
-            }
-          }
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            slug
-            keywords
-            banner {
-              childImageSharp {
-                fluid(
-                  maxWidth: 720
-                  traceSVG: { color: "#573ede" }
-                  quality: 75
-                ) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
-            bannerCredit
           }
         }
       }
