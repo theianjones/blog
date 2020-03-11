@@ -16,11 +16,10 @@ export default function Post({ data: { site, mdx } }) {
     banner,
     slug,
     bannerCredit,
-    editLink
+    editLink,
   } = mdx.fields
-  
-  const blogPostUrl = `${config.siteUrl}/${slug}`
 
+  const blogPostUrl = `${config.siteUrl}/${slug}`
   return (
     <Layout site={site} frontmatter={mdx.frontmatter}>
       <SEO frontmatter={mdx.frontmatter} isBlogPost />
@@ -113,7 +112,22 @@ export default function Post({ data: { site, mdx } }) {
 export const pageQuery = graphql`
   query($id: String!) {
     site {
-      ...site
+      siteMetadata {
+        title
+        image
+        description
+        author {
+          name
+        }
+        social {
+          twitter
+          twitterUrl
+          github
+          githubUrl
+          eggheadUrl
+        }
+        keywords
+      }
     }
     mdx(fields: { id: { eq: $id } }) {
       fields {
