@@ -420,3 +420,63 @@ function App(){
 ```
 
 If `result` passes all of these checks, we know that we have `result.data.comments` and we can display them in a list.
+
+## Understand Urql's Exchanges and Request Policies
+
+[Watch "Understand Urql's Document Cache Exchange and Request Policies" (community resource) on egghead.](https://egghead.io/lessons/graphql-understand-urql-s-document-cache-exchange-and-request-policies?af=ay44db)
+
+When you are setting up an `urql` client, the client comes with default exchanges that your operations go through.
+
+These exchanges are `[dedupExchange, cacheExchange, fetchExchange]`. The order of the array matters.
+
+```js
+const client = new Client({
+  url: 'http://graphql.org/swapi-graphql/',
+  exchanges: [dedupExchange, cacheExchange, fetchExchange],
+})
+```
+
+In this case, the `dedupExchange` is the first exchange that graphql operation will pass through. This exchange has one job: to remove accidental duplicate requests. If you didn't manage your inputs correctly a user can cause many requests at once.
+
+The next exchange the operation goes through is the `cacheExchange`. This exchange caches any successful requests. This is a **Document Cache**[01]. This sort of cache takes the query you've written and the variables and hashes them together. Whenever `urql` finds an operation hash coming through that matches a hash in the `cacheExchange`, it will return that value based on the `requestPolicy`.
+
+The `requestPolicy` for the `cacheExchange` can be 1 of 4 things:
+
+- cache-first
+- cache-only
+- network-only
+- cache-and-network
+
+`cache-first` is the default policy. It tells urql that if an operation passed to the `cacheExchange` has been stored already, the data found should be returned and **the operation should not be passed to the `fetchExchange`**. If the operation hash hasn't been stored in the cache, then its passed to the `fetchExchange`
+
+`cache-only` operates like it sounds: it will only look in the cache for data matching the operation hash and will not pass the operation to the `fetchExchange.
+
+`network-only` will always skip the cache and pass the operation to the `fetchExchange`.
+
+`cache-and-network` will return any value in the cache and pass the operation to the `fetchExchange` even if there was a successful cache hit. The `fetchExchange` will then update the cache when the request comes back.
+
+To change the default `requestPolicy` you can pass one of these values through the `Client` configuration object.
+
+```js
+const client = new Client({
+  url: 'http://graphql.org/swapi-graphql/',
+  exchanges: [dedupExchange, cacheExchange, fetchExchange],
+  requestPolicy: 'cache-and-network',
+})
+```
+
+The last default exchange that your graphql operation passes through is the `fetchExchange`. This exchanges uses `fetch` to make an http request to the url defined on the client.
+
+Other exchanges to look at per the [documentation](https://formidable.com/open-source/urql/docs/concepts/exchanges/).
+
+- `retryExchange`: Allows operations to be retried
+- `devtoolsExchange`: Provides the ability to use the urql-devtools
+- `multipartFetchExchange`: Provides multipart file upload capability
+- `suspenseExchange` (experimental): Allows the use of React Suspense on the client-side with urql's built-in suspense mode
+- graph cache `cacheExchange`
+
+## Resources
+
+- https://formidable.com/open-source/urql/docs/basics/document-caching/
+- https://formidable.com/open-source/urql/docs/graphcache/
+- https://formidable.com/open-source/urql/docs/concepts/exchanges/
