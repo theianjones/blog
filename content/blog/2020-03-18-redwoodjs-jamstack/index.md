@@ -13,6 +13,8 @@ bannerCredit: 'Photo by [Vera Gorbunova](https://unsplash.com/photos/kEBAWaFk7qE
 
 ## Generate a Redwood Project
 
+[Watch "Generate a Redwood Project" on egghead.io.](https://egghead.io/lessons/redwoodjs-generate-a-redwood-project?pl=introduction-to-redwoodjs-full-stack-jamstack-framework-2b10&af=ay44db)
+
 First, you need to make sure your Node version is > 12. We're going to run `yarn create redwood-app ./my-redwood-project`
 
 Redwood will generate a project for us with this file structure.
