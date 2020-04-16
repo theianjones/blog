@@ -43,7 +43,7 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
         : seo.canonicalUrl
       const datePublished = isBlogPost ? postMeta.datePublished : false
       const { twitter } = seo.social
-      const ogImage = `https://pedantic-payne-0af77d.netlify.app/opengraph?title=${title}&author=${twitter}&v=0.0.2`
+      const ogImage = `https://pedantic-payne-0af77d.netlify.app/opengraph?title=${title}&author=${twitter}&v=0.0.3`
       return (
         <React.Fragment>
           <Helmet>
@@ -51,7 +51,6 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
             <title>{title}</title>
             <meta name="description" content={description} />
             <meta name="image" content={image} />
-
             {/* OpenGraph tags */}
             <meta property="og:url" content={url} />
             {isBlogPost ? <meta property="og:type" content="article" /> : null}
@@ -59,9 +58,11 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
             <meta property="og:description" content={description} />
             <meta property="og:image" content={ogImage} />
             <meta property="fb:app_id" content={seo.social.fbAppID} />
-
             {/* Twitter Card tags */}
-            <meta name="twitter:card" content="summary_large_image" />
+            <meta
+              name="twitter:card"
+              content={isBlogPost ? 'summary_large_image' : 'summary'}
+            />
             <meta name="twitter:creator" content={seo.social.twitter} />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />

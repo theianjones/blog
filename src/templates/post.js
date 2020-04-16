@@ -18,7 +18,6 @@ export default function Post({ data: { site, mdx } }) {
     bannerCredit,
     editLink,
   } = mdx.fields
-
   const blogPostUrl = `${config.siteUrl}/${slug}`
   return (
     <Layout site={site} frontmatter={mdx.fields}>
