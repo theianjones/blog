@@ -21,8 +21,8 @@ export default function Post({ data: { site, mdx } }) {
 
   const blogPostUrl = `${config.siteUrl}/${slug}`
   return (
-    <Layout site={site} frontmatter={mdx.frontmatter}>
-      <SEO frontmatter={mdx.frontmatter} isBlogPost />
+    <Layout site={site} frontmatter={mdx.fields}>
+      <SEO frontmatter={mdx.fields} isBlogPost />
       <article
         sx={{
           width: '100%',
