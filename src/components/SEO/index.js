@@ -54,8 +54,8 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
             {/* OpenGraph tags */}
             <meta property="og:url" content={url} />
             {isBlogPost ? <meta property="og:type" content="article" /> : null}
-            {/* <meta property="og:title" content={title} />
-            <meta property="og:description" content={description} /> */}
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
             <meta property="og:image" content={ogImage} />
             <meta property="fb:app_id" content={seo.social.fbAppID} />
             {/* Twitter Card tags */}
