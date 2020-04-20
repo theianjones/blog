@@ -1,15 +1,13 @@
 const path = require('path')
-
 const _ = require('lodash')
-const paginate = require('gatsby-awesome-pagination')
-const PAGINATION_OFFSET = 7
+const { createWiki } = require('./createWiki')
 
 const createPosts = (createPage, createRedirect, edges) => {
   edges.forEach(({ node }, i) => {
     const prev = i === 0 ? null : edges[i - 1].node
     const next = i === edges.length - 1 ? null : edges[i + 1].node
     const pagePath = node.fields.slug
-
+    console.log(pagePath)
     if (node.fields.redirects) {
       node.fields.redirects.forEach(fromPath => {
         createRedirect({
@@ -43,19 +41,22 @@ exports.createPages = ({ actions, graphql }) =>
         edges {
           node {
             id
+            body
+            excerpt(pruneLength: 250)
             parent {
               ... on File {
+                relativePath
                 name
                 sourceInstanceName
+                base
+                relativePath
               }
             }
-            excerpt(pruneLength: 250)
             fields {
               title
               slug
               date
             }
-            body
           }
         }
       }
@@ -71,7 +72,14 @@ exports.createPages = ({ actions, graphql }) =>
 
     const { edges } = data.allMdx
     const { createRedirect, createPage } = actions
-    createPosts(createPage, createRedirect, edges)
+    const wikiNodes = edges.filter(
+      ({ node }) => node.parent.sourceInstanceName === 'wiki'
+    )
+    createWiki(createPage, { wikiNodes })
+    const blogPosts = edges.filter(
+      ({ node }) => node.parent.sourceInstanceName === 'blog'
+    )
+    createPosts(createPage, createRedirect, blogPosts)
     createPage({
       path: '/blog',
       component: path.resolve(`src/templates/blog.js`),
