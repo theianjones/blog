@@ -54,8 +54,10 @@ export default {
       p: 0,
     },
     postlink: {
-      color: 'text',
       textDecoration: 'none',
+      color: 'text',
+    },
+    postlistitem: {
       padding: '.5rem',
       margin: '0 -0.5rem',
       borderRadius: 5,
