@@ -4,9 +4,16 @@ import { Helmet } from 'react-helmet'
 import Header from './header'
 
 export default ({ children, title }) => (
-  <Styled.root>
+  <Styled.root
+    sx={{
+      header: {
+        paddingX: 0,
+        marginX: 0,
+      },
+    }}
+  >
     <Helmet title={title} />
     <Header title={title} />
-    <Box>{children}</Box>
+    <article>{children}</article>
   </Styled.root>
 )
