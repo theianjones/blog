@@ -58,7 +58,6 @@ const BrainNote = ({ note }) => {
                   backgroundColor: 'highlight',
                   borderRadius: '.5rem',
                   display: 'none',
-                  height: 150,
                 }}
               >
                 <Styled.h5 sx={{ marginBottom: '1rem' }}>{ln.title}</Styled.h5>
