@@ -1,92 +1,123 @@
-import { deep } from '@theme-ui/presets'
-export { default as components } from './components'
 import prism from '@theme-ui/prism/presets/theme-ui'
-
 export default {
-  initialColorModeName: 'deep',
   useCustomProperties: true,
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  initialColorMode: 'system',
+  colors: {
+    text: 'hsl(210, 50%, 96%)',
+    background: 'hsl(230, 25%, 18%)',
+    primary: 'hsl(260, 100%, 80%)',
+    secondary: 'hsl(290, 100%, 80%)',
+    highlight: 'hsl(260, 20%, 40%)',
+    purple: 'hsl(290, 100%, 80%)',
+    muted: 'hsla(230, 20%, 0%, 20%)',
+    gray: 'hsl(210, 50%, 60%)',
+  },
   fonts: {
     body: 'system-ui, sans-serif',
     heading: 'inherit',
     monospace: 'Menlo, monospace',
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
   fontWeights: {
     body: 400,
     heading: 700,
-    bold: 700,
+    display: 900,
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    heading: 1.25,
   },
-  colors: {
-    text: '#000',
-    background: '#fff',
-    primary: '#07c',
-    secondary: '#30c',
-    muted: '#f6f6f6',
-    modes: {
-      deep: deep.colors,
+  sizes: {
+    container: 864,
+  },
+  textStyles: {
+    heading: {
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      lineHeight: 'heading',
+    },
+    display: {
+      variant: 'textStyles.heading',
+      fontSize: [5, 6, 7],
+      letterSpacing: '-0.04em',
+      mt: 3,
     },
   },
   styles: {
+    header: {
+      maxWidth: 'container',
+      mb: [4, 5, 6],
+    },
+    postlist: {
+      listStyleType: 'none',
+      m: 0,
+      p: 0,
+    },
+    postlink: {
+      textDecoration: 'none',
+      color: 'text',
+    },
+    postlistitem: {
+      padding: '.5rem',
+      margin: '0 -0.5rem',
+      borderRadius: 5,
+      ':hover': {
+        backgroundColor: 'muted',
+      },
+    },
+    navlink: {
+      color: 'text',
+      textDecoration: 'none',
+      fontWeight: 'heading',
+      textTransform: 'uppercase',
+      letterSpacing: '1px',
+    },
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
+      fontSize: [2, 3, 4],
+      textRendering: 'optimizeLegibility',
+      WebkitFontSmoothing: 'antialiased',
+      display: 'grid',
+      gridTemplateColumns: `minmax(1.2rem, 1fr) minmax(auto, 50ch) minmax(1.2rem, 1fr)`,
+      '*': {
+        gridColumn: 2,
+      },
+      h1: {
+        gridColumn: `1 / 4`,
+      },
     },
     h1: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 5,
+      variant: 'textStyles.display',
     },
     h2: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 4,
+      variant: 'textStyles.heading',
+      fontSize: 5,
     },
     h3: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 3,
+      variant: 'textStyles.heading',
+      fontSize: 4,
     },
     h4: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 2,
+      variant: 'textStyles.heading',
+      fontSize: 3,
     },
     h5: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 1,
+      variant: 'textStyles.heading',
+      fontSize: 2,
     },
     h6: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: '1.2',
-      fontWeight: 'heading',
-      fontSize: 0,
-    },
-    p: {
-      color: 'text',
-      fontFamily: 'body',
-      fontWeight: 'body',
-      lineHeight: 'body',
+      variant: 'textStyles.heading',
+      fontSize: 1,
     },
     a: {
       color: 'primary',
+      textDecorationColor: '#c0bfc0',
+      '&:hover': {
+        color: 'text',
+        textDecorationColor: '#000',
+      },
     },
     pre: {
       fontFamily: 'monospace',
@@ -98,27 +129,41 @@ export default {
       code: {
         color: 'inherit',
       },
-      variant: 'prism',
     },
     code: {
+      ...prism,
+    },
+    inlineCode: {
       fontFamily: 'monospace',
-      fontSize: 'inherit',
+      color: 'secondary',
+      bg: 'muted',
     },
     table: {
       width: '100%',
+      my: 4,
       borderCollapse: 'separate',
       borderSpacing: 0,
+      'th,td': {
+        textAlign: 'left',
+        py: '4px',
+        pr: '4px',
+        pl: 0,
+        borderColor: 'muted',
+        borderBottomStyle: 'solid',
+      },
     },
     th: {
-      textAlign: 'left',
-      borderBottomStyle: 'solid',
+      verticalAlign: 'bottom',
+      borderBottomWidth: '2px',
     },
     td: {
-      textAlign: 'left',
-      borderBottomStyle: 'solid',
+      verticalAlign: 'top',
+      borderBottomWidth: '1px',
     },
-    img: {
-      maxWidth: '100%',
+    hr: {
+      border: 0,
+      borderBottom: '1px solid',
+      borderColor: 'muted',
     },
   },
   images: {
@@ -128,5 +173,4 @@ export default {
       borderRadius: 99999,
     },
   },
-  prism,
 }
