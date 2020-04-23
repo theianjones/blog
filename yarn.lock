@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@aengusm/gatsby-theme-brain@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@aengusm/gatsby-theme-brain/-/gatsby-theme-brain-1.0.4.tgz#b1113301bad649358c311d01d81871cb7e77a576"
-  integrity sha512-iJo3P5cOyjSEod4stxwtRD+hucF1L2t6Gk1/x/xZY2rtUYXDHN87K+v5QuCjxhsRVRI8MuS5RhX07xkejpC3Ng==
+"@aengusm/gatsby-theme-brain@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@aengusm/gatsby-theme-brain/-/gatsby-theme-brain-1.0.5.tgz#8c46bd467845c1a7aae61e137fff92c2742862b5"
+  integrity sha512-lXPJMP11Utetq4mwseJVxuyJIZkwYT5gm3RWpq0aQG3PHLVL9C9ebIQ40LwIGXvsyk2/CXA56/mTdmUhQOcUaw==
   dependencies:
     "@mdx-js/mdx" "^1.5.8"
     "@mdx-js/react" "^1.5.8"
