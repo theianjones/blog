@@ -31,7 +31,7 @@ const SEO = ({ metaData = {}, isBlogPost }) => (
         : seo.canonicalUrl
       const datePublished = isBlogPost ? postMeta.datePublished : false
       const twitter = seo.twitterHandle
-      const params = qs.stringify({ title, author: twitter, v: '0.0.5' })
+      const params = qs.stringify({ title, author: twitter, v: '0.0.6' })
       const ogImage = `https://pedantic-payne-0af77d.netlify.app/opengraph?${params}`
 
       return (
