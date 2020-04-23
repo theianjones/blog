@@ -40,7 +40,7 @@ const SEO = ({ metaData = {}, isBlogPost }) => (
             {/* General tags */}
             <title>{title}</title>
             <meta name="description" content={description} />
-            <meta name="image" content={image} />
+            {/* <meta name="image" content={image} /> */}
             {/* OpenGraph tags */}
             <meta property="og:url" content={url} />
             {isBlogPost ? <meta property="og:type" content="article" /> : null}
