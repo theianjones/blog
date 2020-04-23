@@ -33,7 +33,7 @@ const BrainNote = ({ note }) => {
             marginBottom: '1rem',
           }}
         >
-          <Styled.h3 sx={{ color: 'highlight' }}>Refered in</Styled.h3>
+          <Styled.h3 sx={{ color: 'highlight' }}>Referred in</Styled.h3>
           <Box className="mb-4">{references}</Box>
           <Styled.hr />
         </Box>

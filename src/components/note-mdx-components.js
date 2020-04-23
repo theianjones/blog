@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from 'react'
 import { Styled, jsx } from 'theme-ui'
+import { isString } from 'lodash'
 
 const AnchorTag = (props) => {
   const tooltipRef = React.useRef(null)
@@ -24,14 +25,17 @@ const AnchorTag = (props) => {
       tooltipRef.current.style.display = 'none'
     }
   }
-  const linkWithoutBrackets = props.children.replace(/\[\[(.*?)\]\]/g, '$1')
+  let renderedLink = props.children
+  if (isString(props.children)) {
+    renderedLink = props.children.replace(/\[\[(.*?)\]\]/g, '$1')
+  }
   return (
     <Styled.a
       {...props}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {linkWithoutBrackets}
+      {renderedLink}
     </Styled.a>
   )
 }
