@@ -3,6 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import SchemaOrg from './schema-org'
+import qs from 'query-string'
 
 const SEO = ({ postData, metaData = {}, postImage, isBlogPost }) => (
   <StaticQuery
@@ -31,7 +32,9 @@ const SEO = ({ postData, metaData = {}, postImage, isBlogPost }) => (
         : seo.canonicalUrl
       const datePublished = isBlogPost ? postMeta.datePublished : false
       const twitter = seo.twitterHandle
-      const ogImage = `https://pedantic-payne-0af77d.netlify.app/opengraph?title=${title}&author=${twitter}&v=0.0.4`
+      const params = qs.stringify({ title, author: twitter, v: '0.0.5' })
+      const ogImage = `https://pedantic-payne-0af77d.netlify.app/opengraph?${params}`
+
       return (
         <>
           <Helmet>
