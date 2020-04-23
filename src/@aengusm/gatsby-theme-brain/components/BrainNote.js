@@ -40,7 +40,6 @@ const BrainNote = ({ note }) => {
       )
     }
   }
-
   return (
     <MDXProvider components={components}>
       <Layout title={`${note.title} - Ian's notes`}>
@@ -48,28 +47,25 @@ const BrainNote = ({ note }) => {
         <MDXRenderer>{note.childMdx.body}</MDXRenderer>
         {referenceBlock}
         {note.outboundReferenceNotes &&
-          note.outboundReferenceNotes
-            .filter((reference) => !!reference.childMdx.excerpt)
-            .map((ln, i) => (
-              <Portal key={ln.slug}>
-                <Box
-                  id={`notes/${ln.slug}`}
-                  sx={{
-                    position: 'absolute',
-                    width: '30rem',
-                    padding: '1rem',
-                    backgroundColor: 'highlight',
-                    borderRadius: '.5rem',
-                    display: 'none',
-                  }}
-                >
-                  <Styled.h5 sx={{ marginBottom: '1rem' }}>
-                    {ln.title}
-                  </Styled.h5>
-                  <Styled.p sx={{ margin: 0 }}>{ln.childMdx.excerpt}</Styled.p>
-                </Box>
-              </Portal>
-            ))}
+          note.outboundReferenceNotes.map((ln, i) => (
+            <Portal key={ln.slug}>
+              <Box
+                id={`notes/${ln.slug}`}
+                sx={{
+                  position: 'absolute',
+                  width: '30rem',
+                  padding: '1rem',
+                  backgroundColor: 'highlight',
+                  borderRadius: '.5rem',
+                  display: 'none',
+                  height: 150,
+                }}
+              >
+                <Styled.h5 sx={{ marginBottom: '1rem' }}>{ln.title}</Styled.h5>
+                <Styled.p sx={{ margin: 0 }}>{ln.childMdx.excerpt}</Styled.p>
+              </Box>
+            </Portal>
+          ))}
       </Layout>
     </MDXProvider>
   )
