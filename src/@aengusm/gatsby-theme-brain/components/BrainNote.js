@@ -10,7 +10,7 @@ const BrainNote = ({ note }) => {
   if (note.inboundReferences != null) {
     references = note.inboundReferences.map((ref) => (
       <Styled.li key={ref}>
-        <Styled.a href={ref}>{ref}</Styled.a>
+        <Styled.a href={`/notes/${ref}`}>{ref}</Styled.a>
       </Styled.li>
     ))
 
@@ -25,6 +25,7 @@ const BrainNote = ({ note }) => {
   }
   return (
     <Layout title={note.title}>
+      <Styled.h1>{note.title}</Styled.h1>
       <MDXRenderer>{note.childMdx.body}</MDXRenderer>
       {referenceBlock}
     </Layout>
