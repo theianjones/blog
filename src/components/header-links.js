@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { jsx, Styled } from 'theme-ui'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 export default ({ title }) => {
   const {
