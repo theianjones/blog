@@ -79,14 +79,8 @@ export default {
       fontSize: [2, 3, 4],
       textRendering: 'optimizeLegibility',
       WebkitFontSmoothing: 'antialiased',
-      display: 'grid',
-      gridTemplateColumns: `minmax(1.2rem, 1fr) minmax(auto, 50ch) minmax(1.2rem, 1fr)`,
-      '*': {
-        gridColumn: 2,
-      },
-      h1: {
-        gridColumn: `1 / 4`,
-      },
+      maxWidth: 'container',
+      margin: 'auto',
     },
     h1: {
       variant: 'textStyles.display',

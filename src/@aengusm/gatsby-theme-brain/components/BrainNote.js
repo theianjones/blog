@@ -1,34 +1,77 @@
+/** @jsx jsx */
 import React from 'react'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
+import { Styled, jsx, Box } from 'theme-ui'
+import Portal from '@reach/portal'
+import { MDXProvider } from '@mdx-js/react'
 import Layout from '../../../components/layout'
-import { Styled, jsx } from 'theme-ui'
+import components from '../../../components/note-mdx-components'
 
 const BrainNote = ({ note }) => {
-  console.log({ note })
   let references = []
   let referenceBlock
-  if (note.inboundReferences != null) {
-    references = note.inboundReferences.map((ref) => (
-      <Styled.li key={ref}>
-        <Styled.a href={`/notes/${ref}`}>{ref}</Styled.a>
-      </Styled.li>
+  if (note.inboundReferenceNotes != null) {
+    references = note.inboundReferenceNotes.map((reference) => (
+      <Styled.a
+        sx={{ textDecoration: 'none', color: 'highlight' }}
+        href={`${reference.slug}`}
+        key={reference.slug}
+      >
+        <Box sx={{ padding: 10 }}>
+          <Styled.h5 sx={{ margin: 0 }}>{reference.title}</Styled.h5>
+          <Styled.p>{reference.childMdx.excerpt}</Styled.p>
+        </Box>
+      </Styled.a>
     ))
-
     if (references.length > 0) {
       referenceBlock = (
-        <>
-          <Styled.h2>Linked References</Styled.h2>
-          <Styled.ul>{references}</Styled.ul>
-        </>
+        <Box
+          sx={{
+            backgroundColor: 'muted',
+            padding: '1rem',
+            borderRadius: '.5rem',
+            marginBottom: '1rem',
+          }}
+        >
+          <Styled.h3 sx={{ color: 'highlight' }}>Refered in</Styled.h3>
+          <Box className="mb-4">{references}</Box>
+          <Styled.hr />
+        </Box>
       )
     }
   }
+
   return (
-    <Layout title={note.title}>
-      <Styled.h1>{note.title}</Styled.h1>
-      <MDXRenderer>{note.childMdx.body}</MDXRenderer>
-      {referenceBlock}
-    </Layout>
+    <MDXProvider components={components}>
+      <Layout title={`${note.title} - Ian's notes`}>
+        <Styled.h1>{note.title}</Styled.h1>
+        <MDXRenderer>{note.childMdx.body}</MDXRenderer>
+        {referenceBlock}
+        {note.outboundReferenceNotes &&
+          note.outboundReferenceNotes
+            .filter((reference) => !!reference.childMdx.excerpt)
+            .map((ln, i) => (
+              <Portal key={ln.slug}>
+                <Box
+                  id={`notes/${ln.slug}`}
+                  sx={{
+                    position: 'absolute',
+                    width: '30rem',
+                    padding: '1rem',
+                    backgroundColor: 'highlight',
+                    borderRadius: '.5rem',
+                    display: 'none',
+                  }}
+                >
+                  <Styled.h5 sx={{ marginBottom: '1rem' }}>
+                    {ln.title}
+                  </Styled.h5>
+                  <Styled.p sx={{ margin: 0 }}>{ln.childMdx.excerpt}</Styled.p>
+                </Box>
+              </Portal>
+            ))}
+      </Layout>
+    </MDXProvider>
   )
 }
 
