@@ -11,10 +11,6 @@ const AnchorTag = (props) => {
     if (tooltipRef.current) {
       const { right, top, height } = e.target.getBoundingClientRect()
       const tooltipHeight = 150
-      console.log({
-        top: top + height / 2 - tooltipHeight / 2,
-        left: right + 8,
-      })
       tooltipRef.current.style.top = top + height / 2 - tooltipHeight / 2 + 'px'
       tooltipRef.current.style.left = right + 8 + 'px'
       tooltipRef.current.style.display = 'block'

@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import SchemaOrg from './schema-org'
 import qs from 'query-string'
 
-const SEO = ({ postData, metaData = {}, postImage, isBlogPost }) => (
+const SEO = ({ metaData = {}, isBlogPost }) => (
   <StaticQuery
     query={graphql`
       {
@@ -22,11 +22,10 @@ const SEO = ({ postData, metaData = {}, postImage, isBlogPost }) => (
       }
     `}
     render={({ site: { siteMetadata: seo } }) => {
-      const postMeta =
-        metaData || postData.childMarkdownRemark.frontmatter || {}
-      const title = isBlogPost ? postMeta.title : seo.title
+      const postMeta = metaData || {}
+      const title = postMeta.title || seo.title
       const description = postMeta.description || seo.description
-      const image = postImage ? `${seo.canonicalUrl}${postImage}` : seo.image
+      const image = seo.image
       const url = postMeta.slug
         ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}`
         : seo.canonicalUrl
