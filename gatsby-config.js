@@ -1,3 +1,8 @@
+let twitterHandle = `@_jonesian`
+let twitterUrl = `https://twitter.com/_jonesian/`
+let githubHandle = `theianjones`
+let githubUrl = `https://github.com/theianjones/`
+let eggheadUrl = `https://egghead.io/instructors/ian-jones?af=ay44db`
 module.exports = {
   siteMetadata: {
     // Used for the site title and SEO
@@ -7,23 +12,46 @@ module.exports = {
     // Used for SEO
     description: `I work remotely building eggheadio.`,
     // Used for social links in the root footer
-    eggheadUrl: "https://egghead.io/instructors/ian-jones?af=ay44db",
     canonicalUrl: `https://ianjones.us`,
     image: `./content/assets/logo.png`,
-    twitterHandle: "@_jonesian",
-    twitterUrl: `https://twitter.com/_jonesian/`,
-    githubHandle: `theianjones`,
-    githubUrl: `https://github.com/theianjones/`,
+    eggheadUrl,
+    twitterHandle,
+    twitterUrl,
+    githubHandle,
+    githubUrl,
+    social: [
+      {
+        name: 'Github',
+        url: githubUrl,
+      },
+      {
+        name: 'Twitter',
+        url: twitterUrl,
+      },
+      {
+        name: 'egghead.io',
+        url: eggheadUrl,
+      },
+    ],
   },
   plugins: [
     {
       resolve: `gatsby-theme-blog-core`,
       options: {
-        basePath: "/blog",
-        contentPath: "content/blog",
+        basePath: '/blog',
+        contentPath: 'content/blog',
       },
     },
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `@aengusm/gatsby-theme-brain`,
+      options: {
+        rootNote: 'notebook',
+        rootPath: 'notes',
+        //notesDirectory: 'content/notes/',
+        mdxOtherwiseConfigured: true,
+      },
+    },
   ],
 }
