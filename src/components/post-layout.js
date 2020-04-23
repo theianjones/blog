@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { Styled, jsx, Box } from 'theme-ui'
-import { Helmet } from 'react-helmet'
+import { Styled, jsx } from 'theme-ui'
+import SEO from './seo'
 import Header from './header'
 
-export default ({ children, title }) => (
+export default ({ children, post }) => (
   <Styled.root
     sx={{
       header: {
@@ -12,8 +12,8 @@ export default ({ children, title }) => (
       },
     }}
   >
-    <Helmet title={title} />
-    <Header title={title} />
+    <SEO metaData={post} isBlogPost />
+    <Header title={post.title} />
     <article>{children}</article>
   </Styled.root>
 )
