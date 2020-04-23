@@ -1,5 +1,5 @@
-import React from './node_modules/react'
-import { Helmet } from './node_modules/react-helmet'
+import React from 'react'
+import { Helmet } from 'react-helmet'
 
 export default React.memo(
   ({

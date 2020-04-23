@@ -1,11 +1,10 @@
 import path from 'path'
-import React from './node_modules/react'
-import { Helmet } from './node_modules/react-helmet'
-import { StaticQuery, graphql } from './node_modules/gatsby'
-import PropTypes from './node_modules/prop-types'
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
 import SchemaOrg from './schema-org'
 
-const SEO = ({ metaData = {}, isBlogPost }) => (
+const SEO = ({ postData, metaData = {}, postImage, isBlogPost }) => (
   <StaticQuery
     query={graphql`
       {
@@ -22,10 +21,11 @@ const SEO = ({ metaData = {}, isBlogPost }) => (
       }
     `}
     render={({ site: { siteMetadata: seo } }) => {
-      const postMeta = metaData || {}
+      const postMeta =
+        metaData || postData.childMarkdownRemark.frontmatter || {}
       const title = isBlogPost ? postMeta.title : seo.title
       const description = postMeta.description || seo.description
-      const image = seo.image
+      const image = postImage ? `${seo.canonicalUrl}${postImage}` : seo.image
       const url = postMeta.slug
         ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}`
         : seo.canonicalUrl
@@ -71,15 +71,5 @@ const SEO = ({ metaData = {}, isBlogPost }) => (
     }}
   />
 )
-
-SEO.propTypes = {
-  isBlogPost: PropTypes.bool,
-  postImage: PropTypes.string,
-}
-
-SEO.defaultProps = {
-  isBlogPost: false,
-  postImage: null,
-}
 
 export default SEO
