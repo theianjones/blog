@@ -1,11 +1,11 @@
-import path from "path"
-import React from "react"
-import { Helmet } from "react-helmet"
-import { StaticQuery, graphql } from "gatsby"
-import PropTypes from "prop-types"
-import SchemaOrg from "./schema-org"
+import path from 'path'
+import React from './node_modules/react'
+import { Helmet } from './node_modules/react-helmet'
+import { StaticQuery, graphql } from './node_modules/gatsby'
+import PropTypes from './node_modules/prop-types'
+import SchemaOrg from './schema-org'
 
-const SEO = ({ postData, metaData = {}, postImage, isBlogPost }) => (
+const SEO = ({ metaData = {}, isBlogPost }) => (
   <StaticQuery
     query={graphql`
       {
@@ -22,11 +22,10 @@ const SEO = ({ postData, metaData = {}, postImage, isBlogPost }) => (
       }
     `}
     render={({ site: { siteMetadata: seo } }) => {
-      const postMeta =
-        metaData || postData.childMarkdownRemark.frontmatter || {}
+      const postMeta = metaData || {}
       const title = isBlogPost ? postMeta.title : seo.title
       const description = postMeta.description || seo.description
-      const image = postImage ? `${seo.canonicalUrl}${postImage}` : seo.image
+      const image = seo.image
       const url = postMeta.slug
         ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}`
         : seo.canonicalUrl
@@ -49,7 +48,7 @@ const SEO = ({ postData, metaData = {}, postImage, isBlogPost }) => (
             {/* Twitter Card tags */}
             <meta
               name="twitter:card"
-              content={isBlogPost ? "summary_large_image" : "summary"}
+              content={isBlogPost ? 'summary_large_image' : 'summary'}
             />
             <meta name="twitter:creator" content={twitter} />
             <meta name="twitter:title" content={title} />
@@ -75,18 +74,11 @@ const SEO = ({ postData, metaData = {}, postImage, isBlogPost }) => (
 
 SEO.propTypes = {
   isBlogPost: PropTypes.bool,
-  postData: PropTypes.shape({
-    childMarkdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.any,
-      excerpt: PropTypes.any,
-    }),
-  }),
   postImage: PropTypes.string,
 }
 
 SEO.defaultProps = {
   isBlogPost: false,
-  postData: { childMarkdownRemark: {} },
   postImage: null,
 }
 
