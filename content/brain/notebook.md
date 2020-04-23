@@ -1,6 +1,6 @@
 ---
-title: "Ian's Notebook"
-aliases: ['Notebook']
+title: Ian's Notebook
+aliases: [Notebook]
 ---
 
 👋 These are my living notes. They include ideas that I am working on actively and reference material I am using for [[egghead]] courses or [[Blog]] posts.
