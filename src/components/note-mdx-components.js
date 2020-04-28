@@ -6,7 +6,8 @@ import { isString, isEmpty } from 'lodash'
 const EXTERNAL_LINK_REGEX = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/
 const AnchorTag = (props) => {
   const tooltipRef = React.useRef(null)
-  const isExternalLink = !isEmpty(props.href.match(EXTERNAL_LINK_REGEX))
+  const isExternalLink =
+    props.href && !isEmpty(props.href.match(EXTERNAL_LINK_REGEX))
   const onMouseEnter = (e) => {
     let tooltipHeight = 150
     tooltipRef.current = document.getElementById(props.href.replace(/^\//, ''))
