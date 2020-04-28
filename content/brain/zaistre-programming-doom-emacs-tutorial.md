@@ -3,6 +3,8 @@ title: Doom Emacs Zaistre Programming Tutorial
 aliases: [Zaistre Programming tutorial]
 ---
 
+[Link to youtube video series](https://www.youtube.com/watch?v=BRqjaN4-gGQ&list=PLhXZp00uXBk4np17N39WvB80zgxlZfVwj&index=10)
+
 ### Table of Contents
 
 1.  [Emacs Doom E02 - Projects with Projectile, File Explorer with Treemacs & EShell](#org4ac4b5c)
