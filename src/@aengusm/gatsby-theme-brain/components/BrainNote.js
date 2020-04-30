@@ -42,7 +42,11 @@ const BrainNote = ({ note }) => {
   }
   return (
     <MDXProvider components={components}>
-      <Layout title={`${note.title} - Ian's notes`}>
+      <Layout
+        title={`${note.title} - Ian's notes`}
+        excerpt={note.childMdx.excerpt}
+        isBlogPost
+      >
         <Styled.h1>{note.title}</Styled.h1>
         <MDXRenderer>{note.childMdx.body}</MDXRenderer>
         {referenceBlock}
