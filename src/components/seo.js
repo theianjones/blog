@@ -24,14 +24,14 @@ const SEO = ({ metaData = {}, isBlogPost }) => (
     render={({ site: { siteMetadata: seo } }) => {
       const postMeta = metaData || {}
       const title = postMeta.title || seo.title
-      const description = postMeta.description || seo.description
+      const description = postMeta.excerpt || seo.description
       const image = seo.image
       const url = postMeta.slug
         ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}`
         : seo.canonicalUrl
       const datePublished = isBlogPost ? postMeta.datePublished : false
       const twitter = seo.twitterHandle
-      const params = qs.stringify({ title, author: twitter, v: '0.0.6' })
+      const params = qs.stringify({ title, author: twitter, v: '0.0.7' })
       const ogImage = `https://pedantic-payne-0af77d.netlify.app/opengraph?${params}`
 
       return (

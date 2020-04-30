@@ -1,6 +1,6 @@
 ---
-title: Doom Emacs Zaistre Programming Tutorial
-aliases: [Zaistre Programming tutorial]
+title: Doom Emacs Zaiste Programming Tutorial
+aliases: [Zaiste Programming tutorial]
 ---
 
 [Link to youtube video series](https://www.youtube.com/watch?v=BRqjaN4-gGQ&list=PLhXZp00uXBk4np17N39WvB80zgxlZfVwj&index=10)
