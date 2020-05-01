@@ -12,6 +12,7 @@
     "@aengusm/gatsby-theme-brain": "^1.0.5",
     "@mdx-js/react": "^1.5.7",
     "@reach/portal": "^0.10.1",
+    "@theme-ui/presets": "^0.3.0",
     "@theme-ui/prism": "^0.3.0",
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
