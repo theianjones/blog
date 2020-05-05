@@ -1,0 +1,237 @@
+---
+title: '🧠 Own Your Second Brain: Set Up org-roam on Your Own Machine'
+date: 2020-05-05
+---
+
+## Table of Contents
+
+1.  [Installing Doom Emacs](#org99e85d1)
+2.  [Adding Org Roam To Your Config](#orga972198)
+3.  [Add Bidirectional Link Auto Complete](#org7ef714a)
+4.  [Fleeting Notes](#org59f47bf)
+5.  [Capture Links From the Web](#org8942a5c)
+6.  [Navigate your files easily](#orgb1c6d5e)
+7.  [Resources](#org31cfb44)
+
+First things first, I am new to emacs and the eco system so there are packages I&rsquo;m not aware of. This is my current set up that I am pretty happy with but if you read through it and see something that can be improved, please let me know on twitter at `@_jonesian` or on the Doom Emacs Discord server!
+
+<a id="org99e85d1"></a>
+
+## Installing Doom Emacs
+
+First things first, you need to install [Homebrew](https://brew.sh/). I try to install as many programs from homebrew as I can. This way I can reduce the overhead of keeping all my dependencies up to date.
+
+Once homebrew is installed, there are a couple utils you need for doom emacs.
+
+```sh
+brew install git ripgrep coreutils fd
+```
+
+I am on MacOS so I have to install the XCode developer tools
+
+```sh
+xcode-select --install
+```
+
+Some people have ran into issues directly installing emacs from brew ([Youtube explanation link](https://www.youtube.com/watch?v=Lg61ocfxk3c)) so we are going to use install it a slightly different way:
+
+```sh
+brew tap d12frosted/emacs-plus
+brew install emacs-plus
+```
+
+Now we need to actually install doom emacs. This is down through cloneing the git repo into your `~/.emacs.d` file that installing `emacs-plus` gave you.
+
+```sh
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+```
+
+After this, we want to run `doom install`. This command can be run from the recently cloned `doom-emacs` project.
+
+```sh
+~/.emacs.d/bin/doom install
+```
+
+You will want to add this doom command to your path because any time you update the config, you will need to run `doom refresh` to sync those changes.
+
+```sh
+# inside your .zshrc or .bash_profile
+    export PATH=$PATH:~/.emacs.d/bin
+```
+
+Finally, run `emacs` in your terminal and you should see the doom homepage.
+
+<a id="orga972198"></a>
+
+## Adding Org Roam To Your Config
+
+There are 3 main files that define your doom emacs config:
+
+- config.el
+- init.el
+- packages.el
+
+`doom emacs` comes with many different packages enabled as well as commented out packages that are popular options. Lets take a look, with emacs running, type `spc f p` and then select the `init.el` file. `spc f p` is a short cut to get to your config from anywhere in emacs.
+
+Scroll down to around line 138, you should see `org` on a line. `Org mode` comes with a `+ roam` flag, so it will install all of the dependencies for you. Change that line to look like this:
+
+```lisp
+(org +roam)
+```
+
+Now, lets head over to our `config.el` file: `spc f p`, then select `config.el`.
+
+This is the file that you configure all of your packages in. You can see that this is where you can set your fonts and a theme if you want to change them [heres a list of available themes](https://github.com/hlissner/emacs-doom-themes). This is where we will set the directory that we will create our org-roam files in. I have mine in `~/Desktop/03-resources/org-roam`.
+
+```lisp
+(setq org-roam-directory "~/Desktop/03-resources/org-roam")
+```
+
+Next we want to map some custom commands that you will use a lot in org-roam. To do this we will use the `after!` hook doom provides to set some customization up after the `org-roam` package is loaded.
+
+```lisp
+    (after! org-roam
+        (map! :leader
+            :prefix "n"
+            :desc "org-roam" "l" #'org-roam
+            :desc "org-roam-insert" "i" #'org-roam-insert
+            :desc "org-roam-switch-to-buffer" "b" #'org-roam-switch-to-buffer
+            :desc "org-roam-find-file" "f" #'org-roam-find-file
+            :desc "org-roam-show-graph" "g" #'org-roam-show-graph
+            :desc "org-roam-insert" "i" #'org-roam-insert
+            :desc "org-roam-capture" "c" #'org-roam-capture))
+```
+
+When you are in the `Org` major emacs mode, you will be able to type `spc n` and then any of these letters above to run those functions. For example, you can run `M-x org-roam` instead of `spc n l` to run the specific function.
+
+When you want to create a new page, you can run `spc n i` to insert a new topic page. This process is customizable with org capture templates so you can pre-fill any data you want based on a specific template.
+
+<a id="org7ef714a"></a>
+
+## Add Bidirectional Link Auto Complete
+
+Out of the box, org roam won&rsquo;t suggest links to you while you are typing. You need `company-org-roam`. First things first, we need to install the package. Head over to your `packages.el` file: `spc f p` and select `packages.el`.
+
+The maker of org-roam also made this package, we can install it straight from his github:
+
+```lisp
+(package! company-org-roam
+   :recipe (:host github :repo "jethrokuan/company-org-roam"))
+```
+
+Next, head over to your `config.el` and add the configuration:
+
+```lisp
+    (require 'company-org-roam)
+    (use-package company-org-roam
+      :when (featurep! :completion company)
+      :after org-roam
+      :config
+      (set-company-backend! 'org-mode '(company-org-roam company-yasnippet company-dabbrev)))
+```
+
+Now you will need to quit your current session, `doom refresh` and open emacs back up to get this to work. When you start typing, if you type the title or alias of an org roam note, a completion dialogue will show up and you can press `enter` to select the completion.
+
+<a id="org59f47bf"></a>
+
+## Fleeting Notes
+
+Roam Research puts you in a note that corresponds with the current day as a jumping off point for your notes. This same functionality can be accomplished with `org journal`.
+
+You can use `use-package` function that doom emacs provides to install `org journal`. `org journal` comes installed in doom emacs, we just need to configure it to and point it to the same directory as your `org roam` files. Open up your config (`spc f p config.el`) and add this `use-package` statement:
+
+```lisp
+    (use-package org-journal
+      :bind
+      ("C-c n j" . org-journal-new-entry)
+      :custom
+      (org-journal-dir "~/Desktop/03-resources/org-roam/")
+      (org-journal-date-prefix "#+TITLE: ")
+      (org-journal-file-format "%Y-%m-%d.org")
+      (org-journal-date-format "%A, %d %B %Y"))
+    (setq org-journal-enable-agenda-integration t)
+```
+
+Now you can enter a new journal for that day with `C-c n j` (`C` is the &ldquo;control&rdquo; key). You can see that we have configured what directory this journal entry is added to (in my case `~/Desktop/03-resources/org-roam/`). I like my Journal titles to be in &ldquo;Tuesday, 05 May 2020&rdquo; format.
+
+I create a lot of `TODO=s to my journal entries so =(setq org-journal-enable-agenda-integration t)` will automatically add these files to my agenda.
+
+<a id="org8942a5c"></a>
+
+## Capture Links From the Web
+
+I&rsquo;ve added a Chrome bookmarklet titled &ldquo;open in roam&rdquo; that will add any webpage I am on as a note in my Roam. [Here are the docs](https://org-roam.readthedocs.io/en/latest/roam_protocol/) on what an `org-protocol` is and how to set it up with `org-roam`. Make sure to follow the instructions for `Mac OS` installing `platypus`.
+
+I ran the command in the &ldquo;Note for emacs mac port&rdquo; section which totally broke `org-protocol` for me so don&rsquo;t do that ;)
+
+You will need to add `(require 'org-roam-protocol)` and add a `org-roam-ref-capture-templates` in your `config.el` heres mine:
+
+```lisp
+    (after! org-roam
+      (require 'org-roam-protocol)
+      (setq org-roam-ref-capture-templates
+            '(("r" "ref" plain (function org-roam-capture--get-point)
+               "%?"
+               :file-name "websites/${slug}"
+               :head "#+TITLE: ${title}
+    #+ROAM_KEY: ${ref}
+    - source :: ${ref}"
+               :unnarrowed t)))
+        (map! :leader
+            :prefix "n"
+            :desc "org-roam" "l" #'org-roam
+            :desc "org-roam-insert" "i" #'org-roam-insert
+            :desc "org-roam-switch-to-buffer" "b" #'org-roam-switch-to-buffer
+            :desc "org-roam-find-file" "f" #'org-roam-find-file
+            :desc "org-roam-show-graph" "g" #'org-roam-show-graph
+            :desc "org-roam-insert" "i" #'org-roam-insert
+            :desc "org-roam-capture" "c" #'org-roam-capture))
+```
+
+The `ROAM_KEY` is how `org-roam` knows what site links to what note.
+
+Now add the Chrome Bookmarklet. This is just adding a new bookmark. The title for mine is &ldquo;Open Roam Notes&rdquo; and the &ldquo;url&rdquo; is:
+
+```js
+javascript: (function () {
+  location.href =
+    'org-protocol://roam-ref?template=r&ref=' +
+    encodeURIComponent(location.href) +
+    '&title=' +
+    encodeURIComponent(document.title)
+})()
+```
+
+Now when you click the button, it will open or start the capture process for that specific `ROAM_KEY`.
+
+<a id="orgb1c6d5e"></a>
+
+## Navigate your files easily
+
+I was recommended using `deft` to navigate my `org roam` files. This can be done by adding `use-package` in your `config.el`.
+
+```lisp
+    (use-package deft
+      :after org
+      :bind
+      ("C-c n d" . deft)
+      :custom
+      (deft-recursive t)
+      (deft-use-filter-string-for-filename t)
+      (deft-default-extension "org")
+      (deft-directory "~/Desktop/03-resources/org-roam/"))
+```
+
+The important part is setting the directory to your `org-roam` directory. Now you can get a list of your most recently edited `org-roam` files.
+
+Reach out to me on twitter at @<sub>jonesian</sub> or on the Doom Emacs Discord server if you have any questions or comments!
+
+<a id="org31cfb44"></a>
+
+## Resources
+
+- [Zaiste Programming Emacs Tutorial (Highly Recommended)](https://www.ianjones.us/notes/zaistre-programming-doom-emacs-tutorial)]
+- [Org Roam Docs](https://org-roam.readthedocs.io/en/latest/)
+- [Great Overview Video of Org Roam](https://www.youtube.com/watch?v=Lg61ocfxk3c)
+- [Doom emacs docs](https://github.com/hlissner/doom-emacs/blob/develop/docs/index.org)
+- [Doom emacs discord server](https://discord.com/invite/qvGgnVx)
