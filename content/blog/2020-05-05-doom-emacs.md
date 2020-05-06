@@ -19,6 +19,8 @@ First things first, I am new to emacs and the eco system so there are packages I
 
 ## Installing Doom Emacs
 
+These are instructions for Mac/Linux, if you're on windows I recommend looking at [ervingad's window instructions here](https://github.com/earvingad/configfiles/blob/master/emacs/DoomEmacsWindows.org).
+
 First things first, you need to install [Homebrew](https://brew.sh/). I try to install as many programs from homebrew as I can. This way I can reduce the overhead of keeping all my dependencies up to date.
 
 Once homebrew is installed, there are a couple utils you need for doom emacs.
@@ -86,6 +88,8 @@ This is the file that you configure all of your packages in. You can see that th
 ```lisp
 (setq org-roam-directory "~/Desktop/03-resources/org-roam")
 ```
+
+You can access all of the Roam commands with `spc n r`. It's nice to bind your own to skip that one character so lets add some custom key mappings.
 
 Next we want to map some custom commands that you will use a lot in org-roam. To do this we will use the `after!` hook doom provides to set some customization up after the `org-roam` package is loaded.
 
@@ -235,3 +239,4 @@ Reach out to me on twitter at @<sub>jonesian</sub> or on the Doom Emacs Discord 
 - [Great Overview Video of Org Roam](https://www.youtube.com/watch?v=Lg61ocfxk3c)
 - [Doom emacs docs](https://github.com/hlissner/doom-emacs/blob/develop/docs/index.org)
 - [Doom emacs discord server](https://discord.com/invite/qvGgnVx)
+- [Doom emacs windows installation instructions](https://github.com/earvingad/configfiles/blob/master/emacs/DoomEmacsWindows.org)
