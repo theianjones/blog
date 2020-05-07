@@ -114,6 +114,8 @@ When you want to create a new page, you can run `spc n i` to insert a new topic 
 
 ## Add Bidirectional Link Auto Complete
 
+If you are using the `(org +roam)` flag in Doom emacs, then you dont need to do this set up, its already done for you.
+
 Out of the box, org roam won&rsquo;t suggest links to you while you are typing. You need `company-org-roam`. First things first, we need to install the package. Head over to your `packages.el` file: `spc f p` and select `packages.el`.
 
 The maker of org-roam also made this package, we can install it straight from his github:
@@ -168,11 +170,12 @@ I&rsquo;ve added a Chrome bookmarklet titled &ldquo;open in roam&rdquo; that wil
 
 I ran the command in the &ldquo;Note for emacs mac port&rdquo; section which totally broke `org-protocol` for me so don&rsquo;t do that ;)
 
-You will need to add `(require 'org-roam-protocol)` and add a `org-roam-ref-capture-templates` in your `config.el` heres mine:
+If you are using the `(org +roam)` flag, you wont need to add `(require 'org-roam-protocol)` to your `org-roam` config.
+
+Add a `org-roam-ref-capture-templates` in your `config.el` heres mine:
 
 ```lisp
     (after! org-roam
-      (require 'org-roam-protocol)
       (setq org-roam-ref-capture-templates
             '(("r" "ref" plain (function org-roam-capture--get-point)
                "%?"
@@ -180,16 +183,7 @@ You will need to add `(require 'org-roam-protocol)` and add a `org-roam-ref-capt
                :head "#+TITLE: ${title}
     #+ROAM_KEY: ${ref}
     - source :: ${ref}"
-               :unnarrowed t)))
-        (map! :leader
-            :prefix "n"
-            :desc "org-roam" "l" #'org-roam
-            :desc "org-roam-insert" "i" #'org-roam-insert
-            :desc "org-roam-switch-to-buffer" "b" #'org-roam-switch-to-buffer
-            :desc "org-roam-find-file" "f" #'org-roam-find-file
-            :desc "org-roam-show-graph" "g" #'org-roam-show-graph
-            :desc "org-roam-insert" "i" #'org-roam-insert
-            :desc "org-roam-capture" "c" #'org-roam-capture))
+               :unnarrowed t))))
 ```
 
 The `ROAM_KEY` is how `org-roam` knows what site links to what note.
@@ -212,7 +206,11 @@ Now when you click the button, it will open or start the capture process for tha
 
 ## Navigate your files easily
 
-I was recommended using `deft` to navigate my `org roam` files. This can be done by adding `use-package` in your `config.el`.
+I was recommended using `deft` to navigate my `org roam` files. This can be done by using the `deft` flag in your `init.el` (this option is disabled by default).
+
+Or you can install it manually:
+
+This can be done by adding `use-package` in your `config.el`.
 
 ```lisp
     (use-package deft
