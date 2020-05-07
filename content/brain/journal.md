@@ -5,6 +5,10 @@ aliases: [Journal]
 
 Daily thoughts 🌱
 
+## Thursday, May 7, 2020
+
+Joined a [[Digital Garden]] group [[Anne-Laure Le Cunff]] put together. We discussed quite a few examples today.
+
 ## Tuesday, April 28, 2020
 
 Learning [[Doom Emacs]] with [[Zaistre Programming Tutorial]]
