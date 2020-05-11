@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react'
-import { Styled, jsx, Box } from 'theme-ui'
-import Portal from '@reach/portal'
+import { Styled, jsx } from 'theme-ui'
+import { Link } from 'gatsby'
 import { isString, isEmpty } from 'lodash'
 import PopOver from './pop-over'
 const EXTERNAL_LINK_REGEX = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/
@@ -57,11 +57,12 @@ const AnchorTag = ({ href, children, ...restProps }) => {
     <>
       <Styled.a
         {...restProps}
-        href={href}
+        to={href}
         onMouseEnter={showToolTip}
         onMouseLeave={hideToolTip}
         onFocus={showToolTip}
         onBlur={hideToolTip}
+        as={Link}
       >
         {renderedLink}
       </Styled.a>

@@ -1,7 +1,11 @@
 /** @jsx jsx */
 import { Styled, jsx, Box } from 'theme-ui'
-
+import { Link } from 'gatsby'
 export default function ({ references = [] }) {
+  if (!references || references.length === 0) {
+    return null
+  }
+  console.log({ references })
   return (
     <Box
       sx={{
@@ -15,8 +19,9 @@ export default function ({ references = [] }) {
       <Box className="mb-4">
         {references.map((reference) => (
           <Styled.a
+            as={Link}
             sx={{ textDecoration: 'none', color: 'highlight' }}
-            href={`${reference.slug}`}
+            to={`${reference.slug}`}
             key={reference.slug}
           >
             <Box sx={{ padding: 10 }}>

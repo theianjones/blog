@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import BrainNote from '../components/BrainNote'
 
-export default (props) => {
-  return <BrainNote note={props.data.brainNote} />
+export default ({ data, location }) => {
+  return <BrainNote note={data.brainNote} location={location} />
 }
 
 export const query = graphql`
