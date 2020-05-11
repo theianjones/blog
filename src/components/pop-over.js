@@ -4,8 +4,10 @@ export default function ({ reference }) {
   return (
     <div
       sx={{
-        background: 'highlight',
+        backgroundColor: 'highlight',
+        opacity: 1,
         padding: 16,
+        color: 'muted',
         width: 'auto',
         borderRadius: '.3rem',
       }}
