@@ -14,6 +14,7 @@
     "@reach/portal": "^0.10.1",
     "@theme-ui/presets": "^0.3.0",
     "@theme-ui/prism": "^0.3.0",
+    "@tippyjs/react": "^4.0.2",
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-react-helmet": "^3.2.4",
