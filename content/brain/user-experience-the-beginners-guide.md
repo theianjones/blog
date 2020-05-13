@@ -1,6 +1,6 @@
 ---
 title: User Experience The Beginner's Guide
-aliases: [org roam server]
+aliases: [ux beginners guide]
 ---
 
 - tags :: [[User Experience]]
