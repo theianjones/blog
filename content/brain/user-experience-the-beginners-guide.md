@@ -1,7 +1,9 @@
 ---
-title: User Experient: The Beginner's Guide
+title: User Experience The Beginner's Guide
 aliases: [org roam server]
 ---
+
+- tags :: [[User Experience]]
 
 ## Table of Contents
 
