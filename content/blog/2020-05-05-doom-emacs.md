@@ -118,7 +118,7 @@ When you want to create a new page, you can run `spc n i` to insert a new topic 
 
 If you are using the `(org +roam)` flag in Doom emacs, then you dont need to do this set up, its already done for you.
 
-Out of the box, org roam won&rsquo;t suggest links to you while you are typing. You need `company-org-roam`. First things first, we need to install the package. Head over to your `packages.el` file: `spc f p` and select `packages.el`.
+If you didnt use the `(+roam)` flag, org roam won't suggest links to you while you are typing. You need `company-org-roam`. You'll need to install the package. Head over to your `packages.el` file: `spc f p` and select `packages.el`.
 
 The maker of org-roam also made this package, we can install it straight from his github:
 
