@@ -6,7 +6,7 @@ aliases: [org roam bibtex]
 ## Table of Contents
 
 1.  [Introduction](/notes/org-roam-bibtex#org726c9f4)
-2.  [Zotera for Bibliography management](/notes/org-roam-bibtex#org029cb5a)
+2.  [Zotero for Bibliography management](/notes/org-roam-bibtex#org029cb5a)
 3.  [Set up Org Noter](/notes/org-roam-bibtex#orge327d8c)
 4.  [Set up Helm Bibtex](/notes/org-roam-bibtex#orgb716c96)
 5.  [Set up Org Ref](/notes/org-roam-bibtex#orgc11f057)
@@ -32,7 +32,7 @@ Warning: There is a lot going on with this configuration. This assumes that you 
 
 <a id="org029cb5a"></a>
 
-## Zotera for Bibliography management
+## Zotero for Bibliography management
 
 [Zotero](https://www.zotero.org/) is an application that has a lot of tools built in for managing bibliographies. I like it because it will fetch meta data from pdfs you link it automatically (if its available).
 
