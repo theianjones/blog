@@ -5,7 +5,6 @@ export default function ({ references = [] }) {
   if (!references || references.length === 0) {
     return null
   }
-  console.log({ references })
   return (
     <Box
       sx={{

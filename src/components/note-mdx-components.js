@@ -24,6 +24,9 @@ const ExternalAnchorTag = ({ href, ...restProps }) => {
 }
 
 const AnchorTag = ({ href, children, popups, ...restProps }) => {
+  if (!href && !children) {
+    return <a href={href} children={children} {...restProps} />
+  }
   const isExternalLink = href && !isEmpty(href.match(EXTERNAL_LINK_REGEX))
   let renderedLink = children
   if (isString(children)) {
