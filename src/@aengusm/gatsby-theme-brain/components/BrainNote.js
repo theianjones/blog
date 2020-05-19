@@ -12,8 +12,19 @@ import get from 'lodash/get'
 
 const BrainNote = ({ note, location }) => {
   const inboundReferenceNotes = get(note, 'inboundReferenceNotes') || []
+  const outboundReferenceNotes = get(note, 'outboundReferenceNotes') || []
+
+  const popups = {}
+  if (outboundReferenceNotes) {
+    outboundReferenceNotes.forEach((ln, i) => {
+      popups[ln.slug] = <PopOver reference={ln} />
+    })
+  }
+
+  const AnchorTag = (props) => <components.a {...props} popups={popups} />
+
   return (
-    <MDXProvider components={components}>
+    <MDXProvider components={{ a: AnchorTag }}>
       <Layout
         title={`${note.title} - Ian's notes`}
         excerpt={note.childMdx.excerpt}
