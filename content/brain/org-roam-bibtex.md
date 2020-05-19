@@ -158,7 +158,7 @@ Org ref lets you manage your `cite:` links. We use our `zot_bib` and `org_notes`
              org-ref-notes-function 'orb-edit-notes
         ))
 
-Its important to note (as [rgoswami.me](https://rgoswami.me/posts/org-note-workflow/#org-ref)) notes that org-refs template options are not the same (note that I didn&rsquo;t write this template and just copy pasta&rsquo;d). Heres a cheatsheet:
+Its important to note (as [rgoswami.me](https://rgoswami.me/posts/org-note-workflow/#org-ref) does) that org-refs template options are not the same (note that I didn&rsquo;t write this template and just copy pasta&rsquo;d). Heres a cheatsheet:
 
 ```
 In the format, the following percent escapes will be expanded.
