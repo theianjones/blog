@@ -9,20 +9,18 @@ aliases: [ux beginners guide 1]
 
 ## Table of Contents
 
-1.  [Notes](/notes/user-experience-the-beginners-guide#orgfd0eb24)
-    1.  [Lesson 1](/notes/user-experience-the-beginners-guide#orge6dbebf)
-        1.  [What I learned in a tweet](/notes/user-experience-the-beginners-guide#org3dc8875)
-        2.  [Top 3 takeaways](/notes/user-experience-the-beginners-guide#orgbcf27d4)
-        3.  [Practical Appliation](/notes/user-experience-the-beginners-guide#orgc0f7480)
-        4.  [1.1](/notes/user-experience-the-beginners-guide#orge2f2f4c)
-        5.  [What the @#\$% is UX](/notes/user-experience-the-beginners-guide#org1bdc57d)
-        6.  [1.2 quiz](/notes/user-experience-the-beginners-guide#orgb1f47e1)
-        7.  [1.3 Why is UX Design so Important](/notes/user-experience-the-beginners-guide#org1d46945)
-        8.  [1.4 Mind the Empathy Gap](/notes/user-experience-the-beginners-guide#orgb8d57a5)
-        9.  [1.5 Usability A part of the User Experience](/notes/user-experience-the-beginners-guide#org7147022)
-        10. [1.6 Human Centered Design](/notes/user-experience-the-beginners-guide#org4ea402e)
-        11. [summarize this lesson for Ux Anti-Book Club Meeting](/notes/user-experience-the-beginners-guide#org50fd689)
-        12. [Meeting notes](/notes/user-experience-the-beginners-guide#orge5912b3)
+1.  [What I learned in a tweet](/notes/user-experience-beginners-guide-lesson-1#org3dc8875)
+2.  [Top 3 takeaways](/notes/user-experience-beginners-guide-lesson-1#orgbcf27d4)
+3.  [Practical Appliation](/notes/user-experience-beginners-guide-lesson-1#orgc0f7480)
+4.  [1.1](/notes/user-experience-beginners-guide-lesson-1#orge2f2f4c)
+5.  [What the @#\$% is UX](/notes/user-experience-beginners-guide-lesson-1#org1bdc57d)
+6.  [1.2 quiz](/notes/user-experience-beginners-guide-lesson-1#orgb1f47e1)
+7.  [1.3 Why is UX Design so Important](/notes/user-experience-beginners-guide-lesson-1#org1d46945)
+8.  [1.4 Mind the Empathy Gap](/notes/user-experience-beginners-guide-lesson-1#orgb8d57a5)
+9.  [1.5 Usability A part of the User Experience](/notes/user-experience-beginners-guide-lesson-1#org7147022)
+10. [1.6 Human Centered Design](/notes/user-experience-beginners-guide-lesson-1#org4ea402e)
+11. [summarize this lesson for Ux Anti-Book Club Meeting](/notes/user-experience-beginners-guide-lesson-1#org50fd689)
+12. [Meeting notes](/notes/user-experience-beginners-guide-lesson-1#orge5912b3)
 
 - **tags:** [[User Experience]]
 
@@ -38,7 +36,7 @@ Designers need to take into account [[Psychology]] when designing things
 
 <a id="orgfd0eb24"></a>
 
-# Notes
+## Notes
 
 <a id="orge6dbebf"></a>
 

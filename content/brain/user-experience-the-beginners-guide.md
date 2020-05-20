@@ -7,4 +7,5 @@ aliases: [ux beginners guide]
 
 ## Notes
 
-[[User Experience The Beginner's Guide Lesson 1]]
+- [[User Experience The Beginner's Guide Lesson 1]]
+- [[User Experience The Beginner's Guide Lesson 2]]
