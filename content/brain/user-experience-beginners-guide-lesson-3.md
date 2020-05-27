@@ -37,7 +37,7 @@ You aren&rsquo;t selling a product. You are selling the experience your product 
 
 <a id="org8891a47"></a>
 
-## 3.2 [[Marc Hassenzahl]] introduction to UX
+## 3.2 Marc Hassenzahl introduction to UX
 
 Marc dislikes user experience as a term. Experience is a broader field.
 
