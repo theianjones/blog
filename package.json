@@ -9,7 +9,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@aengusm/gatsby-theme-brain": "^1.0.5",
+    "@aengusm/gatsby-theme-brain": "^1.0.11",
     "@mdx-js/react": "^1.5.7",
     "@reach/portal": "^0.10.1",
     "@theme-ui/presets": "^0.3.0",
