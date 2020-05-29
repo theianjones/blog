@@ -13,20 +13,19 @@ export default () => {
           }
         }
       }
-      allBlogPost(sort: { fields: [date, title], order: DESC }, limit: 1000) {
+      allBrainNote(
+        sort: { fields: [childMdx___frontmatter___date, title], order: DESC }
+        filter: { childMdx: { frontmatter: { type: { eq: "post" } } } }
+      ) {
         edges {
           node {
-            id
-            excerpt
             slug
             title
-            date(formatString: "MMMM DD, YYYY")
-            tags
           }
         }
       }
     }
   `)
 
-  return <PostList posts={data.allBlogPost.edges} />
+  return <PostList posts={data.allBrainNote.edges} />
 }

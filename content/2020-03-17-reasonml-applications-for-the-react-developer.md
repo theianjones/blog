@@ -6,6 +6,7 @@ categories: ['reasonml', 'react']
 keywords: ['Notes']
 published: true
 author: 'Ian Jones'
+type: post
 ---
 
 ## [Use BuckleScript to get up and running in a new ReasonReact project](https://egghead.io/lessons/reason-use-bucklescript-to-get-up-and-running-in-a-new-reasonreact-project?pl=reasonml-applications-for-the-react-developer-684c095f)

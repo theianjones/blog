@@ -6,6 +6,7 @@ categories: []
 keywords: ['Notes']
 published: true
 author: 'Ian Jones'
+type: post
 ---
 
 ## [Async / Await in ReasonML](https://egghead.io/lessons/reason-async-await-in-reasonml?pl=making-an-http-server-in-reasonml-on-top-of-node-js-dab086a2)

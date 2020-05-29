@@ -1,6 +1,7 @@
 ---
 title: '📆 Livestream Event - Build Your Own Public Digital Garden'
 date: 2020-05-11
+type: post
 ---
 
 A digital garden is a place to take concepts from initial discovery all the way to original published posts. It's the idea that concepts grow over time. You tend to this concept over time rather than all at once.

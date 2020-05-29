@@ -7,6 +7,7 @@ categories: []
 keywords: ['gatsby', 'gatsby-themes']
 published: true
 author: 'Ian Jones'
+type: post
 ---
 
 [Chris Biscardi](https://www.christopherbiscardi.com) posted 3 different blog posts going over how to add options to a gatsby theme.

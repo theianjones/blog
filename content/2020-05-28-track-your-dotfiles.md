@@ -7,6 +7,7 @@ categories: []
 keywords: []
 published: true
 author: 'Ian Jones'
+type: post
 ---
 
 First create a `.cfg` git directory. This is where you git files will live. Because of reasons, you should init a git repo in your home directory.

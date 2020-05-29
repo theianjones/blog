@@ -6,6 +6,7 @@ description: "How we've been using Notion at egghead"
 categories: []
 keywords: ['Notion', 'productivity']
 published: true
+type: post
 author: 'Ian Jones'
 ---
 

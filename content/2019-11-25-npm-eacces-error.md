@@ -4,6 +4,7 @@ date: 2019-11-25
 title: 'Dont run npm with sudo'
 description: 'Running npm with sudo means you downloaded node with root permissions.'
 categories: []
+type: post
 keywords: ['npm', 'error']
 published: true
 author: 'Ian Jones'

@@ -6,6 +6,7 @@ description: 'Thoughts on creating beginner material.'
 categories: []
 keywords: ['Teaching']
 published: true
+type: post
 author: 'Ian Jones'
 ---
 

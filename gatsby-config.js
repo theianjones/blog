@@ -3,7 +3,7 @@ let twitterUrl = `https://twitter.com/_jonesian/`
 let githubHandle = `theianjones`
 let githubUrl = `https://github.com/theianjones/`
 let eggheadUrl = `https://egghead.io/instructors/ian-jones?af=ay44db`
-let { deep } = require('@theme-ui/presets')
+let { funk } = require('@theme-ui/presets')
 
 module.exports = {
   siteMetadata: {
@@ -43,17 +43,10 @@ module.exports = {
         name: `Ian's Blog`,
         short_name: `Ian's Blog`,
         start_url: `/`,
-        background_color: deep.background_color,
-        theme_color: deep.primary,
+        background_color: funk.background_color,
+        theme_color: funk.primary,
         display: `standalone`,
         icon: `content/assets/logo.png`,
-      },
-    },
-    {
-      resolve: `gatsby-theme-blog-core`,
-      options: {
-        basePath: '/blog',
-        contentPath: 'content/blog',
       },
     },
     `gatsby-plugin-theme-ui`,
@@ -64,7 +57,6 @@ module.exports = {
         rootNote: 'notebook',
         rootPath: '/',
         notesDirectory: 'content/',
-        mdxOtherwiseConfigured: true,
         additionalNoteTypes: {
           blogIndex: './templates/blog.js',
         },
@@ -76,14 +68,23 @@ module.exports = {
         defaultCrumb: {
           // location: required and must include the pathname property
           location: {
-            pathname: '/notes',
+            pathname: '/',
           },
           // crumbLabel: required label for the default crumb
-          crumbLabel: 'Notes',
+          crumbLabel: 'Home',
           // all other properties optional
           crumbSeparator: ' / ',
         },
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `content/assets`,
+        name: `content/assets`,
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }

@@ -7,6 +7,7 @@ categories: []
 keywords: ['ruby', 'rspec', 'rails', 'factory bot']
 published: true
 author: 'Ian Jones'
+type: post
 ---
 
 `FactoryBot#build_stubbed` allows you to make faster test with less time in the

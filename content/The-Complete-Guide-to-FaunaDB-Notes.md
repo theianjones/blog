@@ -7,6 +7,7 @@ categories: ['reading']
 keywords: ['FaunaDB']
 published: true
 author: 'Ian Jones'
+type: post
 ---
 
 These are notes on [Chris Biscardi's FaunaDB playlist](https://egghead.io/playlists/the-complete-guide-to-faunadb-74bef44b).

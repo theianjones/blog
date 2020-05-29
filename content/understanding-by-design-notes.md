@@ -7,6 +7,7 @@ categories: ['reading']
 keywords: ['Understanding by Design']
 published: false
 author: 'Ian Jones'
+type: post
 redirects:
   - '/ubd'
 ---
@@ -78,7 +79,7 @@ Memories formed from memory are stored separately in different modalities: visio
 
 #### Desired Goals
 
-Learners need to have clarity about the goal they are trying to achieve. They need evidence of it's achievement and understanding of how a goal relates to them. 
+Learners need to have clarity about the goal they are trying to achieve. They need evidence of it's achievement and understanding of how a goal relates to them.
 
 Goal buy-in is a critical component to learning and will motivate the brain to focus attention.
 
@@ -106,16 +107,16 @@ UbD is the convergence of two independent ideas:
 1. Learning is enhanced when teachers are purposeful with their curriculum design.
 2. Focus curriculum and teaching on the ability to effectively use content knowledge and skill
 3. Understanding is revealed when students can transfer their learning through authentic performance. 6 facets of understanding:
-    1. explain
-    2. interpret
-    3. apply
-    4. shift perspective
-    5. empathize
-    6. sell-assessing
+   1. explain
+   2. interpret
+   3. apply
+   4. shift perspective
+   5. empathize
+   6. sell-assessing
 4. Curriculum is planned backward from long-term outcomes through three-stage design process which helps avoid:
-    a. treating the textbook as a curriculum
-    b. activity-oriented teaching where no priorities or purposes are apparent
-    c. test prep
+   a. treating the textbook as a curriculum
+   b. activity-oriented teaching where no priorities or purposes are apparent
+   c. test prep
 5. Teachers are coaches of understanding. Focus on transfer of learning rather than assuming what was taught was learned
 6. Regular reviews of curriculum against design standards. Reviewing student work to inform needed adjustments in curriculum
 7. Share curriculum and assessment designs
@@ -137,7 +138,6 @@ Most salient points:
 - Patterning is where the brain sees patterns in new information and relating it to information that it already knows or chunking material into patterns its not used before
 - Experiential learning that stimulates multiple senses
 - best remembered info is learned through multiple and varied exposures paired with authentic uses of the knowledge
-
 
 ### What _Is_ Understanding
 

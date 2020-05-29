@@ -6,6 +6,7 @@ description: 'This is my solution to Advent of Code Day 4 2019'
 categories: []
 keywords: ['advent of code', 'javascript']
 published: true
+type: post
 author: 'Ian Jones'
 ---
 
@@ -45,11 +46,7 @@ Next, we need to be able to iterate over any given number and check out rules ag
 One way to create an array of numbers out of a single number is to convert it to a string, split that string and then map over the array and convert each back to a number.
 
 ```js
-const digits = n =>
-  n
-    .toString()
-    .split('')
-    .map(Number)
+const digits = (n) => n.toString().split('').map(Number)
 ```
 
 My thought here was that we will create 1 reduce function per rule and filter the range down to the numbers that match each rule.
@@ -59,7 +56,7 @@ I am going to start with rule 4 because that will reduce the most amount of numb
 We want to use `Array.reduce` because we want to take the array of numbers and reduce it down to a `true` or `false` value.
 
 ```js
-const numberIncreasesLeftToRight = n => {
+const numberIncreasesLeftToRight = (n) => {
   return digits(n).reduce((acc, curr, index, array) => {}, true)
 }
 ```
@@ -67,7 +64,7 @@ const numberIncreasesLeftToRight = n => {
 We start with `true` so that we can return early if we find a false value.
 
 ```js
-const numberIncreasesLeftToRight = n => {
+const numberIncreasesLeftToRight = (n) => {
   return digits(n).reduce((acc, curr, index, array) => {
     if (!acc) {
       return false
@@ -79,7 +76,7 @@ const numberIncreasesLeftToRight = n => {
 Next, we need to check if the current number is less than or equal to the next number in the array. We return this value as the accumulator because if it ever returns false, we will return early.
 
 ```js
-const numberIncreasesLeftToRight = n => {
+const numberIncreasesLeftToRight = (n) => {
   return digits(n).reduce((acc, curr, index, array) => {
     if (!acc) {
       return false
@@ -93,7 +90,7 @@ const numberIncreasesLeftToRight = n => {
 This code has a bug in it. When we get to the last element in the array, `array[index + 1]` will return `undefined` causing `false` to be returned.
 
 ```js
-const numberIncreasesLeftToRight = n => {
+const numberIncreasesLeftToRight = (n) => {
   return digits(n).reduce((acc, curr, index, array) => {
     if (!acc) {
       return false
@@ -111,7 +108,7 @@ const numberIncreasesLeftToRight = n => {
 Next we will create a method for finding pairs in the number. This method will `reduce` the array of numbers just like `numberIncreasesLeftToRight` did. We start with a `false` value because we want to return early if we find a pair in the number.
 
 ```js
-const numberHasPair = n => {
+const numberHasPair = (n) => {
   return digits(n).reduce((acc, curr, index, array) => {
     if (acc) {
       return true
@@ -123,7 +120,7 @@ const numberHasPair = n => {
 Next we want to check if the next number in the array is the same as the current number.
 
 ```js
-const numberHasPair = n => {
+const numberHasPair = (n) => {
   return digits(n).reduce((acc, curr, index, array) => {
     if (acc) {
       return true
@@ -137,7 +134,7 @@ const numberHasPair = n => {
 And just like the last rule, we want to return the accumulated value if we get to the last number in the array.
 
 ```js
-const numberHasPair = n => {
+const numberHasPair = (n) => {
   return digits(n).reduce((acc, curr, index, array) => {
     if (acc) {
       return true
