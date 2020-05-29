@@ -3,6 +3,8 @@ let twitterUrl = `https://twitter.com/_jonesian/`
 let githubHandle = `theianjones`
 let githubUrl = `https://github.com/theianjones/`
 let eggheadUrl = `https://egghead.io/instructors/ian-jones?af=ay44db`
+let { deep } = require('@theme-ui/presets')
+
 module.exports = {
   siteMetadata: {
     // Used for the site title and SEO
@@ -35,6 +37,18 @@ module.exports = {
     ],
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ian's Blog`,
+        short_name: `Ian's Blog`,
+        start_url: `/`,
+        background_color: deep.background_color,
+        theme_color: deep.primary,
+        display: `standalone`,
+        icon: `content/assets/logo.png`,
+      },
+    },
     {
       resolve: `gatsby-theme-blog-core`,
       options: {
