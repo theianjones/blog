@@ -48,9 +48,12 @@ module.exports = {
       resolve: `@aengusm/gatsby-theme-brain`,
       options: {
         rootNote: 'notebook',
-        rootPath: 'notes',
-        //notesDirectory: 'content/notes/',
+        rootPath: '/',
+        notesDirectory: 'content/',
         mdxOtherwiseConfigured: true,
+        additionalNoteTypes: {
+          blogIndex: './templates/blog.js',
+        },
       },
     },
     {

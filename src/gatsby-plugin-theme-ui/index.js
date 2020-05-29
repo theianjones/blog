@@ -1,10 +1,15 @@
 import prism from '@theme-ui/prism/presets/theme-ui'
 import { deep, funk } from '@theme-ui/presets'
+import { darken } from 'polished'
 
 const colors = {
   ...deep.colors,
+  'darker-background': darken('0.05', deep.colors.background),
   modes: {
-    light: funk.colors,
+    light: {
+      ...funk.colors,
+      'darker-background': darken('0.05', funk.colors.background),
+    },
   },
 }
 

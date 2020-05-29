@@ -1,6 +1,5 @@
 ---
-title: Aravind Balla
-aliases: [aravind balla]
+title: Aengus McMillin
 ---
 
 ## Sites

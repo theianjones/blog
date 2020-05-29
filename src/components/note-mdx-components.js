@@ -5,18 +5,26 @@ import { Link } from 'gatsby'
 import { isString, isEmpty } from 'lodash'
 import PopOver from './pop-over'
 const EXTERNAL_LINK_REGEX = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/
-import Tippy from '@tippyjs/react'
+import Tippy from '@tippyjs/react/headless'
+import { inlinePositioning } from 'tippy.js'
+import ColorModeToggle from './color-mode-toggle'
+import HomeContent from './home-content'
+import EggheadCollections from './egghead-collections'
+import PopulatedPostList from './populated-posts-list'
 
 const ExternalAnchorTag = ({ href, ...restProps }) => {
   return (
     <Tippy
-      content={
+      appendTo={() => document.body}
+      render={(attrs) => (
         <PopOver
+          arrow={false}
           reference={{ title: href }}
           animation="scale"
           delay={[2000, 100]}
+          {...attrs}
         />
-      }
+      )}
     >
       <Styled.a {...restProps} href={href} />
     </Tippy>
@@ -32,10 +40,20 @@ const AnchorTag = ({ href, children, popups, ...restProps }) => {
   if (isString(children)) {
     renderedLink = children.replace(/\[\[(.*?)\]\]/g, '$1')
   }
-  const popUpKey = href.replace(/^\//, '').split('/')[1]
+  const popUpKey = href.replace(/^\//, '').split('/')[0]
   if (!isExternalLink) {
     return (
-      <Tippy content={popups[popUpKey]} placement="top" animation="shift-away">
+      <Tippy
+        appendTo={() => document.body}
+        render={(attrs) => popups[popUpKey]}
+        placement="top"
+        plugins={[inlinePositioning]}
+        inlinePositioning={true}
+        theme="light"
+        interactive={true}
+        interactiveBorder={5}
+        touch={false}
+      >
         <Styled.a {...restProps} to={href} as={Link}>
           {renderedLink}
         </Styled.a>
@@ -52,4 +70,8 @@ const AnchorTag = ({ href, children, popups, ...restProps }) => {
 
 export default {
   a: AnchorTag,
+  ColorModeToggle,
+  HomeContent,
+  EggheadCollections,
+  PopulatedPostList,
 }
