@@ -1,5 +1,6 @@
 ---
 title: '🧠 Own Your Second Brain: Set Up org-roam on Your Own Machine'
+type: post
 date: 2020-05-05
 ---
 
