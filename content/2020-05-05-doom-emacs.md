@@ -8,13 +8,13 @@ date: 2020-05-05
 
 ## Table of Contents
 
-1.  [Installing Doom Emacs](#org99e85d1)
-2.  [Adding Org Roam To Your Config](#orga972198)
-3.  [Add Bidirectional Link Auto Complete](#org7ef714a)
-4.  [Fleeting Notes](#org59f47bf)
-5.  [Capture Links From the Web](#org8942a5c)
-6.  [Navigate your files easily](#orgb1c6d5e)
-7.  [Resources](#org31cfb44)
+1.  [Installing Doom Emacs](/2020-05-05-doom-emacs#org99e85d1)
+2.  [Adding Org Roam To Your Config](/2020-05-05-doom-emacs#orga972198)
+3.  [Add Bidirectional Link Auto Complete](/2020-05-05-doom-emacs#org7ef714a)
+4.  [Fleeting Notes](/2020-05-05-doom-emacs#org59f47bf)
+5.  [Capture Links From the Web](/2020-05-05-doom-emacs#org8942a5c)
+6.  [Navigate your files easily](/2020-05-05-doom-emacs#orgb1c6d5e)
+7.  [Resources](/2020-05-05-doom-emacs#org31cfb44)
 
 First things first, I am new to emacs and the eco system so there are packages I&rsquo;m not aware of. This is my current set up that I am pretty happy with but if you read through it and see something that can be improved, please let me know on twitter at `@_jonesian` or on the Doom Emacs Discord server!
 
