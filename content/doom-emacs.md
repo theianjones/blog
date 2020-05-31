@@ -5,7 +5,7 @@ aliases: [doom emacs]
 
 ## Installation
 
-These are a little outdate, take a look at [my blog post](https://www.ianjones.us/blog/2020-05-05-doom-emacs/) for a better guide!
+These are a little outdate, take a look at [my blog post](https://www.ianjones.us/2020-05-05-doom-emacs/) for a better guide!
 
 ```bash
 brew install git ripgrep
