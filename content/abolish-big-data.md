@@ -1,13 +1,10 @@
- ---
- title: Abolish Big Data
- ---
+---
+title: Abolish Big Data
+---
 
 Talk by [[Yeshimabeit Milner]]
 
-
-<a id="org5d2262d"></a>
-
-# notes
+ 
 
 [[Data & Society]] ([website](http://criticalresistance.org/wp-content/uploads/2012/06/CR-Abolitionist-Toolkit-online.pdf))
 
