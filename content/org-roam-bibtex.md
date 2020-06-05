@@ -71,12 +71,13 @@ Heres how:
 
 Heres the config for org noter you need inside of your `config.el`:
 
-    (use-package! org-noter
-      :after (:any org pdf-view)
-      :config
-        (setq
+```
+(use-package! org-noter
+:after (:any org pdf-view)
+    :config
+    (setq
         ;; The WM can handle splits
-         org-noter-notes-window-location 'other-frame
+        org-noter-notes-window-location 'other-frame
          ;; Please stop opening frames
          org-noter-always-create-frame nil
          ;; I want to see the whole file
@@ -84,7 +85,8 @@ Heres the config for org noter you need inside of your `config.el`:
          ;; Everything is relative to the main notes file
          org-noter-notes-search-path (list org_notes)
        )
-      )
+      )      
+```
 
 I had to install `org-pdftools` and `org-noter-pdftools` to actually view pdfs in emacs. I believe I ran `M-x pdf-tools-install` and added this to `config.el`:
 
