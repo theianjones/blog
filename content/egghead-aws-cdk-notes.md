@@ -4,10 +4,7 @@ title: Build an App with AWS Cloud Development Kit
 
 These are my notes for Tomasz egghead course. 
 
-![]()
-
 ### Table of Contents
-
 
 1.  [Podcast](/build-an-app-with-aws-cloud-development-kit#org538806f)
 2.  [Lessons](/build-an-app-with-aws-cloud-development-kit#org2fc32fe)
