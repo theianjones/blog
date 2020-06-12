@@ -2,8 +2,11 @@
 title: Build an App with AWS Cloud Development Kit
 ---
 
+These are my notes for Tomasz egghead course. 
 
-# Table of Contents
+![]()
+
+### Table of Contents
 
 
 1.  [Podcast](/build-an-app-with-aws-cloud-development-kit#org538806f)
@@ -35,12 +38,9 @@ title: Build an App with AWS Cloud Development Kit
     25. [Deploy a site with HTTPS support behind a CDN with CDK](/build-an-app-with-aws-cloud-development-kit#orgd4e3faf)
     26. [Destroy an AWS CDK stack](/build-an-app-with-aws-cloud-development-kit#orgeb2cfae)
 
--   **tags:** [AWS Cloud Development Kit](aws_cloud_development_kit.md), [Tomasz Lakomy](tomasz_lakomy.md)
+-   **tags:** [[AWS Cloud Development Kit]], [[Tomasz Lakomy]], [[egghead]]
 
 
-<a id="org600bd3a"></a>
-
-# Notes
 
 
 <a id="org538806f"></a>
