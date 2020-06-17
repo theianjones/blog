@@ -1,6 +1,8 @@
 ---
 title: Org Pomodoro
 aliases: [org-pomodoro]
+type: post
+date: 2020-06-15
 ---
 
 When you are on a header, you can call `M-x org-pomodoro`. This kicks off a 25 minute timer and calls `org-clock-in` on the current header.

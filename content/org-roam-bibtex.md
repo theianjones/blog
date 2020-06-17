@@ -1,17 +1,19 @@
 ---
 title: Org Roam Bibtex
 aliases: [org roam bibtex]
+type: post
+date: 2020-06-04
 ---
 
 ## Table of Contents
 
-1.  [Introduction](/notes/org-roam-bibtex#org726c9f4)
-2.  [Zotero for Bibliography management](/notes/org-roam-bibtex#org029cb5a)
-3.  [Set up Org Noter](/notes/org-roam-bibtex#orge327d8c)
-4.  [Set up Helm Bibtex](/notes/org-roam-bibtex#orgb716c96)
-5.  [Set up Org Ref](/notes/org-roam-bibtex#orgc11f057)
-6.  [Org Roam Bibtex (ORB)](/notes/org-roam-bibtex#orgf4ff9fb)
-7.  [Workflow](/notes/org-roam-bibtex#org3fdc4e0)
+1.  [Introduction](/org-roam-bibtex#org726c9f4)
+2.  [Zotero for Bibliography management](/org-roam-bibtex#org029cb5a)
+3.  [Set up Org Noter](/org-roam-bibtex#orge327d8c)
+4.  [Set up Helm Bibtex](/org-roam-bibtex#orgb716c96)
+5.  [Set up Org Ref](/org-roam-bibtex#orgc11f057)
+6.  [Org Roam Bibtex (ORB)](/org-roam-bibtex#orgf4ff9fb)
+7.  [Workflow](/org-roam-bibtex#org3fdc4e0)
 
 - **tags:** [[Org Roam Bibtex]], [[Org Ref]], [[Org Roam]], [[Note Taking]]
 
