@@ -26,3 +26,5 @@ I added `=` to my smartparens list:
     (sp-local-pair "*" "*")
     (sp-local-pair "=" "="))
 ```
+
+I dont like looking at the emphasis markers so I've opted to have org-mode hide them from me: `SPC h v` then type `org-hide-emphasis-markers` and set it to `t`
