@@ -15,5 +15,3 @@ title: Ian's Digital Garden
 - [GitHub](https://github.com/theianjones)
 - [Source Code](https://github.com/theianjones/blog)
 - [Notes](/notes)
-
-<ColorModeToggle />
