@@ -15,11 +15,6 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
-          <script
-            src="https://unpkg.com/i-stand/black-lives.js"
-            type="module"
-          ></script>
-          <black-lives></black-lives>
           {this.props.preBodyComponents}
           <noscript>This site runs best with JavaScript enabled.</noscript>
           <div
