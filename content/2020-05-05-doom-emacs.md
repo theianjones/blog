@@ -169,7 +169,7 @@ I create a lot of `TODO=s to my journal entries so =(setq org-journal-enable-age
 
 ## Capture Links From the Web
 
-I&rsquo;ve added a Chrome bookmarklet titled &ldquo;open in roam&rdquo; that will add any webpage I am on as a note in my Roam. [Here are the docs](https://org-roam.readthedocs.io/en/latest/roam_protocol/) on what an `org-protocol` is and how to set it up with `org-roam`. Make sure to follow the instructions for `Mac OS` installing `platypus`.
+I&rsquo;ve added a Chrome bookmarklet titled &ldquo;open in roam&rdquo; that will add any webpage I am on as a note in my Roam. [Here are the docs](https://orgroam.com/manual/Roam-Protocol.html#Roam-Protocol) on what an `org-protocol` is and how to set it up with `org-roam`. Make sure to follow the instructions for `Mac OS` installing `platypus`.
 
 I ran the command in the &ldquo;Note for emacs mac port&rdquo; section which totally broke `org-protocol` for me so don&rsquo;t do that ;)
 
@@ -236,7 +236,7 @@ Reach out to me on twitter at @<sub>jonesian</sub> or on the Doom Emacs Discord 
 ## Resources
 
 - [Zaiste Programming Emacs Tutorial (Highly Recommended)](https://www.ianjones.us/notes/zaistre-programming-doom-emacs-tutorial)]
-- [Org Roam Docs](https://org-roam.readthedocs.io/en/latest/)
+- [Org Roam Docs](https://www.orgroam.com/manual/)
 - [Great Overview Video of Org Roam](https://www.youtube.com/watch?v=Lg61ocfxk3c)
 - [Doom emacs docs](https://github.com/hlissner/doom-emacs/blob/develop/docs/index.org)
 - [Doom emacs discord server](https://discord.com/invite/qvGgnVx)
