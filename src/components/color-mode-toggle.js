@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, useColorMode } from 'theme-ui'
-export default (props) => {
+const ColorModeToggle = (props) => {
   const [colorMode, setColorMode] = useColorMode()
   return (
     <button
@@ -29,3 +29,5 @@ export default (props) => {
     </button>
   )
 }
+
+export default ColorModeToggle
