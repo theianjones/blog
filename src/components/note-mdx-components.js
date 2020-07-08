@@ -11,6 +11,7 @@ import ColorModeToggle from './color-mode-toggle'
 import HomeContent from './home-content'
 import EggheadCollections from './egghead-collections'
 import PopulatedPostList from './populated-posts-list'
+import Social from './social'
 
 const ExternalAnchorTag = ({ href, ...restProps }) => {
   return (
@@ -26,7 +27,7 @@ const ExternalAnchorTag = ({ href, ...restProps }) => {
         />
       )}
     >
-      <Styled.a {...restProps} href={href} />
+      <Styled.a {...restProps} href={href} sx={{ color: 'secondary' }} />
     </Tippy>
   )
 }
@@ -74,4 +75,5 @@ export default {
   HomeContent,
   EggheadCollections,
   PopulatedPostList,
+  Social,
 }

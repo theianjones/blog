@@ -7,9 +7,6 @@ import { MDXProvider } from '@mdx-js/react'
 import Layout from '../../../components/note-layout'
 import components from '../../../components/note-mdx-components'
 import ReferenceBlock from '../../../components/reference-block'
-import ColorModeToggle from '../../../components/color-mode-toggle'
-import HomeContent from '../../../components/home-content'
-import EggheadCollections from '../../../components/egghead-collections'
 import PopOver from '../../../components/pop-over'
 import get from 'lodash/get'
 
@@ -25,7 +22,6 @@ const BrainNote = ({ note, location }) => {
   }
 
   const AnchorTag = (props) => <components.a {...props} popups={popups} />
-
   return (
     <MDXProvider
       components={{
@@ -39,6 +35,7 @@ const BrainNote = ({ note, location }) => {
         isBlogPost
         location={location}
         crumbLabel={note.title}
+        displayTitle={location.pathname !== '/'}
       >
         <div id="note">
           <MDXRenderer>{note.childMdx.body}</MDXRenderer>

@@ -2,6 +2,7 @@
 title: '🧠 Own Your Second Brain: Set Up org-roam on Your Own Machine'
 type: post
 date: 2020-05-05
+tags: [featured]
 ---
 
 [I recorded an overview of what you can build when you follow this technical guide here on youtube](https://youtu.be/gDAbpz98ooU).

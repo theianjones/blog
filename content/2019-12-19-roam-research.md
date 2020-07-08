@@ -20,7 +20,7 @@ There are handy short cuts for mark down syntax and everything.
 
 Roam is a networked not taking app :exploding_head:
 
-When ever you get to some topic you want to reference, you can add `[[]]` around the string to create a page. Now that you've created a page, you can reference that page from anywhere.
+When ever you get to some topic you want to reference, you can add around the string to create a page. Now that you've created a page, you can reference that page from anywhere.
 
 For example, I use rails for work, so Ive created a `[[Rails]]` tag.
 

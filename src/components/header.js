@@ -10,8 +10,10 @@ export default ({ title }) => {
       sx={{
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'space-between',
         variant: 'styles.header',
         pt: [4, 5, 6],
+        marginBottom: 50,
       }}
     >
       <Logo />

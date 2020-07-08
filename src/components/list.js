@@ -5,32 +5,57 @@ import { map } from 'lodash'
 
 export default function List({ collections = [] }) {
   return (
-    <>
+    <Flex
+      sx={{
+        flexWrap: 'wrap',
+      }}
+    >
       {map(collections, (collection) => (
-        <Flex
+        <Styled.a
           key={collection.id || collection.slug}
+          href={collection.http_url}
+          aria-label={`View ${collection.title}`}
           sx={{
-            alignItems: 'center',
-            variant: 'styles.postlistitem',
+            textDecoration: 'none',
+            maxWidth: 260,
+            marginRight: 20,
+            marginBottom: 20,
+            padding: 1,
+            borderWidth: '1px 1px 1px 1px',
+            borderColor: 'rgba(231, 236, 240, 1)',
+            borderRadius: '4',
+            borderStyle: 'solid',
+            boxShadow: '0px 3px 10px 2px rgba(198, 204, 217, 0.2)',
+            ':hover': {
+              borderStyle: 'solid',
+              boxShadow: '0px 6px 16px 4px rgba(198, 204, 217, 0.3)',
+            },
           }}
         >
-          {collection.image_thumb_url && (
-            <Image src={collection.image_thumb_url} variant="tiny" />
-          )}
-          <Styled.a
-            key={collection.slug || collection.id}
-            sx={{
-              marginLeft: 10,
-              color: 'text',
-              textDecoration: 'none',
-            }}
-            href={collection.http_url}
-            aria-label={`View ${collection.title}`}
-          >
-            {collection.title}{' '}
-          </Styled.a>
-        </Flex>
+          <img src={collection.image} height="auto" width="250" />
+          <Flex sx={{ alignItems: 'center', padding: 10 }}>
+            {collection.image_thumb_url && (
+              <img
+                src={collection.image_thumb_url}
+                width="25"
+                height="25"
+                sx={{ borderRadius: 999 }}
+              />
+            )}
+            <Styled.p
+              sx={{
+                marginLeft: 10,
+                color: 'text',
+                maxWidth: 230,
+                fontFamily: 'heading',
+                fontSize: 3,
+              }}
+            >
+              {collection.title}{' '}
+            </Styled.p>
+          </Flex>
+        </Styled.a>
       ))}
-    </>
+    </Flex>
   )
 }

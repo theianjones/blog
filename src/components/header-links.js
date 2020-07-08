@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Styled, Link as ThemeLink } from 'theme-ui'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
 export default ({ title }) => {
@@ -15,5 +15,11 @@ export default ({ title }) => {
     }
   `)
 
-  return <nav></nav>
+  return (
+    <nav>
+      <ThemeLink sx={{ variant: 'styles.navlink' }} as={Link} to={'/blog'}>
+        Articles
+      </ThemeLink>
+    </nav>
+  )
 }

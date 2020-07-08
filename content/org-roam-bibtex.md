@@ -3,6 +3,7 @@ title: Org Roam Bibtex
 aliases: [org roam bibtex]
 type: post
 date: 2020-06-04
+tags: [featured]
 ---
 
 ## Table of Contents
@@ -87,7 +88,7 @@ Heres the config for org noter you need inside of your `config.el`:
          ;; Everything is relative to the main notes file
          org-noter-notes-search-path (list org_notes)
        )
-      )      
+      )
 ```
 
 I had to install `org-pdftools` and `org-noter-pdftools` to actually view pdfs in emacs. I believe I ran `M-x pdf-tools-install` and added this to `config.el`:

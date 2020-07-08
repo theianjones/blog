@@ -2,6 +2,7 @@
 title: 'Io: the "simplest" programming language on the block'
 date: 2020-06-30
 type: post
+tags: [featured]
 ---
 
 Io ([website link](http://iolanguage.com/)) is a pure [[Prototype Language]]. Io feels like a brain child of [[Ruby]] and [[JavaScript]]. It has the least amount of syntax that I&rsquo;ve experience in a language. You use `=` to assign a value to a slot on an object. `:=` to assign a value on a slot or create a new value. `::=` to assign a value to a slot, create setters for that slot or assign a new value.
@@ -69,20 +70,20 @@ Co-routines are useful for suspending your progams execution so that the thread 
                 yield
                 "No more rhymes now, I mean it." println
                  yield)
-    
+
     fezzik := Object clone
-    
+
     fezzik rhyme := method(
     			yield
                 "If there are, we'll all be dead." println
                 yield
                 "Anybody want a peanut?" println)
-    
+
     vizzini @@talk; fezzik @@rhyme
-    
+
     Coroutine currentCoroutine pause
-    
-    // =>  
+
+    // =>
     Fezzik, are there rocks ahead?
     If there are, we'll all be dead.
     No more rhymes now, I mean it.
@@ -105,24 +106,22 @@ Heres what happens when you run the code regularly:
                 yield
                 "No more rhymes now, I mean it." println
                  yield)
-    
+
     fezzik := Object clone
-    
+
     fezzik rhyme := method(
     			yield
                 "If there are, we'll all be dead." println
                 yield
                 "Anybody want a peanut?" println)
-    
+
     vizzini talk; fezzik rhyme
     // =>
     : Fezzik, are there rocks ahead?
     : No more rhymes now, I mean it.
     : If there are, we'll all be dead.
     : Anybody want a peanut?
-    
+
 You can see that Io ignores the `yield` completely and runs the code synchonously. How cool is it that you can turn concurrency on and off that easily!? Theres no comparable concept that I have used in Ruby or Javascript. I know JavaScript generators have a similar yielding functionality but the concurrency piece is missing.
 
 Io has an extremely small footprint and flexible enough to describe an domain specific language. It&rsquo;s really cool to see how such different programming languages work.
-
-

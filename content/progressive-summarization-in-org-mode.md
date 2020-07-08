@@ -2,6 +2,7 @@
 title: Progressive Summarization in Org Mode
 type: post
 date: 2020-06-17
+tags: [featured]
 ---
 
 Tiago Fortes progressive summarization is a way to make notes progressively more useful as you come back to them.
@@ -13,7 +14,7 @@ For your level 2 notes, you can use the `*` to bold text. I found [this blog pos
     (sp-local-pair "*" "*"))
 ```
 
-Next, you need to be able to highlight text for your level 3 notes. Out of the box, emacs won't do this for you. I don't need to export my notes anywhere so I just want org mode to highlight text for me. 
+Next, you need to be able to highlight text for your level 3 notes. Out of the box, emacs won't do this for you. I don't need to export my notes anywhere so I just want org mode to highlight text for me.
 
 Enter `org-emphasis-alist`. In doom emacs, you can customize variables with `SPC h v`. Next enter `org-emphasis-alist`. I choose to use the `=` for my highlights. To cusomize this character, hit the value menu key of the character you want to cusomize. Next hit `INS` key. This will produce two fields: `Key` and `Value`. You can add the key of `:background` and the value of `"Yellow"`. I want to make sure that my text is black so hit `INS` again to add `Key: :foreground, Value: "black"`.
 

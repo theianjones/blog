@@ -1,39 +1,34 @@
 import prism from '@theme-ui/prism/presets/theme-ui'
-import { deep, funk } from '@theme-ui/presets'
-import { darken } from 'polished'
-
-const colors = {
-  ...funk.colors,
-  'darker-background': darken('0.05', funk.colors.background),
-  modes: {
-    dark: {
-      ...deep.colors,
-      'darker-background': darken('0.05', deep.colors.background),
-    },
-  },
-}
 
 export default {
   useCustomProperties: true,
-  initialColorMode: 'system',
-  colors,
-  fonts: {
-    body: 'system-ui, sans-serif',
-    heading: 'inherit',
-    monospace: 'Menlo, monospace',
+  sizes: {
+    container: 864,
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  fonts: {
+    body: '"Source Serif Pro", serif',
+    heading: 'Open Sans, "Avenir Next", Helvetica, Arial, sans-serif',
+    monospace: 'Lato, sans-serif',
+  },
+  fontSizes: [9.22, 11.52, 14.4, 18.0, 22.5, 28.13, 35.16, 43.95, 54.93],
   fontWeights: {
     body: 400,
     heading: 700,
-    display: 900,
+    bold: 700,
   },
   lineHeights: {
-    body: 1.5,
-    heading: 1.25,
+    body: 1.7,
+    heading: 1.14,
   },
-  sizes: {
-    container: 864,
+  colors: {
+    text: '#233044',
+    background: '#fff',
+    primary: '#7B14D1',
+    secondary: '#C320D6',
+    muted: '#f5f2ed',
+    darkGray: '#545977',
+    gray: '#777C9B',
   },
   textStyles: {
     heading: {
@@ -71,11 +66,15 @@ export default {
       },
     },
     navlink: {
-      color: 'text',
+      color: 'darkGray',
       textDecoration: 'none',
       fontWeight: 'heading',
-      textTransform: 'uppercase',
-      letterSpacing: '1px',
+      fontFamily: 'heading',
+      letterSpacing: '0.5px',
+      '&:hover': {
+        color: 'primary',
+        textDecorationColor: '#000',
+      },
     },
     root: {
       fontFamily: 'body',
@@ -89,30 +88,57 @@ export default {
       margin: 'auto',
     },
     h1: {
-      variant: 'textStyles.display',
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      fontSize: 8,
     },
     h2: {
-      variant: 'textStyles.heading',
-      fontSize: 5,
+      color: 'text',
+      fontFamily: 'body',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      fontSize: 7,
     },
     h3: {
-      variant: 'textStyles.heading',
-      fontSize: 4,
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      fontSize: 6,
     },
     h4: {
-      variant: 'textStyles.heading',
-      fontSize: 3,
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      fontSize: 5,
     },
     h5: {
-      variant: 'textStyles.heading',
-      fontSize: 2,
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      fontSize: 4,
     },
     h6: {
-      variant: 'textStyles.heading',
-      fontSize: 1,
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      fontSize: 4,
+    },
+    p: {
+      color: 'text',
+      fontFamily: 'body',
+      fontWeight: 'body',
+      lineHeight: 'body',
+      fontSize: 4,
     },
     a: {
       color: 'primary',
+      fontFamily: 'body',
       textDecorationColor: '#c0bfc0',
       '&:hover': {
         color: 'text',
@@ -121,7 +147,7 @@ export default {
     },
     pre: {
       fontFamily: 'monospace',
-      fontSize: 1,
+      fontSize: 3,
       p: 3,
       color: 'text',
       bg: 'muted',
