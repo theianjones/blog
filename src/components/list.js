@@ -21,6 +21,7 @@ export default function List({ collections = [] }) {
             marginRight: 20,
             marginBottom: 20,
             padding: 1,
+            transition: 'all 400ms ease-in-out',
             borderWidth: '1px 1px 1px 1px',
             borderColor: 'rgba(231, 236, 240, 1)',
             borderRadius: '4',
@@ -28,7 +29,7 @@ export default function List({ collections = [] }) {
             boxShadow: '0px 3px 10px 2px rgba(198, 204, 217, 0.2)',
             ':hover': {
               borderStyle: 'solid',
-              boxShadow: '0px 6px 16px 4px rgba(198, 204, 217, 0.3)',
+              boxShadow: '0px 10px 16px 4px rgba(198, 204, 217, 0.3)',
             },
           }}
         >
