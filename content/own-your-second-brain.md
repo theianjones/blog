@@ -10,13 +10,13 @@ tags: [featured]
 
 ## Table of Contents
 
-1.  [Installing Doom Emacs](/2020-05-05-doom-emacs#org99e85d1)
-2.  [Adding Org Roam To Your Config](/2020-05-05-doom-emacs#orga972198)
-3.  [Add Bidirectional Link Auto Complete](/2020-05-05-doom-emacs#org7ef714a)
-4.  [Fleeting Notes](/2020-05-05-doom-emacs#org59f47bf)
-5.  [Capture Links From the Web](/2020-05-05-doom-emacs#org8942a5c)
-6.  [Navigate your files easily](/2020-05-05-doom-emacs#orgb1c6d5e)
-7.  [Resources](/2020-05-05-doom-emacs#org31cfb44)
+1.  [Installing Doom Emacs](/own-your-second-brain#org99e85d1)
+2.  [Adding Org Roam To Your Config](/own-your-second-brain#orga972198)
+3.  [Add Bidirectional Link Auto Complete](/own-your-second-brain#org7ef714a)
+4.  [Fleeting Notes](/own-your-second-brain#org59f47bf)
+5.  [Capture Links From the Web](/own-your-second-brain#org8942a5c)
+6.  [Navigate your files easily](/own-your-second-brain#orgb1c6d5e)
+7.  [Resources](/own-your-second-brain#org31cfb44)
 
 First things first, I am new to emacs and the eco system so there are packages I&rsquo;m not aware of. This is my current set up that I am pretty happy with but if you read through it and see something that can be improved, please let me know on twitter at `@_jonesian` or on the Doom Emacs Discord server!
 
