@@ -14,18 +14,35 @@ export default function ({ references = [] }) {
         marginBottom: '1rem',
       }}
     >
-      <Styled.h3 sx={{ color: 'highlight' }}>Referred in</Styled.h3>
+      <Styled.h3 sx={{ color: 'gray', fontWeight: 600 }}>Referred in</Styled.h3>
       <Box className="mb-4">
         {references.map((reference) => (
           <Styled.a
             as={Link}
-            sx={{ textDecoration: 'none', color: 'highlight' }}
+            sx={{
+              textDecoration: 'none',
+            }}
             to={`${reference.slug}`}
             key={reference.slug}
           >
-            <Box sx={{ padding: 10 }}>
-              <Styled.h5 sx={{ margin: 0 }}>{reference.title}</Styled.h5>
-              <Styled.p>{reference.childMdx.excerpt}</Styled.p>
+            <Box
+              sx={{
+                padding: 10,
+                color: 'gray',
+                ':hover': {
+                  color: 'primary',
+                },
+              }}
+            >
+              <h5
+                sx={{
+                  margin: 0,
+                  fontWeight: 500,
+                }}
+              >
+                {reference.title}
+              </h5>
+              <p>{reference.childMdx.excerpt}</p>
             </Box>
           </Styled.a>
         ))}

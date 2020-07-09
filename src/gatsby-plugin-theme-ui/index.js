@@ -29,6 +29,7 @@ export default {
     muted: '#f5f2ed',
     darkGray: '#545977',
     gray: '#777C9B',
+    lightGray: '#C5C9DB',
   },
   textStyles: {
     heading: {
