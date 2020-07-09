@@ -8,13 +8,40 @@ export default () => {
   }
 
   return (
-    <nav>
+    <nav
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
       <ThemeLink
         sx={{
           variant: 'styles.navlink',
-          color: location.pathname === '/articles' ? 'primary' : 'darkGray',
+          marginRight: 20,
+          fontSize: 3,
+          fontWeight: 'body',
+          transition: 'all 400ms ease',
+          ':hover': {
+            color: 'primary',
+          },
         }}
-        as={location.pathname === '/articles' ? 'div' : Link}
+        as={Link}
+        to={'/collections'}
+      >
+        Collections
+      </ThemeLink>
+      <ThemeLink
+        sx={{
+          variant: 'styles.navlink',
+          fontSize: 3,
+          fontWeight: 'body',
+          transition: 'all 400ms ease',
+          ':hover': {
+            color: 'primary',
+          },
+        }}
+        as={Link}
         to={'/articles'}
       >
         Articles
