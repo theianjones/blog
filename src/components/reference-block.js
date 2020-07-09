@@ -36,13 +36,15 @@ export default function ({ references = [] }) {
             >
               <h5
                 sx={{
+                  fontFamily: 'heading',
                   margin: 0,
+                  fontSize: 5,
                   fontWeight: 500,
                 }}
               >
                 {reference.title}
               </h5>
-              <p>{reference.childMdx.excerpt}</p>
+              <p sx={{ marginTop: 0 }}>{reference.childMdx.excerpt}</p>
             </Box>
           </Styled.a>
         ))}

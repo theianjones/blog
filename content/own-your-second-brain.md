@@ -235,9 +235,11 @@ Reach out to me on twitter at @<sub>jonesian</sub> or on the Doom Emacs Discord 
 
 <a id="org31cfb44"></a>
 
+Be sure to level up your Emacs skills with [[Zaiste Programming tutorial]].
+
 ## Resources
 
-- [Zaiste Programming Emacs Tutorial (Highly Recommended)](https://www.ianjones.us/notes/zaistre-programming-doom-emacs-tutorial)]
+- [[Zaiste Programming tutorial]]
 - [Org Roam Docs](https://www.orgroam.com/manual/)
 - [Great Overview Video of Org Roam](https://www.youtube.com/watch?v=Lg61ocfxk3c)
 - [Doom emacs docs](https://github.com/hlissner/doom-emacs/blob/develop/docs/index.org)
