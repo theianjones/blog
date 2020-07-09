@@ -1,6 +1,6 @@
 ---
 title: Variable Spaced Fonts in Doom Emacs
-date: 2020-06-23
+date: 2020-07-09
 type: post
 ---
 
@@ -11,7 +11,7 @@ You can use the `mixed-pitch` package to manage your variably spaced fonts in [[
 (use-package mixed-pitch
   :hook
   ;; If you want it in all text modes:
-  (text-mode . mixed-pitch-mode))
+  (text-mode . mixed-pitch-mode)) ;; or org-mode
 ```
 
 Remember to require the package:
@@ -21,7 +21,9 @@ Remember to require the package:
 (package! mixed-pitch)
 ```
 
-Next you may notice that your company completions are off. This requires installing `company-box`. Doom gives us a flag on company to intall and manage this dependency for us.
+## Company
+
+Next you may notice that your company completions are off. This requires installing `company-box`. Doom gives us a flag on company to install and manage this dependency for us.
 
 ```lisp
 ;; .doom.d/init.el
@@ -32,6 +34,18 @@ Next you may notice that your company completions are off. This requires install
 Doom will add the `package!` and `add-hook` code for us now.
 
 I had to restart emacs to get this to work.
+
+## Set the Font Height
+
+`@denis631` on the doom discord server needed to set the height of their font and did it like this:
+
+```lisp
+(use-package! mixed-pitch
+  :hook (org-mode . mixed-pitch-mode)
+  :config
+  (setq mixed-pitch-set-heigth t)
+  (set-face-attribute 'variable-pitch nil :height 180))
+```
 
 ## Resources
 
