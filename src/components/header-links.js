@@ -17,7 +17,14 @@ export default ({ title }) => {
 
   return (
     <nav>
-      <ThemeLink sx={{ variant: 'styles.navlink' }} as={Link} to={'/blog'}>
+      <ThemeLink
+        sx={{
+          variant: 'styles.navlink',
+          color: location.pathname === '/articles' ? 'primary' : 'darkGray',
+        }}
+        as={location.pathname === '/articles' ? 'div' : Link}
+        to={'/articles'}
+      >
         Articles
       </ThemeLink>
     </nav>
