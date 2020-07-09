@@ -7,6 +7,7 @@ aliases: [org roam]
 
 ## Resources
 
-- [🧠 Own Your Second Brain: Set Up org-roam on Your Own Machine](https://www.ianjones.us/2020-05-05-doom-emacs/)
+- 🧠 [[Install Org Roam on Doom Emacs Guide]]
+- [Bare Bones org-roam installation](https://org-roam.discourse.group/t/beginners-guide-to-troubleshooting-emacs-problems-an-org-roam-edition/224/3)
 - [Great intro video](https://www.youtube.com/watch?v=Lg61ocfxk3c)
 - [Doom Emacs getting started](https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org#with-homebrew)

@@ -8,7 +8,7 @@ export default function ({ reference }) {
   return (
     <div
       sx={{
-        backgroundColor: 'darker-background',
+        backgroundColor: 'muted',
         maxWidth: excerpt ? 300 : 1000,
         borderRadius: 3,
       }}
