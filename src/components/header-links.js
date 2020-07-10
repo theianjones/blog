@@ -27,9 +27,9 @@ export default () => {
           },
         }}
         as={Link}
-        to={'/collections'}
+        to={'/lessons'}
       >
-        Collections
+        Lessons
       </ThemeLink>
       <ThemeLink
         sx={{

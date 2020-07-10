@@ -4,15 +4,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 export default () => {
   const data = useStaticQuery(graphql`
     query MyPostsQuery {
-      site {
-        siteMetadata {
-          title
-          social {
-            name
-            url
-          }
-        }
-      }
       allBrainNote(
         sort: { fields: [childMdx___frontmatter___date, title], order: DESC }
         filter: { childMdx: { frontmatter: { type: { eq: "post" } } } }
