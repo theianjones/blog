@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@aengusm/gatsby-theme-brain@^1.0.11":
+"@aengusm/gatsby-theme-brain@1.0.12":
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/@aengusm/gatsby-theme-brain/-/gatsby-theme-brain-1.0.12.tgz#a244c5969532f69aa17394128fce661d08c5d99d"
   integrity sha512-xHL9h53mOrzbE67+hdPuhFbmP3h+rhjYbihuxE4xwXYX4J+fGFr94AnDVmySaN7pzONK4h61Xc/kQCqx/gX9cw==
