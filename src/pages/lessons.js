@@ -15,7 +15,7 @@ const Collections = ({ data: { allCollectionsJson } }) => {
 
 export default Collections
 
-export const pageQuery = graphql`
+export const query = graphql`
   query {
     allCollectionsJson(sort: { fields: id, order: ASC }) {
       nodes {

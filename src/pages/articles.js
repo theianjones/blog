@@ -293,7 +293,8 @@ const data = {
   },
 }
 
-function Articles() {
+function Articles(props) {
+  console.log({ props })
   return (
     <Layout>
       <Styled.h1>Articles</Styled.h1>
@@ -304,18 +305,18 @@ function Articles() {
 
 export default Articles
 
-// export const pageQuery = graphql`
-//   query ArticlesQuery {
-//     allBrainNote(
-//       sort: { fields: [childMdx___frontmatter___date, title], order: DESC }
-//       filter: { childMdx: { frontmatter: { type: { eq: "post" } } } }
-//     ) {
-//       edges {
-//         node {
-//           slug
-//           title
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query ArticlesQuery {
+    allBrainNote(
+      sort: { fields: [childMdx___frontmatter___date, title], order: DESC }
+      filter: { childMdx: { frontmatter: { type: { eq: "post" } } } }
+    ) {
+      edges {
+        node {
+          slug
+          title
+        }
+      }
+    }
+  }
+`
