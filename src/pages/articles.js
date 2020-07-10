@@ -6,7 +6,6 @@ import PostList from '../components/post-list'
 
 
 function Articles(props) {
-  console.log(props.data )
   return (
     <Layout>
       <Styled.h1>Articles</Styled.h1>
