@@ -15,10 +15,10 @@ export default {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: '"Source Serif Pro", serif',
-    heading: 'Open Sans, "Avenir Next", Helvetica, Arial, sans-serif',
+    heading: '"Avenir Next", Open Sans, Helvetica, Arial, sans-serif',
     monospace: 'Lato, sans-serif',
   },
-  fontSizes: [9.22, 11.52, 14.4, 18.0, 22.5, 28.13, 35.16, 43.95, 54.93],
+  fontSizes: [10, 12, 15, 19, 24, 29, 35.5, 44, 55],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -26,7 +26,7 @@ export default {
   },
   lineHeights: {
     body: 1.7,
-    heading: 1.14,
+    heading: 1.4,
   },
   colors: {
     text: '#233044',
@@ -34,8 +34,8 @@ export default {
     background: '#fff',
     primary: '#7B14D1',
     secondary: '#C320D6',
-    muted: '#f5f2ed',
-    darkMuted: darken(0.3, '#f5f2ed'),
+    muted: '#F7F6F9',
+    darkMuted: darken(0.3, '#F7F6F9'),
     gray: '#777C9B',
     orange: '#FFB65C',
     darkGray: darken(0.05, '#777C9B'),
@@ -63,18 +63,24 @@ export default {
     postlist: {
       listStyleType: 'none',
       m: 0,
-      p: 0,
+      p: 1,
     },
     postlink: {
       textDecoration: 'none',
       color: 'text',
     },
     postlistitem: {
-      padding: '.5rem',
-      margin: '0 -0.5rem',
+      padding: '.8rem 1rem',
+      margin: '0.5rem 0',
       borderRadius: 5,
+      transition: 'all 300ms ease-in-out',
+      boxShadow: '0px 0px 1px 1px rgba(198, 204, 217, 0.1)',
       ':hover': {
-        backgroundColor: 'muted',
+        boxShadow: '0px 10px 16px 4px rgba(198, 204, 217, 0.3)',
+        transform: 'scale(1.01)',
+        a: {
+          color: 'primary'
+        }
       },
     },
     filterSection: {
@@ -131,20 +137,23 @@ export default {
       lineHeight: 'heading',
       fontWeight: 'heading',
       fontSize: 8,
+      marginTop: 5
     },
     h2: {
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 300,
+      fontSize: 7,
+      marginTop: 5
+    },
+    h3: {
       color: 'text',
       fontFamily: 'body',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: 7,
-    },
-    h3: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
       fontSize: 6,
+      marginTop: 4
     },
     h4: {
       color: 'text',

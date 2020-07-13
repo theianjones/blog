@@ -22,10 +22,10 @@ export default () => {
   `)
   return (
     <Box sx={{ marginBottom: 30 }}>
-      <Styled.h2 sx={{ fontFamily: 'heading' }}>
+      <Styled.h1 sx={{ fontFamily: 'heading' }}>
         👋 I'm Ian, I live and work remotely in Northern Virginia building
         egghead.io
-      </Styled.h2>
+      </Styled.h1>
 
       <Flex
         sx={{
@@ -35,9 +35,9 @@ export default () => {
           justifyContent: 'space-between',
         }}
       >
-        <Styled.h3 sx={{ color: 'primary', marginBottom: 15 }}>
+        <Styled.h2 sx={{ color: 'darkGray', marginBottom: 15 }}>
           Featured Articles
-        </Styled.h3>
+        </Styled.h2>
       </Flex>
       <PostList posts={data.allBrainNote.edges} />
     </Box>
