@@ -27,7 +27,7 @@ const EggheadCollections = () => {
   `)
   return (
     <>
-      <Styled.h3 sx={{ color: 'primary' }}>egghead Video Lessons</Styled.h3>
+      <Styled.h2 sx={{ color: 'darkGray' }}>egghead Video Lessons</Styled.h2>
       <List collections={allCollectionsJson.nodes} />
     </>
   )

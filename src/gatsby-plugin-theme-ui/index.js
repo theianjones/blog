@@ -34,8 +34,8 @@ export default {
     background: '#fff',
     primary: '#7B14D1',
     secondary: '#C320D6',
-    muted: '#f5f2ed',
-    darkMuted: darken(0.3, '#f5f2ed'),
+    muted: '#F7F6F9',
+    darkMuted: darken(0.3, '#F7F6F9'),
     gray: '#777C9B',
     orange: '#FFB65C',
     darkGray: darken(0.05, '#777C9B'),
@@ -63,18 +63,24 @@ export default {
     postlist: {
       listStyleType: 'none',
       m: 0,
-      p: 0,
+      p: 1,
     },
     postlink: {
       textDecoration: 'none',
       color: 'text',
     },
     postlistitem: {
-      padding: '.5rem',
-      margin: '0 -0.5rem',
+      padding: '.8rem 1rem',
+      margin: '0.5rem 0',
       borderRadius: 5,
+      transition: 'all 300ms ease-in-out',
+      boxShadow: '0px 0px 1px 1px rgba(198, 204, 217, 0.1)',
       ':hover': {
-        backgroundColor: 'muted',
+        boxShadow: '0px 10px 16px 4px rgba(198, 204, 217, 0.3)',
+        transform: 'scale(1.01)',
+        a: {
+          color: 'primary'
+        }
       },
     },
     filterSection: {
