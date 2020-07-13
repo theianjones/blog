@@ -37,6 +37,7 @@ export default {
     muted: '#f5f2ed',
     darkMuted: darken(0.3, '#f5f2ed'),
     gray: '#777C9B',
+    orange: '#FFB65C',
     darkGray: darken(0.05, '#777C9B'),
     lightGray: lighten(0.2, '#777C9B'),
     lightestGrey: lighten(0.35, '#777C9B'),
