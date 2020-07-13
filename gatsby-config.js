@@ -82,6 +82,7 @@ module.exports = {
       options: {
         fonts: [
           `Open Sans`,
+          `Avenir Next`
           `Source Serif Pro\:400,700` // you can also specify font weights and styles
         ],
         display: 'swap'

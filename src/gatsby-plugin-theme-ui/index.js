@@ -15,10 +15,10 @@ export default {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: '"Source Serif Pro", serif',
-    heading: 'Open Sans, "Avenir Next", Helvetica, Arial, sans-serif',
+    heading: '"Avenir Next", Open Sans, Helvetica, Arial, sans-serif',
     monospace: 'Lato, sans-serif',
   },
-  fontSizes: [9.22, 11.52, 14.4, 18.0, 22.5, 28.13, 35.16, 43.95, 54.93],
+  fontSizes: [10, 12, 15, 19, 24, 29, 35.5, 44, 55],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -26,7 +26,7 @@ export default {
   },
   lineHeights: {
     body: 1.7,
-    heading: 1.14,
+    heading: 1.4,
   },
   colors: {
     text: '#233044',
@@ -131,20 +131,23 @@ export default {
       lineHeight: 'heading',
       fontWeight: 'heading',
       fontSize: 8,
+      marginTop: 5
     },
     h2: {
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 300,
+      fontSize: 7,
+      marginTop: 5
+    },
+    h3: {
       color: 'text',
       fontFamily: 'body',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: 7,
-    },
-    h3: {
-      color: 'text',
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
       fontSize: 6,
+      marginTop: 4
     },
     h4: {
       color: 'text',
