@@ -1,8 +1,9 @@
 ---
 title: Build an App with AWS Cloud Development Kit
+tags: [egghead, aws]
 ---
 
-These are my notes for Tomasz egghead course. 
+These are my notes for Tomasz egghead course.
 
 ### Table of Contents
 
@@ -35,10 +36,7 @@ These are my notes for Tomasz egghead course.
     25. [Deploy a site with HTTPS support behind a CDN with CDK](/build-an-app-with-aws-cloud-development-kit#orgd4e3faf)
     26. [Destroy an AWS CDK stack](/build-an-app-with-aws-cloud-development-kit#orgeb2cfae)
 
--   **tags:** [[AWS Cloud Development Kit]], [[Tomasz Lakomy]], [[egghead]]
-
-
-
+- **tags:** [[AWS Cloud Development Kit]], [[Tomasz Lakomy]], [[egghead]]
 
 <a id="org538806f"></a>
 
@@ -64,11 +62,9 @@ You can destroy your AWS set up very easily.
 
 Experiment with the things you learn. Add editing a todo.
 
-
 <a id="org2fc32fe"></a>
 
 ## Lessons
-
 
 <a id="orgc200104"></a>
 
@@ -89,7 +85,6 @@ npm run build to build our app.
 
 cdk init cannot be ran in a non empty directory
 
-
 <a id="org1aa0639"></a>
 
 ### Build and deploy a sample AWS Cloud Development Kit stack to AWS
@@ -105,7 +100,6 @@ Unable to resolve AWS account to use. It must be either configured when you defi
 
 `brew install awscli`
 
-
 <a id="org105438e"></a>
 
 ### Review an AWS CloudFormation stack deployed with AWS CDK
@@ -116,14 +110,12 @@ Our code is going to turn into a template file.
 
 You have to click on CloudFormation in the aws console to get to our app.
 
-
 <a id="orgdb433dd"></a>
 
 ### Clear an initial AWS CDK stack to start building an app from scratch
 
 `cdk diff` to diff changes in your applications.
 cdk wont deploy anything that you haven&rsquo;t specified.
-
 
 <a id="org2d55ea5"></a>
 
@@ -138,17 +130,16 @@ Subprocess exited with error 1
 
 I was editing the .js file which causes this error.
 
->  ❌  SampleAppStack failed: Error: This stack uses assets, so the toolkit stack must be deployed to the environment (Run &ldquo;cdk bootstrap aws://unknown-account/unknown-region&rdquo;)
->     at Object.addMetadataAssetsToManifest (/usr/local/Cellar/aws-cdk/1.45.0/libexec/lib/node<sub>modules</sub>/aws-cdk/lib/assets.ts:28:11)
->     at Object.deployStack (/usr/local/Cellar/aws-cdk/1.45.0/libexec/lib/node<sub>modules</sub>/aws-cdk/lib/api/deploy-stack.ts:205:29)
->     at processTicksAndRejections (internal/process/task<sub>queues.js</sub>:97:5)
->     at CdkToolkit.deploy (/usr/local/Cellar/aws-cdk/1.45.0/libexec/lib/node<sub>modules</sub>/aws-cdk/lib/cdk-toolkit.ts:181:24)
->     at main (/usr/local/Cellar/aws-cdk/1.45.0/libexec/lib/node<sub>modules</sub>/aws-cdk/bin/cdk.ts:250:16)
->     at initCommandLine (/usr/local/Cellar/aws-cdk/1.45.0/libexec/lib/node<sub>modules</sub>/aws-cdk/bin/cdk.ts:183:9)
+> ❌ SampleAppStack failed: Error: This stack uses assets, so the toolkit stack must be deployed to the environment (Run &ldquo;cdk bootstrap aws://unknown-account/unknown-region&rdquo;)
+> at Object.addMetadataAssetsToManifest (/usr/local/Cellar/aws-cdk/1.45.0/libexec/lib/node<sub>modules</sub>/aws-cdk/lib/assets.ts:28:11)
+> at Object.deployStack (/usr/local/Cellar/aws-cdk/1.45.0/libexec/lib/node<sub>modules</sub>/aws-cdk/lib/api/deploy-stack.ts:205:29)
+> at processTicksAndRejections (internal/process/task<sub>queues.js</sub>:97:5)
+> at CdkToolkit.deploy (/usr/local/Cellar/aws-cdk/1.45.0/libexec/lib/node<sub>modules</sub>/aws-cdk/lib/cdk-toolkit.ts:181:24)
+> at main (/usr/local/Cellar/aws-cdk/1.45.0/libexec/lib/node<sub>modules</sub>/aws-cdk/bin/cdk.ts:250:16)
+> at initCommandLine (/usr/local/Cellar/aws-cdk/1.45.0/libexec/lib/node<sub>modules</sub>/aws-cdk/bin/cdk.ts:183:9)
 > This stack uses assets, so the toolkit stack must be deployed to the environment (Run &ldquo;cdk bootstrap aws://unknown-account/unknown-region&rdquo;)
 
 `cdk bootstrap` [github issue link](https://github.com/aws/aws-cdk/issues/3091#issuecomment-514219068)
-
 
 <a id="orgc1cb745"></a>
 
@@ -156,14 +147,13 @@ I was editing the .js file which causes this error.
 
 You can see in the resources:
 
--   CDKMetadata
--   HelloLambda
--   HelloLambdaServiceRole
-    
-    You can click the Physical ID of HelloLambda to visit the lambdas console.
-    
-    We configure a test event with the Amazon API Gateway AWS Proxy template
+- CDKMetadata
+- HelloLambda
+- HelloLambdaServiceRole
 
+  You can click the Physical ID of HelloLambda to visit the lambdas console.
+
+  We configure a test event with the Amazon API Gateway AWS Proxy template
 
 <a id="org67a178d"></a>
 
@@ -182,7 +172,6 @@ You can configure your lambda with the object passed into the `lambda.Function`
           timeout: cdk.Duration.seconds(10)
     });
 
-
 <a id="orgb06fd19"></a>
 
 ### Attach an API Gateway to a lambda function deployed with AWS CDK
@@ -196,7 +185,6 @@ add the @aws-cdk/api-gateway package to our app. Then we need to configure the g
         })
 
 Heres my endpoint: <https://81eq25iin1.execute-api.us-east-1.amazonaws.com/prod/>
-
 
 <a id="org4caa786"></a>
 
@@ -218,13 +206,11 @@ Pass `environment` object to you lambda to provide `process.env` variables in yo
           }
     });
 
-
 <a id="org8f3bca0"></a>
 
 ### Run lambda functions built with CDK locally using AWS SAM
 
 Run your lambda functions locally with `sam`. This requires docker.
-
 
 <a id="org505b4b7"></a>
 
@@ -234,7 +220,6 @@ You can create an S3 bucket with the `@aws-cdk/aws-s3` package.
 
     const logoBucket = new s3.Bucket(this, "LogoBucket", {})
 
-
 <a id="org2afaa05"></a>
 
 ### Make the contents of an S3 bucket deployed with CDK public
@@ -242,7 +227,6 @@ You can create an S3 bucket with the `@aws-cdk/aws-s3` package.
 By default, the contents of the bucket are secure.
 
 You can add `publicReadAccess: true` to make the contents readable.
-
 
 <a id="org60b9d27"></a>
 
@@ -258,7 +242,6 @@ add the event notification when a file gets create:
           // execute our lambda function
           new s3Notifications.LambdaDestination(helloLambda)
       );
-
 
 <a id="orgee0fd50"></a>
 
@@ -276,7 +259,6 @@ create and `assets/` folder and put an image in it.
 
 Now you deploy your code and assets get uploaded!
 
-
 <a id="orgfa3460d"></a>
 
 ### Create a custom AWS CDK construct
@@ -286,7 +268,7 @@ Constructs can represent a single resource or a high-level component that holds 
 Created `lib/todo-backend.ts` and added
 
     import * as cdk from "@aws-cdk/core"
-    
+
     export class TodoBackend extends cdk.Construct {
         constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps){
             super(scope, id)
@@ -294,7 +276,6 @@ Created `lib/todo-backend.ts` and added
     }
 
 The community notes had me add `public readonly handler: lambda.Function` which was not in the lesson.
-
 
 <a id="org8df9217"></a>
 
@@ -313,7 +294,6 @@ We need a partition key to uniquely identify an item.
 Got `A class member cannot have the 'const' keyword` because I put the table declaration outside of the constructor.
 
 Added an item in the dynamodb console.
-
 
 <a id="org86c3775"></a>
 
@@ -343,22 +323,21 @@ Then in our `sample_app-stack` we will delete the old hello lambda code and repl
     export class SampleAppStack extends cdk.Stack {
       constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
-    
+
         const todoBackend = new TodoBackend(this, "TodoBackend")
-    
+
         new apiGateway.LambdaRestApi(this, 'Endpoint', {
           handler: todoBackend.handler
         })
-    
+
         const logoBucket = new s3.Bucket(this, "LogoBucket", {publicReadAccess: true})
-    
+
         new s3Deployment.BucketDeployment(this, "DeployAssets", {
           destinationBucket: logoBucket,
           sources: [s3Deployment.Source.asset('./assets')]
         })
       }
     }
-
 
 <a id="org8241d88"></a>
 
@@ -380,7 +359,6 @@ This fixes the issue:
 
 `curl https://81eq25iin1.execute-api.us-east-1.amazonaws.com/prod/`
 
-
 <a id="orgf3340e7"></a>
 
 ### Adding data to a DynamoDB table with put operation
@@ -392,13 +370,13 @@ updated our event handler:
             // if GET return todos
             if (httpMethod === "GET") {
                 const response = await getAllTodos();
-    
+
                 return createResponse(response.Items || []);
             }
             if (!requestBody) {
                 return createResponse("Missing request body", 500);
             }
-    
+
             // parsing the data we sent to the server
             const data = JSON.parse(requestBody);
             // if POST add a todo
@@ -417,7 +395,7 @@ updated our event handler:
                       )
                     : createResponse("ID is missing", 500);
             }
-    
+
             return createResponse(
                 `We only accept GET, POST, OPTIONS and DELETE, not ${httpMethod}`,
                 500
@@ -446,7 +424,6 @@ We will use `dynamodb.put` to find and update OR create an item based off the id
         return todo;
     };
 
-
 <a id="orgda40fb2"></a>
 
 ### Delete an item from a DynamoDB table with delete operation
@@ -455,7 +432,7 @@ We can use `dynamodb.delete`.
 
     const deleteTodoItem = async (data: { id: string }) => {
         const { id } = data;
-    
+
         if (id && id !== "") {
             await dynamo
                 .delete({
@@ -467,10 +444,9 @@ We can use `dynamodb.delete`.
                 })
                 .promise();
         }
-    
+
         return id;
     };
-
 
 <a id="org2402563"></a>
 
@@ -499,7 +475,6 @@ Then we can `import {v4 as uuid} from 'uuid'` and add this to our put request:
         return todo;
     };
 
-
 <a id="org06cade2"></a>
 
 ### Connect React app to a serverless backend deployed with CDK and fix CORS issues
@@ -524,7 +499,6 @@ We have to handle the CORS preflight requests now in our lambda handler function
          return createResponse("ok");
      }
 
-
 <a id="org00eb521"></a>
 
 ### Add a custom CloudFormation stack output with CDK
@@ -535,7 +509,6 @@ If you want to see the output of a Construct, in this case our S3 bucket, you ca
       // add the name of your bucket and your file (in the assets folder)
         value: `https://${logoBucket.bucketDomainName}/testFile.png`
     });
-
 
 <a id="orgf442f2b"></a>
 
@@ -549,17 +522,16 @@ You just need to point the build of your app to a directory that our stack is wa
           // the index document
           websiteIndexDocument: "index.html"
         });
-    
+
         new s3Deployment.BucketDeployment(this, "DeployWebsite", {
           destinationBucket: websiteBucket,
           // path to our build directory
           sources: [s3Deployment.Source.asset("../frontend/build")]
         });
-    
+
         new cdk.CfnOutput(this, "WebsiteUrl", {
           value: websiteBucket.bucketWebsiteUrl
         });
-
 
 <a id="orgd4e3faf"></a>
 
@@ -574,7 +546,6 @@ There is a user created construct for SPAs that puts our app behind cloudfront a
         websiteFolder: "../frontend/build"
     });
 
-
 <a id="orgeb2cfae"></a>
 
 ### Destroy an AWS CDK stack
@@ -584,4 +555,3 @@ There is a user created construct for SPAs that puts our app behind cloudfront a
 S3 buckets are skipped.
 
 You can run `cdk deploy` to deploy everything again.
-

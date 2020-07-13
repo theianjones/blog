@@ -4,7 +4,7 @@ date: 2020-05-28
 title: Track Your Dotfiles
 description: Use a Git Bare repository to track your dotfiles.
 categories: []
-keywords: []
+tags: [dotfiles, git]
 published: true
 author: 'Ian Jones'
 type: post

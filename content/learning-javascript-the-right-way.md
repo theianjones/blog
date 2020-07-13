@@ -6,7 +6,7 @@ published: true
 keywords: []
 author: Ian Jones
 description: ''
-categories: javascript fundamentals
+tags: [javascript, fundamentals]
 slug: '/learning-javascript-the-right-way'
 type: post
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Traveling Throughout Europe
 date: 2016-10-10 13:12:21
 published: true
-keywords: []
+tags: [traveling]
 author: Ian Jones
 description: ''
 slug: '/traveling-europe'

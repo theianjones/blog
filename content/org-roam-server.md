@@ -1,6 +1,7 @@
 ---
 title: Org Roam Server
 aliases: [org roam server]
+tags: [org roam]
 ---
 
 - **tags:** [[Org Roam]], [[Org Mode]], [[Doom Emacs]]

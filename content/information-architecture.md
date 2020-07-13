@@ -2,7 +2,7 @@
 layout: post
 title: '📝 Everyday Information Architecture'
 date: 2019-05-13
-categories: reading
+tags: [information architecture, ux]
 slug: '/information-architecture'
 type: post
 ---

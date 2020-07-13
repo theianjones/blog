@@ -3,8 +3,7 @@ slug: factory-bot-build-stubbed
 date: 2019-10-02
 title: "Fast Ruby Test's with FactoryBot#build_stubbed"
 description: 'build_stubbed allows you to create fast tests because everything is handled in memory with less database hits.'
-categories: []
-keywords: ['ruby', 'rspec', 'rails', 'factory bot']
+tags: ['ruby', 'rspec', 'rails', 'factory bot']
 published: true
 author: 'Ian Jones'
 type: post

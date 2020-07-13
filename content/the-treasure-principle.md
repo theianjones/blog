@@ -1,5 +1,6 @@
 ---
 title: The Treasure Principle
+tags: [faith, money]
 ---
 
 ### Table of Contents

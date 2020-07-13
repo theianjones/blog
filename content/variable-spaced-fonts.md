@@ -2,6 +2,7 @@
 title: Variable Spaced Fonts in Doom Emacs
 date: 2020-07-09
 type: post
+tags: [emacs, fonts]
 ---
 
 You can use the `mixed-pitch` package to manage your variably spaced fonts in [[Doom Emacs]].

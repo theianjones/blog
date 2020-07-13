@@ -7,7 +7,7 @@ published: true
 keywords: []
 author: Ian Jones
 description: ''
-categories: functional javascript
+tags: [functional programming, javascript]
 type: post
 ---
 

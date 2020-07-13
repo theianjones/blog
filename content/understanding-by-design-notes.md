@@ -3,7 +3,7 @@ slug: understanding-by-design-meets-neuroscience
 date: 2019-05-17
 title: 'Understanding By Design meets Neuroscience Notes 🧠'
 description: ''
-categories: ['reading']
+tags: ['understanding by design']
 keywords: ['Understanding by Design']
 published: false
 author: 'Ian Jones'

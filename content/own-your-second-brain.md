@@ -19,13 +19,17 @@ growthStage: evergreen
 6.  [Navigate your files easily](/own-your-second-brain#orgb1c6d5e)
 7.  [Resources](/own-your-second-brain#org31cfb44)
 
-First things first, I am new to emacs and the eco system so there are packages I&rsquo;m not aware of. This is my current set up that I am pretty happy with but if you read through it and see something that can be improved, please let me know on twitter at `@_jonesian` or on the Doom Emacs Discord server!
-
 <a id="org99e85d1"></a>
 
 ## Installing Doom Emacs
 
 These are instructions for Mac/Linux, if you're on windows I recommend looking at [ervingad's window instructions here](https://github.com/earvingad/configfiles/blob/master/emacs/DoomEmacsWindows.org).
+
+> First things first, I am new to emacs and the eco system so there are packages I&rsquo;m not aware of.
+>
+> This is my current set up that I am pretty happy with but if you read through it and see something that can be improved, please let me know on twitter at `@_jonesian` or on the Doom Emacs Discord server!
+>
+> <footer>some link goes here</footer>
 
 First things first, you need to install [Homebrew](https://brew.sh/). I try to install as many programs from homebrew as I can. This way I can reduce the overhead of keeping all my dependencies up to date.
 

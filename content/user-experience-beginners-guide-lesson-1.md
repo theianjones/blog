@@ -1,6 +1,7 @@
 ---
 title: User Experience The Beginner's Guide Lesson 1
 aliases: [ux beginners guide 1]
+tags: [ux]
 ---
 
 ## Meeting Notes

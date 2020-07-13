@@ -4,7 +4,7 @@ slug: '/converting-rails-data-to-csv'
 title: Using Rails Console To Turn Data Into a CSV
 date: 2017-09-10 11:02:21
 published: true
-keywords: []
+tags: [rails, csv]
 author: Ian Jones
 description: ''
 type: post

@@ -4,7 +4,7 @@ date: 2020-02-13
 title: 'Rails Omniauth CSRF Detected error'
 description: 'An error that took me 3 days to solve...'
 categories: []
-keywords: ['Rails', 'Omniauth']
+tags: [rails, omniauth]
 published: true
 author: 'Ian Jones'
 type: post

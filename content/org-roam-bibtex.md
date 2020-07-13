@@ -3,7 +3,7 @@ title: Org Roam Bibtex
 aliases: [org roam bibtex]
 type: post
 date: 2020-06-04
-tags: [featured]
+tags: [featured, org roam, org mode, emacs]
 ---
 
 ## Table of Contents

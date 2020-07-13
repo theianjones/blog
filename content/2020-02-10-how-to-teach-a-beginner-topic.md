@@ -4,7 +4,7 @@ date: 2020-02-10
 title: 'How do you Teach a Beginner Topic?'
 description: 'Thoughts on creating beginner material.'
 categories: []
-keywords: ['Teaching']
+tags: [teaching]
 published: true
 type: post
 author: 'Ian Jones'

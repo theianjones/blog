@@ -1,6 +1,7 @@
 ---
 title: Org Roam
 aliases: [org roam]
+tags: [emacs, org mode, org roam]
 ---
 
 [[Roam Research]] [[Doom Emacs]] clone that extends [[Org Mode]]

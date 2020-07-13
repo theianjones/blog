@@ -3,7 +3,7 @@ layout: post
 title: 'Stop Thinking In Lifecycle Methods'
 date: 2019-09-10 13:12:21
 published: true
-keywords: []
+tags: [react]
 author: Ian Jones
 description: ''
 slug: '/stop-thinking-in-lifecycle-methods'

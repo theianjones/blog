@@ -2,8 +2,7 @@
 slug: reasonml-async-await
 date: 2020-03-17
 title: '📝 ReasonML Applications for the React Developer egghead Collection Notes'
-categories: ['reasonml', 'react']
-keywords: ['Notes']
+tags: [reasonml, react]
 published: true
 author: 'Ian Jones'
 type: post

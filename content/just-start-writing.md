@@ -3,7 +3,7 @@ layout: post
 title: Just Start Writing
 date: 2016-06-28 13:12:21
 published: true
-keywords: []
+tags: [writing]
 author: Ian Jones
 description: ''
 slug: '/just-start-writing'

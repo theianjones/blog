@@ -3,7 +3,7 @@ layout: post
 title: 'Setting Up Jekyll With Github Pages'
 date: 2015-08-14 13:12:21
 published: true
-keywords: []
+tags: [jekyll, ruby]
 author: Ian Jones
 description: ''
 categories: jekyll

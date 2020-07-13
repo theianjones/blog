@@ -3,8 +3,7 @@ slug: faunadb-notes
 date: 2019-09-23
 title: '📝 The Complete Guide to FaunaDB'
 description: ''
-categories: ['reading']
-keywords: ['FaunaDB']
+tags: ['faunadb']
 published: true
 author: 'Ian Jones'
 type: post

@@ -3,7 +3,7 @@ layout: post
 title: Set Up React Router in Rails
 date: 2017-09-22 11:02:21
 published: true
-keywords: []
+tags: [rails, react]
 author: Ian Jones
 description: ''
 slug: '/set-up-react-on-rails-routes'

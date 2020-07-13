@@ -3,7 +3,7 @@ layout: post
 title: Mobx Window Size Store
 date: 2017-09-18 11:02:21
 published: true
-keywords: []
+tags: [mobx]
 author: Ian Jones
 description: ''
 slug: '/mobx-window-size-store'

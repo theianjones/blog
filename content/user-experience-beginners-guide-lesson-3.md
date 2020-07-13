@@ -1,6 +1,7 @@
 ---
 title: User Experience The Beginner's Guide Lesson 3
 aliases: [ux beginners guide 3]
+tags: [ux]
 ---
 
 ### Table of Contents

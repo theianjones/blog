@@ -3,7 +3,7 @@ slug: reasonml-async-await
 date: 2020-03-11
 title: '📝 Making an HTTP server in ReasonML egghead Collection Notes'
 categories: []
-keywords: ['Notes']
+tags: [reasonml]
 published: true
 author: 'Ian Jones'
 type: post

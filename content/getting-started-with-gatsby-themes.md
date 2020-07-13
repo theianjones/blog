@@ -3,8 +3,7 @@ slug: getting-started-with-gatsby-themes
 date: 2019-05-20
 title: 'Getting Started with Gatsby Themes'
 description: 'This post will detail how Gatsby themes can enable you to build your blog, documentation site, or ecommerse site faster.'
-categories: ['gatsby', 'themes', 'mdx', 'docz']
-keywords: ['gatsby', 'themes', 'mdx', 'docz']
+tags: ['gatsby', 'themes', 'mdx', 'docz']
 published: true
 author: 'Ian Jones'
 type: post

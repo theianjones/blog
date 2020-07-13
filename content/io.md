@@ -2,7 +2,7 @@
 title: 'Io: the "simplest" programming language on the block'
 date: 2020-06-30
 type: post
-tags: [featured]
+tags: [featured, programming language, io]
 ---
 
 Io ([website link](http://iolanguage.com/)) is a pure [[Prototype Language]]. Io feels like a brain child of [[Ruby]] and [[JavaScript]]. It has the least amount of syntax that I&rsquo;ve experience in a language. You use `=` to assign a value to a slot on an object. `:=` to assign a value on a slot or create a new value. `::=` to assign a value to a slot, create setters for that slot or assign a new value.

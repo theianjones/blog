@@ -4,7 +4,7 @@ date: 2019-12-19
 title: 'Roam Research to Explore Ideas'
 description: 'A networked note taking app to supercharge your productivity'
 categories: []
-keywords: ['Roam Research', 'productivity']
+tags: ['roam research', 'productivity']
 published: true
 type: post
 author: 'Ian Jones'

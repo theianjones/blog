@@ -3,7 +3,7 @@ layout: post
 title: XCode's License Issue with Node
 date: 2015-11-9 13:12:21
 published: true
-keywords: []
+tags: [xcode]
 author: Ian Jones
 description: ''
 categories: node

@@ -1,5 +1,6 @@
 ---
 title: Roam Research Clones
+tags: [roam research, org roam, digital garden]
 ---
 
 - **tags:** [[Roam Research]], [[Digital Garden]]

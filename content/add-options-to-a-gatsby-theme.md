@@ -4,7 +4,7 @@ date: 2019-09-26
 title: 'Add Options To A Gatsby Theme'
 description: 'Chris Biscardi posted 3 different blog posts going over how to add options to a gatsby theme. '
 categories: []
-keywords: ['gatsby', 'gatsby-themes']
+tags: ['gatsby', 'gatsby themes']
 published: true
 author: 'Ian Jones'
 type: post

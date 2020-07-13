@@ -4,7 +4,7 @@ date: 2019-12-04
 title: '🎄 Advent of Code Day 4 2019'
 description: 'This is my solution to Advent of Code Day 4 2019'
 categories: []
-keywords: ['advent of code', 'javascript']
+tags: ['advent of code', 'javascript']
 published: true
 type: post
 author: 'Ian Jones'

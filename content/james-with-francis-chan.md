@@ -1,6 +1,7 @@
 ---
 title: Study of James with Francis Chan
 aliases: [James Study]
+tags: [faith]
 ---
 
 My [[Small Group]] has been going over [Francis Chan's Right Now media course on James](https://www.rightnowmedia.org/Content/Series/159923).

@@ -2,8 +2,7 @@
 slug: rr-themes
 date: 2020-03-18
 title: 'Custom Roam Research Themes'
-categories: ['Roam Research', 'react']
-keywords: ['Notes']
+tags: [roam research]
 published: true
 author: 'Ian Jones'
 type: post

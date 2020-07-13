@@ -3,7 +3,7 @@ layout: post
 title: '📝 Graph Algorithms'
 date: 2019-08-20 13:12:21
 published: true
-keywords: ['neo4j', 'graph', 'algorithms']
+tags: ['neo4j', 'graph', 'algorithms']
 author: Ian Jones
 description: ''
 slug: '/notes-neo4j-graph-algorithms-oscon'

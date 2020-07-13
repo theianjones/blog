@@ -1,5 +1,6 @@
 ---
 title: 2020-05-13 UX Anti Book Club
+tags: [ux]
 ---
 
 ## Meeting notes

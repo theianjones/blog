@@ -1,14 +1,14 @@
 ---
 title: Abolish Big Data
+tags: [big data]
+growthStage: budding
 ---
 
 Talk by [[Yeshimabeit Milner]]
 
- 
+[[Data & Society]](<[website](http://criticalresistance.org/wp-content/uploads/2012/06/CR-Abolitionist-Toolkit-online.pdf)>)
 
-[[Data & Society]] ([website](http://criticalresistance.org/wp-content/uploads/2012/06/CR-Abolitionist-Toolkit-online.pdf))
-
-[[Data for Black Live]] ([website](http://d4bl.org/))
+[[Data for Black Live]](<[website](http://d4bl.org/)>)
 
 Abolish Big Data
 
@@ -53,4 +53,3 @@ Risk ratios are used by the policy and city officials to oppress kids.
 Data for Black Lives wants to build Data Trusts
 
 Data Code for Ethics
-

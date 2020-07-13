@@ -1,5 +1,6 @@
 ---
 title: Easy Tandoori Chicken
+tags: [cooking]
 ---
 
 Recipe from the Nom Nom Paleo™ app

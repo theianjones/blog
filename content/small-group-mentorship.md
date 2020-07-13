@@ -1,7 +1,7 @@
 ---
 title: Small Group Mentorship
+tags: [faith]
 ---
-
 
 ### Table of Contents
 
@@ -21,8 +21,7 @@ title: Small Group Mentorship
         4.  [SoS tool](/small-group-mentorship#orgb715247)
         5.  [Fruit to Root](/small-group-mentorship#org620a8f6)
 
--   **tags:** [Small group](20200426212938-small_group.md), [Faith](20200426171952-faith.md), [Fairfax Bible Church](fairfax_bible_church_org.md)
-
+- **tags:** [Small group](20200426212938-small_group.md), [Faith](20200426171952-faith.md), [Fairfax Bible Church](fairfax_bible_church_org.md)
 
 <a id="orge34713f"></a>
 
@@ -31,7 +30,6 @@ title: Small Group Mentorship
 [[Fairfax Bible Church]] Mission:
 
 To glorify God by makeing disciples of all nations as we live in loving community.
-
 
 <a id="orgab94a79"></a>
 
@@ -44,7 +42,6 @@ We aspire to the concept of multiplication.
 
 We use small groups to make teach the word, fellowship with one another, and pray with each other.
 
-
 <a id="orgbb882cd"></a>
 
 ## Live in Loving community
@@ -53,13 +50,11 @@ We want to connect with those that are in our Church and small group. We want to
 
 This community should be the place we build lasting relationships.
 
-
 <a id="orge22a802"></a>
 
 ## How to lead a small group?
 
 We realize that small group may not be the best way to teach content, mentor others, and fellowship all at once but it is the tool we have chosen that does a pretty good job of each.
-
 
 <a id="org2753cc2"></a>
 
@@ -69,19 +64,17 @@ A small group leader, is first and formost a leader. We lead with our strengths 
 
 There is no way to manufacture disciples. You cultivate them.
 
-
 <a id="orge481b8f"></a>
 
 ### Strength Finders
 
 We took the strength finders test to see what some areas we could excel leading our small groups in. Mine were:
 
--   Input
--   Relator
--   Intellection
--   Developer
--   Consistency
-
+- Input
+- Relator
+- Intellection
+- Developer
+- Consistency
 
 <a id="org5222ba6"></a>
 
@@ -92,7 +85,6 @@ We read Master Plan of Evangelism by Robert E. Colman to discuss how Jesus culti
 Jesus had 12 disciples, a relatively small number of people to reach the WHOLE world. He pour his heart and soul into them. Among these 12 he had 3 espectially close disciples. This gives us a model on how we can make disciples. By teaching those in your circle how to teach others.
 
 Truth in Christ starts with obediance, then understanding follows. Having men that you can look up to as examples of this makes a big difference.
-
 
 <a id="orgd7ffa6a"></a>
 
@@ -106,7 +98,6 @@ As a teacher, you do not need to know everything. Things that you dont know can 
 
 Teaching in small group plays an important role. Steeping ourselves in the word of God helps us grow and see the world like He does.
 
-
 <a id="org080a89b"></a>
 
 ### Questions for Facilitation
@@ -118,19 +109,18 @@ Teaching in small group plays an important role. Steeping ourselves in the word 
 2.  So, What?
 
     A lot of leader guides you will come in contact with will be weak in this area.
-    
+
     So, What questions establish connections with other text. They bring to light a pattern in the Bible or a strong metaphor. This is where we can ground the text we are discussing in a real way.
-    
+
     &ldquo;Where else in scripture have we seen this principle?&rdquo;
 
 3.  Now What?
 
     Now what questions drive the application of the text home. How can we apply what we are learning to our lives?
-    
-    You can ask general now what questions to the group and get specific in break out time.
-    
-    Applying application to how we as a church can do better in the area we are discussing is a good frame.
 
+    You can ask general now what questions to the group and get specific in break out time.
+
+    Applying application to how we as a church can do better in the area we are discussing is a good frame.
 
 <a id="orgef171b4"></a>
 
@@ -146,7 +136,6 @@ We are responsible for the people we are leading in our small group. This is a s
 
 Jeff gave us 3 points to focus on:
 
-
 <a id="org0ddc371"></a>
 
 ### Know
@@ -156,7 +145,6 @@ We need to keep our eyes and ears open and check on every person in our group. P
 We will give a sheparding report once a month. This serves as a reminder to be asking your group how they are doing.
 
 God has entrusted his people into our care.
-
 
 <a id="org6cc87ba"></a>
 
@@ -168,7 +156,6 @@ Galatians 6:1-2
 Bear one anothers burdens. Small group is a safety net. The &ldquo;first responders&rdquo; of our church body. Its important that people are able to share whats on their heart. How else can the church pray for these people?
 
 We need to deal with the sin that we see. We can&rsquo;t ignore it.
-
 
 <a id="orgbf4134b"></a>
 
@@ -189,7 +176,6 @@ Worship - Come to Church
 Walk - Join a small group
 Work - serve in a ministry
 
-
 <a id="orgb715247"></a>
 
 ## SoS tool
@@ -201,7 +187,6 @@ This stands for Severity, Ownership, and Support.
 We need to gather data. On the legal side, Virginia is a mandatory reporting state. If we think abuse is happening we need to report to our elders.
 
 Confidentiality is important but some things are more important.
-
 
 <a id="org620a8f6"></a>
 
@@ -222,5 +207,3 @@ What were you thinking or feeling?
 What are they really wanting?
 
 What should you be wanting instead?
-
-

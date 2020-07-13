@@ -4,7 +4,8 @@ date: 2020-02-24
 title: 'Introduction to Urql: A Robust GraphQL Client'
 description: 'Urql is a flexible alternative to Apollo'
 categories: []
-keywords: ['urql', 'graphql']
+tags: [urql, graphql]
+growthStage: evergreen
 published: true
 author: 'Ian Jones'
 type: post

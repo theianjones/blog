@@ -2,6 +2,7 @@
 title: Org Pomodoro
 aliases: [org-pomodoro]
 type: post
+tags: [emacs, org-mode, pomodoro]
 date: 2020-06-15
 ---
 

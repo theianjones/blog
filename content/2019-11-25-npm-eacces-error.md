@@ -6,6 +6,7 @@ description: 'Running npm with sudo means you downloaded node with root permissi
 categories: []
 type: post
 keywords: ['npm', 'error']
+tags: [npm]
 published: true
 author: 'Ian Jones'
 ---

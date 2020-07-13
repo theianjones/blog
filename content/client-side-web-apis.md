@@ -4,7 +4,7 @@ date: 2020-02-10
 title: 'Get Started with JavaScript in the Browser'
 description: 'A gentle introduction to the DOM and JavaScript in the browser'
 categories: []
-keywords: ['DOM', 'JavaScript']
+tags: ['dom', 'javascript']
 published: true
 author: 'Ian Jones'
 banner: './assets/client-side-web-apis/01.jpg'

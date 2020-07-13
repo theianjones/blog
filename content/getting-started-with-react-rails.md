@@ -6,6 +6,7 @@ published: true
 keywords: []
 author: Ian Jones
 description: ''
+tags: [rails, react]
 slug: '/getting-started-with-react-rails'
 type: post
 ---

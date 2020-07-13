@@ -1,6 +1,7 @@
 ---
 title: Doom Emacs
 aliases: [doom emacs]
+tags: [emacs]
 ---
 
 ## Installation

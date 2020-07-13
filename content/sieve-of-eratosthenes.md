@@ -3,7 +3,7 @@ layout: post
 title: Sieve of Eratosthenes
 date: 2016-06-29 13:12:21
 published: true
-keywords: []
+tags: [ruby, algorithms]
 author: Ian Jones
 description: ''
 slug: '/sieve-of-eratosthenes'

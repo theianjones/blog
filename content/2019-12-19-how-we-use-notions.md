@@ -4,7 +4,7 @@ date: 2019-12-19
 title: 'Use Notion to Organize your Brain'
 description: "How we've been using Notion at egghead"
 categories: []
-keywords: ['Notion', 'productivity']
+tags: ['notion', 'productivity']
 published: true
 type: post
 author: 'Ian Jones'

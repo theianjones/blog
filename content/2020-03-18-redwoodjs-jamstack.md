@@ -3,7 +3,7 @@ slug: rw
 date: 2020-03-18
 title: 'RedwoodJS: a full-stack framework for JAMstack'
 description: ''
-categories: ['javascript', 'jamstack', 'redwoodjs']
+tags: ['javascript', 'jamstack', 'redwoodjs']
 keywords: []
 published: true
 author: 'Ian Jones'

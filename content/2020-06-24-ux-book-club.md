@@ -1,5 +1,6 @@
 ---
 title: Ux Bookclub 7
+tags: ['ux', 'book club']
 ---
 
 ## Three Main Takeaways
@@ -15,4 +16,3 @@ As we think about designing workshops, its important to design the interactions 
 ## What I learned in a tweet
 
 When you are learning with your peers, simply collaborating will not improve your outcome. You need to establish a shared understanding of the subject and set expectations for communication.
-

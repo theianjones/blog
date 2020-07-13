@@ -3,7 +3,7 @@ layout: post
 title: 📝 The Power Of Habit
 date: 2016-12-28 13:12:21
 published: true
-keywords: []
+tags: [book]
 author: Ian Jones
 description: ''
 slug: '/power-of-habit'

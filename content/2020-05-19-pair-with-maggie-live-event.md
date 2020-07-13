@@ -1,6 +1,7 @@
 ---
 title: '📆 Livestream Event - Build Your Own Public Digital Garden'
 date: 2020-05-11
+tags: [digital garden]
 type: post
 ---
 
