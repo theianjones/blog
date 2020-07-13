@@ -1,9 +1,16 @@
 import prism from '@theme-ui/prism/presets/theme-ui'
 import { darken, lighten } from 'polished'
+import { bpMaxMD, minSM, minMD, minLG, minXL, minXXL } from '../lib/breakpoints'
+
 export default {
   useCustomProperties: true,
   sizes: {
     container: 864,
+    minSM,
+    minMD,
+    minLG,
+    minXL,
+    minXXL,
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
@@ -225,6 +232,27 @@ export default {
       wordWrap: 'break-word',
       whiteSpace: 'pre-line',
       overflowWrap: 'break-word',
+    },
+    blockquote: {
+      fontSize: '3',
+      p: {
+        marginRight: '40px',
+        marginRight: 0,
+      },
+      footer: {
+        fontSize: '2',
+        textAlign: 'right',
+      },
+      bpMaxMD: {
+        marginLeft: '1.5em',
+        marginRight: '0em',
+        p: {
+          width: '100%',
+        },
+        footer: {
+          width: '100%',
+        },
+      },
     },
   },
   images: {

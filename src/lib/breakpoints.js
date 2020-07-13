@@ -1,8 +1,8 @@
-const minSM = 545
-const minMD = 768
-const minLG = 998
-const minXL = 1200
-const minXXL = 1920
+export const minSM = 545
+export const minMD = 768
+export const minLG = 998
+export const minXL = 1200
+export const minXXL = 1920
 
 export const bpMinSM = `@media (min-width: ${minSM}px)`
 export const bpMinMD = `@media (min-width: ${minMD}px)`
