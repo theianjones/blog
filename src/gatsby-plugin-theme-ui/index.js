@@ -1,5 +1,5 @@
 import prism from '@theme-ui/prism/presets/theme-ui'
-
+import { darken, lighten } from 'polished'
 export default {
   useCustomProperties: true,
   sizes: {
@@ -23,13 +23,16 @@ export default {
   },
   colors: {
     text: '#233044',
+    white: '#fff',
     background: '#fff',
     primary: '#7B14D1',
     secondary: '#C320D6',
     muted: '#f5f2ed',
-    darkGray: '#545977',
+    darkMuted: darken(0.3, '#f5f2ed'),
     gray: '#777C9B',
-    lightGray: '#C5C9DB',
+    darkGray: darken(0.05, '#777C9B'),
+    lightGray: lighten(0.2, '#777C9B'),
+    lightestGrey: lighten(0.35, '#777C9B'),
   },
   textStyles: {
     heading: {
@@ -65,6 +68,32 @@ export default {
       ':hover': {
         backgroundColor: 'muted',
       },
+    },
+    filterSection: {
+      display: 'grid',
+      gridTemplateColumns: '70% 27%',
+      fontSize: '0.85em',
+      fontFamily: 'heading',
+    },
+    growthFilter: {
+      display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: 'flex-end',
+      alignContent: 'flex-start',
+    },
+    topicFilter: {
+      display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: 'flex-start',
+    },
+    notesGrid: {
+      display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      marginTop: '2em',
     },
     navlink: {
       color: 'darkGray',
@@ -191,6 +220,11 @@ export default {
       border: 0,
       borderBottom: '1px solid',
       borderColor: 'muted',
+    },
+    span: {
+      wordWrap: 'break-word',
+      whiteSpace: 'pre-line',
+      overflowWrap: 'break-word',
     },
   },
   images: {

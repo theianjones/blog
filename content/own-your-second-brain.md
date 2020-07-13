@@ -3,7 +3,8 @@ title: '🧠 Own Your Second Brain: Set Up org-roam on Your Own Machine'
 type: post
 date: 2020-05-05
 aliases: [Install Org Roam on Doom Emacs Guide]
-tags: [featured]
+tags: [featured, productivity, emacs, org roam]
+growthStage: evergreen
 ---
 
 [I recorded an overview of what you can build when you follow this technical guide here on youtube](https://youtu.be/gDAbpz98ooU).
@@ -119,9 +120,7 @@ When you want to create a new page, you can run `spc n i` to insert a new topic 
 
 ## Add Bidirectional Link Auto Complete
 
-If you are using the `(org +roam)` flag in Doom emacs, then you dont need to do this set up, its already done for you.
-
-If you didnt use the `(+roam)` flag, org roam won't suggest links to you while you are typing. You need `company-org-roam`. You'll need to install the package. Head over to your `packages.el` file: `spc f p` and select `packages.el`.
+You need `company-org-roam`. You'll need to install the package. Head over to your `packages.el` file: `spc f p` and select `packages.el`. <SideNote idName={1}>If you are using the `(org +roam)` flag in Doom emacs, then you dont need to do this set up, its already done for you.</SideNote>
 
 The maker of org-roam also made this package, we can install it straight from his github:
 

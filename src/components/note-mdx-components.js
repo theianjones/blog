@@ -12,7 +12,7 @@ import HomeContent from './home-content'
 import EggheadCollections from './egghead-collections'
 import PopulatedPostList from './populated-posts-list'
 import Social from './social'
-
+import SideNote from './side-note'
 const ExternalAnchorTag = ({ href, ...restProps }) => {
   return (
     <Tippy
@@ -76,4 +76,5 @@ export default {
   EggheadCollections,
   PopulatedPostList,
   Social,
+  SideNote,
 }
