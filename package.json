@@ -19,6 +19,7 @@
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-breadcrumb": "^9.0.3",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.4.9",
     "gatsby-plugin-netlify": "^2.3.4",
     "gatsby-plugin-react-helmet": "^3.2.4",
