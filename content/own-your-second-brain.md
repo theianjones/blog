@@ -177,11 +177,11 @@ I ran the command in the &ldquo;Note for emacs mac port&rdquo; section which tot
 
 If you are using the `(org +roam)` flag, you wont need to add `(require 'org-roam-protocol)` to your `org-roam` config.
 
-Add a `org-roam-ref-capture-templates` in your `config.el` heres mine:
+Add a `org-roam-capture-ref-templates` in your `config.el` heres mine:
 
 ```lisp
     (after! org-roam
-      (setq org-roam-ref-capture-templates
+      (setq org-roam-capture-ref-templates
             '(("r" "ref" plain (function org-roam-capture--get-point)
                "%?"
                :file-name "websites/${slug}"
