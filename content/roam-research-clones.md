@@ -13,3 +13,4 @@ tags: [roam research, org roam, digital garden]
 - [[Tiddly Wiki]]
   - [[Ann-Laure Le Cunff]] made this [example: Mental Nodes](https://www.mentalnodes.com/about).
 - [Logseq](https://logseq.com/) is an open source, local first clone of Roam Research. It can be backed by a private github account so no one is storing your data.
+- [Foam VS Code](https://foambubble.github.io/foam/) backlinks and graph visualization right in your VScode editor!
