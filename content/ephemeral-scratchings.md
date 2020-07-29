@@ -4,7 +4,7 @@ type: post
 date: 2020-07-24
 aliases: [Fleeting Notes]
 tags: [productivity]
-growthStage: sapling
+growthStage: seedling
 ---
 
 These are notes that you take while you are working. If the note feels like it has legs, it can be extracted into Todo/notes to be completed later.
