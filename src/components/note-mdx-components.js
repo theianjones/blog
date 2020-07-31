@@ -69,8 +69,11 @@ const AnchorTag = ({ href, children, popups, ...restProps }) => {
   )
 }
 
+const Image = (props) => <img height="auto" width={864} {...props} />
+
 export default {
   a: AnchorTag,
+  img: Image,
   ColorModeToggle,
   HomeContent,
   EggheadCollections,
