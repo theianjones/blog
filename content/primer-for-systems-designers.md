@@ -37,20 +37,16 @@ Pattern Language, the book, wont give you the fundamental ideas here.
 
 First two chapters are essential.
 
-- Form
+- Form: the concrete form that the project takes on. Code, Buildings, Pixels, etc.
 
   Theres a style based ideology for design. Without understanding why.
 
-  There isnt one way, but its not anything goes.
-
-  Judgement of success is how form and context fit.
-
   Requirements are generally described in Form.
 
-  If your definition of success is based on form, its infinetly circular. You must understand how the behavior fits into the form.
+  If your definition of success is based on form, its infinitely circular. You must understand how the behavior fits into the form.
 
-- Context
-- Fit
+- Context: the activities that people are trying to accomplish through the form
+- Fit: the relationship between the form and the context fit together. This is the judgement of success for the form for a given context.
 
 <a id="org3ff7d46"></a>
 
@@ -82,15 +78,15 @@ The previous planter couldnt afford sitting. The sitting isn&rsquo;t the point. 
   The face is an example. Eyes, nose, mouth, are salient structures.
   The bones that connect your eyes to your nose are secondary, your eyes look somewhere, your face follows.
 
-  If salient elements aren&rsquo;t related to eachother, they arent centers.
+  If salient elements aren&rsquo;t related to eachother, they aren't centers. Or they are weak centers.
 
   Every structure has strong and weak centers.
 
-  15 properties that Alexander defines.
+  15 properties that Alexander defines. A couple of them:
 
-  levels of scale
-  boundaries
-  void
+  - levels of scale
+  - boundaries
+  - void
 
 <a id="org5819ca4"></a>
 
