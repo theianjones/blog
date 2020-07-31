@@ -5,22 +5,6 @@ author: Ian Jones
 growthStage: seedling
 ---
 
-### Table of Contents
-
-- [Books Covered In this Talk](#books-covered-in-this-talk)
-- [Notes on Synthesis of Form](#notes-on-synthesis-of-form)
-- [Nature of Order](#nature-of-order)
-  - [Building Picture](#building-picture)
-  - [Planter example](#planter-example)
-  - [Topic of Centers](#topic-of-centers)
-  - [How do we improve form through process? Generative Process](#how-do-we-improve-form-through-process-generative-process)
-  - [Pattern languages are generic solved patterns - not the main thing though](#pattern-languages-are-generic-solved-patterns---not-the-main-thing-though)
-  - [Pattern languages are a way to specifcy 1 unique project](#pattern-languages-are-a-way-to-specifcy-1-unique-project)
-- [Battle](#battle)
-- [Software Example](#software-example)
-- [Summary](#summary)
-- [Q&A](#qa)
-
 [[Ryan Singer]] live stream on [[Christopher Alexander]]
 
 ## Books Covered In this Talk
@@ -170,7 +154,7 @@ A wall of faces. Its not best to just group people arbitrarily. We need the cont
 
 Some are involved in the project, but others are just informed. Others are included for transparency.
 
-![](https://res.cloudinary.com/dzsq0psas/image/upload/v1596222684/blog/system-design-3_cwxxmy.png)
+![]()
 
 <a id="org248835f"></a>
 
