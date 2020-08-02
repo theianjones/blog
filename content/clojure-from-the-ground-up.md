@@ -7,7 +7,6 @@ tags: [clojure, programming language]
 
 1.  [Basic Types](/clojure-from-the-ground-up/#org2c24b52)
 2.  [Functions](/clojure-from-the-ground-up/#org2486c7b)
-3.  [Backlinks](/clojure-from-the-ground-up/#orgb4518ce)
 
 Adventures in learning [[Clojure]](source)
 
