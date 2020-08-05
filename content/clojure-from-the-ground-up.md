@@ -5,10 +5,10 @@ tags: [clojure, programming language]
 
 ### Table of Contents
 
-1.  [Basic Types](/clojure-from-the-ground-up/#org2c24b52)
-2.  [Functions](/clojure-from-the-ground-up/#org2486c7b)
-
-Adventures in learning [[Clojure]](source)
+1. [Basic Types](/clojure-from-the-ground-up/#org2c24b52)
+2. [Functions](/clojure-from-the-ground-up/#org2486c7b)
+3. [Sequences](/clojure-from-the-ground-up/#org31174a7)
+   Adventures in learning [[Clojure]](source)
 
 <a id="org2c24b52"></a>
 
@@ -89,3 +89,89 @@ Inspect metadata of a function with:
 [Clojure Cheatsheets](https://clojure.org/api/cheatsheet)
 
 <a id="orgb4518ce"></a>
+
+<a id="org31174a7"></a>
+
+## Sequences
+
+Use `cons` to build a list.
+
+Use `map` to change every value in a list. If you pass map multiple sequences, it will fold together corresponding elements of each collection.
+
+          (map + [1 2 3]
+                  [4 5 6]
+                  [7 8 9])
+    ; => (12 15 18)
+    ; this adds 1 + 4 + 7, 2 + 5 + 8, and 7 + 8 + 9
+
+We can use `map-indexed` to transform elements together with their indices.
+
+    (map (fn [index element] (str index ". " element))
+                (iterate inc 0)
+                ["erlang" "ruby" "haskell"])
+    ; vs
+
+    (map-indexed (fn [index element] (str index ". " element))
+                        ["erlang" "ruby" "haskell"])
+
+We use recursion to work with lists. It has two parts:
+
+1.  Some part of the problem which has a known solution
+2.  A relationship which connects one part of the problem to the next
+
+The base case is the ground to build on. Our inductive or recurrence relation is how we brake the problem up.
+
+`iterate` will create an infinetely long list. We use `take` to pull values out of that list.
+
+    (defn fib
+      ([n]
+       (fib [1, 1] n))
+      ([xs, n]
+       (if (= (count xs) n)
+         xs
+         (fib (conj xs (+ (last xs) (nth xs (- (count xs) 2))))
+              n))))
+    ;; or
+    (defn fib2 [n] (take n (map first (iterate (fn [[a b]] (vector b (+ a b))) [1 1]))))
+
+    (defn fib3 [n] (->> [1 1]
+                        (iterate (fn [[a b]] (vector b (+ a b))))
+                        (map first)
+                        (take n)))
+
+`repeat` will construct a sequence with every element being the same.
+
+`repeatedly` will call a function f without any relationship to the elements.
+
+`concat` will add multiple sequences to the first sequence you pass it.
+
+`interleave` will create one sequence where it shuffles two sequences together.
+
+`interpose` will add an element between every element in a sequence.
+
+`reverse` reverses a sequence. You can reverse a string but a sequence of characters will be returned.
+
+    (reverse "wolf") ; => (\f \l \o \w)
+    (apply str (reverse "wolf")) ; => "flow"
+
+`take` can pull a subsequence out.
+
+`drop` will drop `n` values and return the remaining sequence.
+
+`take-last` and `drop-last` will do the same but in reverse.
+
+`take-while` accepts a function that returns a bool and takes until its false.
+
+`split-at` will split a sequence at a specific index.
+
+`filter` is like javascript filter
+
+`remove` will remove on a truthy value.
+
+`reduce` is like javascript reduce. you can use `reduced` to indicate that you have completed your reduction early.
+
+`reductions` will return a list of all the intermitten states that reduce calculates.
+
+Reduce elements into a collection with `into`.
+
+use `realized?` to check if an infinite series has been realized.
