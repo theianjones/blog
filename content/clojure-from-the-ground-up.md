@@ -493,7 +493,7 @@ When you want a performance boost and dont care what order your refs update in, 
 <thead>
 <tr>
 <th scope="col" class="org-left">Type</th>
-<th scope="col" class="org-left">mutability</th>
+<th scope="col" class="org-left">Mutability</th>
 <th scope="col" class="org-left">Reads</th>
 <th scope="col" class="org-left">Updates</th>
 <th scope="col" class="org-left">Evaluation</th>
