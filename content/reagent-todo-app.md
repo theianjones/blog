@@ -13,7 +13,7 @@ tags: [clojure, react, reagent]
 5.  [Deploying to heroku](/reagent-todo-app#orgd51f80e)
 
 
-I used the `lein reagent` default project to get this up and running. I used defaults, so this project uses `figwheel` for updating code.
+I used the `lein reagent` default project to get this up and running. I used defaults, so this project uses `figwheel` for updating code. [Link to Github Repo](https://github.com/theianjones/reagent-todo) 
 
 
 ## defonce
