@@ -162,7 +162,7 @@ This is called the `app-db`.
 
 `app-db` is `(reagent/atom {})`.
 
--   **ratom:** A [Reagent](reagent.md) atom
+-   **ratom:** A [[Reagent]] atom
 
 Ratoms contained structured data. The db is the value (clojure map) stored inside the Ratom.
 

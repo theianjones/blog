@@ -11,20 +11,57 @@ growthStage: evergreen
 
 ## Table of Contents
 
-1.  [Installing Doom Emacs](/own-your-second-brain#org99e85d1)
-2.  [Adding Org Roam To Your Config](/own-your-second-brain#orga972198)
-3.  [Add Bidirectional Link Auto Complete](/own-your-second-brain#org7ef714a)
-4.  [Fleeting Notes](/own-your-second-brain#org59f47bf)
-5.  [Capture Links From the Web](/own-your-second-brain#org8942a5c)
-6.  [Navigate your files easily](/own-your-second-brain#orgb1c6d5e)
-7.  [Resources](/own-your-second-brain#org31cfb44)
+1. [The Easy Way](/own-your-second-brain#the-easy-way)
+2. [The Hard Way ](/own-your-second-brain#the-hard-way)
+	1.  [Installing Doom Emacs](/own-your-second-brain#org99e85d1)
+	2.  [Adding Org Roam To Your Config](/own-your-second-brain#orga972198)
+	3.  [Add Bidirectional Link Auto Complete](/own-your-second-brain#org7ef714a)
+	4.  [Fleeting Notes](/own-your-second-brain#org59f47bf)
+	5.  [Capture Links From the Web](/own-your-second-brain#org8942a5c)
+	6.  [Navigate your files easily](/own-your-second-brain#orgb1c6d5e)
+	7.  [Resources](/own-your-second-brain#org31cfb44)
 
 First things first, I am new to emacs and the eco system so there are packages I&rsquo;m not aware of.
 This is my current set up that I am pretty happy with but if you read through it and see something that can be improved, please let me know on twitter at `@_jonesian` or on the Doom Emacs Discord server!
 
+<a id="the-easy-way"></a>
+
+## The Easy Way
+
+[[Doom Emacs]] is the [[Emacs]] configuration that I use. There are flags that you can use to install common dependencies. To install [[Org Roam]], You need to add the `+roam` flag to your org dependency.
+
+So in your `.doom.d/init.el`, find `org` under the `:lang` section and add the `+roam` flag:
+
+```
+:lang
+(org +roam)
+```
+
+This will install `org-roam`, `org-roam-protocol`, and `company-org-roam ` (if you have company enabled). 
+
+By default, the org roam directory will be your in your `org-directory/roam`. You can override where your `org-roam-directory`. In your `config.el`:
+
+```elisp
+(setq org-roam-directory "~/Desktop/03-resources/org-roam")
+```
+
+For my [[Ephemeral Scratchings]], I have switched to using `org-roam-dailies` which is just built into org roam. I call `org-roam-dalies-today` to create or get back to my current daily notes. I keep all of my notes here. You can also use [[Org Journal]]. [[Doom Emacs]] has a flag for this as well:
+
+```
+:lang
+(org +roam +journal)
+```
+
+
+<a id="the-hard-way"></a>
+
+## The Hard Way
+
+This is how I first installed [[Org Roam]]. There is a lot of custom config code that you have to write that [[Doom Emacs]] has already taken care of for you.
+
 <a id="org99e85d1"></a>
 
-## Installing Doom Emacs
+### Installing Doom Emacs
 
 These are instructions for Mac/Linux, if you're on windows I recommend looking at [ervingad's window instructions here](https://github.com/earvingad/configfiles/blob/master/emacs/DoomEmacsWindows.org).
 
@@ -72,7 +109,7 @@ Finally, run `emacs` in your terminal and you should see the doom homepage.
 
 <a id="orga972198"></a>
 
-## Adding Org Roam To Your Config
+### Adding Org Roam To Your Config
 
 There are 3 main files that define your doom emacs config:
 
@@ -119,7 +156,7 @@ When you want to create a new page, you can run `spc n i` to insert a new topic 
 
 <a id="org7ef714a"></a>
 
-## Add Bidirectional Link Auto Complete
+### Add Bidirectional Link Auto Complete
 
 You need `company-org-roam`. You'll need to install the package. Head over to your `packages.el` file: `spc f p` and select `packages.el`. <SideNote idName={1}>If you are using the `(org +roam)` flag in Doom emacs, then you dont need to do this set up, its already done for you.</SideNote>
 
@@ -145,7 +182,7 @@ Now you will need to quit your current session, `doom refresh` and open emacs ba
 
 <a id="org59f47bf"></a>
 
-## Fleeting Notes
+### Fleeting Notes
 
 Roam Research puts you in a note that corresponds with the current day as a jumping off point for your notes. This same functionality can be accomplished with `org journal`.
 
@@ -169,7 +206,7 @@ I create a lot of `TODO=s to my journal entries so =(setq org-journal-enable-age
 
 <a id="org8942a5c"></a>
 
-## Capture Links From the Web
+### Capture Links From the Web
 
 I&rsquo;ve added a Chrome bookmarklet titled &ldquo;open in roam&rdquo; that will add any webpage I am on as a note in my Roam. [Here are the docs](https://orgroam.com/manual/Roam-Protocol.html#Roam-Protocol) on what an `org-protocol` is and how to set it up with `org-roam`. Make sure to follow the instructions for `Mac OS` installing `platypus`.
 
@@ -209,7 +246,7 @@ Now when you click the button, it will open or start the capture process for tha
 
 <a id="orgb1c6d5e"></a>
 
-## Navigate your files easily
+### Navigate your files easily
 
 I was recommended using `deft` to navigate my `org roam` files. This can be done by using the `deft` flag in your `init.el` (this option is disabled by default).
 
@@ -237,7 +274,7 @@ Reach out to me on twitter at @<sub>jonesian</sub> or on the Doom Emacs Discord 
 
 Be sure to level up your Emacs skills with [[Zaiste Programming tutorial]].
 
-## Resources
+### Resources
 
 - [[Zaiste Programming tutorial]]
 - [Org Roam Docs](https://www.orgroam.com/manual/)
