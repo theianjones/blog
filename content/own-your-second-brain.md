@@ -19,7 +19,7 @@ growthStage: evergreen
 	4.  [Fleeting Notes](/own-your-second-brain#org59f47bf)
 	5.  [Capture Links From the Web](/own-your-second-brain#org8942a5c)
 	6.  [Navigate your files easily](/own-your-second-brain#orgb1c6d5e)
-	7.  [Resources](/own-your-second-brain#org31cfb44)
+3.  [Resources](/own-your-second-brain#org31cfb44)
 
 First things first, I am new to emacs and the eco system so there are packages I&rsquo;m not aware of.
 This is my current set up that I am pretty happy with but if you read through it and see something that can be improved, please let me know on twitter at `@_jonesian` or on the Doom Emacs Discord server!
