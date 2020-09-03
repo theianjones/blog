@@ -11,57 +11,23 @@ growthStage: evergreen
 
 ## Table of Contents
 
-1. [The Easy Way](/own-your-second-brain#the-easy-way)
-2. [The Hard Way ](/own-your-second-brain#the-hard-way)
-	1.  [Installing Doom Emacs](/own-your-second-brain#org99e85d1)
-	2.  [Adding Org Roam To Your Config](/own-your-second-brain#orga972198)
-	3.  [Add Bidirectional Link Auto Complete](/own-your-second-brain#org7ef714a)
-	4.  [Fleeting Notes](/own-your-second-brain#org59f47bf)
-	5.  [Capture Links From the Web](/own-your-second-brain#org8942a5c)
-	6.  [Navigate your files easily](/own-your-second-brain#orgb1c6d5e)
+1. [Installing Doom Emacs](/own-your-second-brain#org99e85d1)
+2. Installing Org Roam
+	1. [The Easy Way](/own-your-second-brain#the-easy-way)
+	2. [The Hard Way ](/own-your-second-brain#the-hard-way)
+		1.  [Adding Org Roam To Your Config](/own-your-second-brain#orga972198)
+		2.  [Add Bidirectional Link Auto Complete](/own-your-second-brain#org7ef714a)
+		3.  [Fleeting Notes](/own-your-second-brain#org59f47bf)
+		4.  [Capture Links From the Web](/own-your-second-brain#org8942a5c)
+		5.  [Navigate your files easily](/own-your-second-brain#orgb1c6d5e)
 3.  [Resources](/own-your-second-brain#org31cfb44)
 
 First things first, I am new to emacs and the eco system so there are packages I&rsquo;m not aware of.
 This is my current set up that I am pretty happy with but if you read through it and see something that can be improved, please let me know on twitter at `@_jonesian` or on the Doom Emacs Discord server!
 
-<a id="the-easy-way"></a>
-
-## The Easy Way
-
-[[Doom Emacs]] is the [[Emacs]] configuration that I use. There are flags that you can use to install common dependencies. To install [[Org Roam]], You need to add the `+roam` flag to your org dependency.
-
-So in your `.doom.d/init.el`, find `org` under the `:lang` section and add the `+roam` flag:
-
-```
-:lang
-(org +roam)
-```
-
-This will install `org-roam`, `org-roam-protocol`, and `company-org-roam ` (if you have company enabled). 
-
-By default, the org roam directory will be your in your `org-directory/roam`. You can override where your `org-roam-directory`. In your `config.el`:
-
-```elisp
-(setq org-roam-directory "~/Desktop/03-resources/org-roam")
-```
-
-For my [[Ephemeral Scratchings]], I have switched to using `org-roam-dailies` which is just built into org roam. I call `org-roam-dalies-today` to create or get back to my current daily notes. I keep all of my notes here. You can also use [[Org Journal]]. [[Doom Emacs]] has a flag for this as well:
-
-```
-:lang
-(org +roam +journal)
-```
-
-
-<a id="the-hard-way"></a>
-
-## The Hard Way
-
-This is how I first installed [[Org Roam]]. There is a lot of custom config code that you have to write that [[Doom Emacs]] has already taken care of for you.
-
 <a id="org99e85d1"></a>
 
-### Installing Doom Emacs
+## Installing Doom Emacs
 
 These are instructions for Mac/Linux, if you're on windows I recommend looking at [ervingad's window instructions here](https://github.com/earvingad/configfiles/blob/master/emacs/DoomEmacsWindows.org).
 
@@ -106,6 +72,41 @@ You will want to add this doom command to your path because any time you update 
 ```
 
 Finally, run `emacs` in your terminal and you should see the doom homepage.
+
+<a id="the-easy-way"></a>
+
+## The Easy Way
+
+[[Doom Emacs]] is the [[Emacs]] configuration that I use. There are flags that you can use to install common dependencies. To install [[Org Roam]], You need to add the `+roam` flag to your org dependency.
+
+So in your `.doom.d/init.el`, find `org` under the `:lang` section and add the `+roam` flag:
+
+```
+:lang
+(org +roam)
+```
+
+This will install `org-roam`, `org-roam-protocol`, and `company-org-roam ` (if you have company enabled). 
+
+By default, the org roam directory will be your in your `org-directory/roam`. You can override where your `org-roam-directory`. In your `config.el`:
+
+```elisp
+(setq org-roam-directory "~/Desktop/03-resources/org-roam")
+```
+
+For my [[Ephemeral Scratchings]], I have switched to using `org-roam-dailies` which is just built into org roam. I call `org-roam-dalies-today` to create or get back to my current daily notes. I keep all of my notes here. You can also use [[Org Journal]]. [[Doom Emacs]] has a flag for this as well:
+
+```
+:lang
+(org +roam +journal)
+```
+
+
+<a id="the-hard-way"></a>
+
+## The Hard Way
+
+This is how I first installed [[Org Roam]]. There is a lot of custom config code that you have to write that [[Doom Emacs]] has already taken care of for you.
 
 <a id="orga972198"></a>
 
