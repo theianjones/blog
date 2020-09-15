@@ -1,7 +1,7 @@
 ---
 date: 2020-09-15
 title: Worldbrain Memex
-tags: ['digital garden' 'memex']
+tags: [digital garden, memex]
 published: true
 type: post
 ---
