@@ -6,7 +6,7 @@ published: true
 type: post
 ---
 
-Found this extension that is like hypothesis.is: you can collect highlights on a page that get sourced to a dashboard. 
+[Found this extension](https://getmemex.com/) that is like hypothesis.is: you can collect highlights on a page that get sourced to a dashboard. 
 
 They have "export to Roam Markdown" enabled by default so you can export your highlights to your clip board. 
 
