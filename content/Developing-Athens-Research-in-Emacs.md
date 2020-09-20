@@ -35,4 +35,4 @@ shadow-cljs - watching build :renderer
 This tells us that our [[nRepl]] server is on port 8777. Since this server is already running, we just need to `connect` to it. You dont need to `jack in`, this would start a server for us. So `SPC m C` or ciders default emacs chord `C-c C-x c s`. Then select `:shadow-select`, enter port 8777. <SideNote idName={1}>the prompt shows me a random port to select, I never select it and always enter 8777</SideNote>
 
 Before our repl will work <SideNote idName={2}>You'll get this error `No available JS runtime.
-See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting`</SideNote>, you need to run electron. An easy way to do this is start it with `npx`: In the root of your project `npx electron .`. Now you should be good to go!
+See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting`</SideNote>, you need to run electron. An easy way to do this is start it with `npx`: In the root of your project `npx electron .`
