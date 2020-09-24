@@ -17,11 +17,9 @@ growthStage: seedling
 
 By the [[Bible Project]] with [[Tim Mackie]]
 
-
 <a id="orgde3664b"></a>
 
 ## Gospel of the Kingdom
-
 
 <a id="org38ea1b2"></a>
 
@@ -37,7 +35,6 @@ Where is God in Covid-19?
 
 Jesus will die along side us and for us
 
-
 <a id="orgcc7642e"></a>
 
 ### video notes
@@ -48,20 +45,20 @@ Euangelion - Gospel - Good News
 
 The juxtoposition of the worlds kingdom and Jesus kingdom.
 
--   the world needs to impose its will through force
--   Jesus kingdom asks us to forgive and love our enemies
+- the world needs to impose its will through force
+- Jesus kingdom asks us to forgive and love our enemies
 
 Jesuses crusifiction is depicted as his thrown.
-
 
 <a id="orgf031478"></a>
 
 ### Read and Discuss
 
-
 <a id="orgd15d480"></a>
 
-#### [Luke 19:28-48](https://google.com/search?q=Luke 19:28-48)
+#### Luke 19:28-48
+
+[link](https://google.com/search?q=Luke 19:28-48)
 
 The people expected Jesus to bring peace and rule as king in a way that they could understand. Jesus grieved over this because he knew they would suffer and he longed for them to see him as the true King through his suffering. Like Jesus, it’s okay to grieve over shattered expectations and suffering.
 
@@ -71,10 +68,11 @@ Take a moment and express any grief you’re feeling over suffering or shattered
 Question 2:
 Jesus is the King despite the way the world looks right now. What questions does that bring up for you? What truths can you rely on at this time?
 
-
 <a id="org6420933"></a>
 
-#### [Isaiah 52:7-53:12](https://google.com/search?q=Isaiah 52:7-53:12)
+#### Isaiah 52:7-53:12
+
+[link](https://google.com/search?q=Isaiah 52:7-53:12)
 
 This passage proclaims that God himself is coming to rescue his people. This is good news, but it will happen in a surprising way. God’s appointed one, the Messiah, will enter into the suffering and death of our world. There’s a lot of suffering and pain going on in our world right now, but God enters into our suffering. He experiences it personally and is present with us and all those who suffer.
 
@@ -84,10 +82,11 @@ Write down or speak out loud where you see suffering and pain in the world and y
 Question 2:
 Now pray or speak out loud these same instances again, taking in the truth that God is present in those situations and suffers with us.
 
-
 <a id="orgfd38cb9"></a>
 
-#### [John 12:12-33](https://google.com/search?q=John 12:12-33)
+#### John 12:12-33
+
+[link](https://google.com/search?q=John 12:12-33)
 
 Jesus&rsquo; suffering was the way God’s power and love was shown to the world. The cross shows us that God’s ultimate response to human death and suffering was love, to die alongside us and for us, and to overcome death with his resurrection life. This is Jesus’ upside-down Kingdom.
 
@@ -96,4 +95,3 @@ What is Jesus doing for others in this passage?
 
 Question 2:
 Jesus calls his followers to do what he does. In what ways specifically can you suffer alongside others or serve and love others?
-
