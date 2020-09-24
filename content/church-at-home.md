@@ -58,7 +58,7 @@ Jesuses crusifiction is depicted as his thrown.
 
 #### Luke 19:28-48
 
-[link](https://google.com/search?q=Luke 19:28-48)
+[link](https://google.com/search?q=Luke%2019:28-48)
 
 The people expected Jesus to bring peace and rule as king in a way that they could understand. Jesus grieved over this because he knew they would suffer and he longed for them to see him as the true King through his suffering. Like Jesus, it’s okay to grieve over shattered expectations and suffering.
 
@@ -72,7 +72,7 @@ Jesus is the King despite the way the world looks right now. What questions does
 
 #### Isaiah 52:7-53:12
 
-[link](https://google.com/search?q=Isaiah 52:7-53:12)
+[link](https://google.com/search?q=Isaiah%2052:7-53:12)
 
 This passage proclaims that God himself is coming to rescue his people. This is good news, but it will happen in a surprising way. God’s appointed one, the Messiah, will enter into the suffering and death of our world. There’s a lot of suffering and pain going on in our world right now, but God enters into our suffering. He experiences it personally and is present with us and all those who suffer.
 
@@ -86,7 +86,7 @@ Now pray or speak out loud these same instances again, taking in the truth that 
 
 #### John 12:12-33
 
-[link](https://google.com/search?q=John 12:12-33)
+[link](https://google.com/search?q=John%2012:12-33)
 
 Jesus&rsquo; suffering was the way God’s power and love was shown to the world. The cross shows us that God’s ultimate response to human death and suffering was love, to die alongside us and for us, and to overcome death with his resurrection life. This is Jesus’ upside-down Kingdom.
 
