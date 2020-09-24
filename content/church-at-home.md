@@ -1,0 +1,99 @@
+---
+title: Church at Home
+tags: [faith]
+growthStage: seedling
+---
+
+### Table of Contents
+
+1.  [Gospel of the Kingdom](church-at-home#orgde3664b)
+    1.  [podcast notes](church-at-home#org38ea1b2)
+    2.  [video notes](church-at-home#orgcc7642e)
+    3.  [Read and Discuss](church-at-home#orgf031478)
+        1.  [Luke 19:28-48](church-at-home#orgd15d480)
+        2.  [Isaiah 52:7-53:12](church-at-home#org6420933)
+        3.  [John 12:12-33](church-at-home#orgfd38cb9)
+2.  [Backlinks](church-at-home#org3f028f7)
+
+By the [[Bible Project]] with [[Tim Mackie]]
+
+
+<a id="orgde3664b"></a>
+
+## Gospel of the Kingdom
+
+
+<a id="org38ea1b2"></a>
+
+### podcast notes
+
+The story on [[Palm Sunday]] is laced with [[Tragedy]]
+
+[[Jesus]] would die unjustly.
+
+Jesus saw things differently. Entering into human pain and suffering. Jesus doesnt un do or erase the suffering. Jesus suffering shows us that tragedy cant seperate us from the Lord.
+
+Where is God in Covid-19?
+
+Jesus will die along side us and for us
+
+
+<a id="orgcc7642e"></a>
+
+### video notes
+
+[[Isaiah]] told [[Isreal]] that they were in a mess of their own making.
+
+Euangelion - Gospel - Good News
+
+The juxtoposition of the worlds kingdom and Jesus kingdom.
+
+-   the world needs to impose its will through force
+-   Jesus kingdom asks us to forgive and love our enemies
+
+Jesuses crusifiction is depicted as his thrown.
+
+
+<a id="orgf031478"></a>
+
+### Read and Discuss
+
+
+<a id="orgd15d480"></a>
+
+#### [Luke 19:28-48](https://google.com/search?q=Luke 19:28-48)
+
+The people expected Jesus to bring peace and rule as king in a way that they could understand. Jesus grieved over this because he knew they would suffer and he longed for them to see him as the true King through his suffering. Like Jesus, it’s okay to grieve over shattered expectations and suffering.
+
+Question 1:
+Take a moment and express any grief you’re feeling over suffering or shattered expectations.
+
+Question 2:
+Jesus is the King despite the way the world looks right now. What questions does that bring up for you? What truths can you rely on at this time?
+
+
+<a id="org6420933"></a>
+
+#### [Isaiah 52:7-53:12](https://google.com/search?q=Isaiah 52:7-53:12)
+
+This passage proclaims that God himself is coming to rescue his people. This is good news, but it will happen in a surprising way. God’s appointed one, the Messiah, will enter into the suffering and death of our world. There’s a lot of suffering and pain going on in our world right now, but God enters into our suffering. He experiences it personally and is present with us and all those who suffer.
+
+Question 1:
+Write down or speak out loud where you see suffering and pain in the world and your community right now.
+
+Question 2:
+Now pray or speak out loud these same instances again, taking in the truth that God is present in those situations and suffers with us.
+
+
+<a id="orgfd38cb9"></a>
+
+#### [John 12:12-33](https://google.com/search?q=John 12:12-33)
+
+Jesus&rsquo; suffering was the way God’s power and love was shown to the world. The cross shows us that God’s ultimate response to human death and suffering was love, to die alongside us and for us, and to overcome death with his resurrection life. This is Jesus’ upside-down Kingdom.
+
+Question 1:
+What is Jesus doing for others in this passage?
+
+Question 2:
+Jesus calls his followers to do what he does. In what ways specifically can you suffer alongside others or serve and love others?
+
