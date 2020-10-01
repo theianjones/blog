@@ -13,7 +13,8 @@ growthStage: seedling
         1.  [Luke 19:28-48](church-at-home#orgd15d480)
         2.  [Isaiah 52:7-53:12](church-at-home#org6420933)
         3.  [John 12:12-33](church-at-home#orgfd38cb9)
-2.  [Backlinks](church-at-home#org3f028f7)
+2.  [Philemon](church-at-home#org20eacf7)
+    1.  [Read and discuss](church-at-home#orgaa2c742)
 
 By the [[Bible Project]] with [[Tim Mackie]]
 
@@ -95,3 +96,44 @@ What is Jesus doing for others in this passage?
 
 Question 2:
 Jesus calls his followers to do what he does. In what ways specifically can you suffer alongside others or serve and love others?
+
+
+## [Philemon]
+
+-   if you could choose an age forever, what age would you choose and why?
+    -   [[Reconciliation]] [[Peace]]
+    -   Podcast Notes
+    -   [Apostle Paul]s shortest letter
+    -   1/4 to a 1/3 were slaves in that time
+    -   [[Slavery]]was a wide spread institution
+    -   Paul is obligated by law to send Onisimus back.
+        -   &ldquo;Receive him as you would receive me.&rdquo;
+    -   What could it look like to model Jesus in a relationship you feel blocked on?
+    -   Video notes
+    -   Backstory
+        -   Philemon is a well todo Roman citizen
+        -   Onisemus was a slave owned by Philemon
+        -   Onisemus becomes a Christian.
+        -   Paul asks Philemon to take Onisemus back as a brother
+    -   v6 Partnership - Koinonia
+    -   All followers are equal partners
+    -   Philemon had every right to punish Onisemus. Paul asks more than to let him free
+    -   [[Reconciliation]] Paul asks Philemon to charge the cost of Onisemus to Paul.
+    -   Then [[Partnership]] in the family of God
+    -   Paul is demonstrating the cross through his actions. So he doesn&rsquo;t bring it up in the letter.
+
+
+<a id="orgaa2c742"></a>
+
+### Read and discuss
+
+-   [Read Philemon 1:1-25](<https://bibleproject.com/church-at-home/week20-philemon/#ref-philemon_1:1-25>)
+-   How does the meaning of the word koinonia help you better understand Paul’s letter to Philemon?
+-   In the letter to Philmeon, Paul inserts himself into the middle of the conflict between Philemon and Onesimus. Paul modeled the good news, believing that it held the power to unite against incredible odds.
+-   How is Pauls example like Jesus?
+-   Name one relationship that feels difficult to unite. What is one way you can humbly step in the conflict to promote love, equality, and healing mercy?
+-   [Colossians 3:1-14](https://bibleproject.com/church-at-home/week20-philemon/#ref-colossians_3:1-14)
+-   In this passage, Paul is describing the characteristics of a life that’s fitting to all followers of Jesus and a life that is not. Jesus followers are called to throw out the greedy, lustful, angry markings of the old life and instead adopt the loving, patient, and humble traits of Jesus’ new resurrected life. The old way of life separates people from God and from one another. The new way of life in Jesus unites people to God and to one another.
+-   Consider how you have recently interacted with the political, racial, and socio-economic dynamics of your culture. In your interactions, what old instincts are especially difficult for you and/or others to overcome (see verses 5-9)? What relationships might have been avoided or damaged? What is one step you can take towards repair?
+-   Read verses 10-11 again. In the new creation family of Jesus, all identities are made equal and unified into one redeemed identity. What might the list in verse 11 sound like if Paul rewrote it for your culture and time?
+-   Consider the qualities of your new identity in Jesus: compassion, kindness, humility, gentleness, patience, forgiveness, and love (verses 12-14). Reflect on how Jesus inserted himself into humanity’s conflict while perfectly expressing these qualities. Pray for God’s help to do the same while living from these qualities this week. Pray the same for your family, church, and city.
