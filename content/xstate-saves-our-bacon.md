@@ -213,7 +213,7 @@ export const useCommerceMachine = ({sellable}) => {
 
 We are memoizing our call to `createCommerceMachine` because we only want to create a new machine if the `sellableSlug` or the `userID` has changed.
 
-The first machine initializes in the `fetchingPrice` state. This is a that that is invoking a promise ([xstate docs](https://xstate.js.org/docs/guides/communication.html#invoking-promises)). A state can invoke a number of services but in our case we are using a promise. Heres the overview of the state:
+The first machine initializes in the `fetchingPrice` state. This is a state that is invoking a promise ([xstate docs](https://xstate.js.org/docs/guides/communication.html#invoking-promises)). A state can invoke a number of services but in our case we are using a promise. Heres the overview of the state:
 
 ```js
 fetchingPrice: {
