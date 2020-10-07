@@ -149,7 +149,7 @@ We use these states to build up the `context` of our state machine. This is what
 - quantity: 1
 - purchase: null
 
-As you can see `sellable`, `purchaseHeaders`, and `upgradeFromSellable` are all passed in from a closure above. Heres what the basic state machine with no transitions looks like:
+As you can see `sellable` and `purchaseHeaders` are all passed in from a closure above. Heres what the basic state machine with no transitions looks like:
 
 ```js
 const createCommerceMachine = ({
