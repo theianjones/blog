@@ -33,7 +33,7 @@ export default function List({ collections = [] }) {
             },
           }}
         >
-          <img src={collection.image} height="auto" width="250" />
+          <img src={collection.square_cover_480_url || collection.image} height="auto" width="250" />
           <Flex sx={{ alignItems: 'center', padding: 10 }}>
             {collection.image_thumb_url && (
               <img

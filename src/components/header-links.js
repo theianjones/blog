@@ -29,7 +29,7 @@ export default () => {
         as={Link}
         to={'/lessons'}
       >
-        Lessons
+        Courses 
       </ThemeLink>
       <ThemeLink
         sx={{

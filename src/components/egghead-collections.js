@@ -7,7 +7,7 @@ import List from './list'
 const EggheadCollections = () => {
   const { allCollectionsJson } = useStaticQuery(graphql`
     query {
-      allCollectionsJson(sort: { fields: id, order: ASC }, limit: 3) {
+      allCollectionsJson(sort: { fields: created_at, order: DESC }, limit: 3) {
         nodes {
           description
           duration
@@ -27,7 +27,7 @@ const EggheadCollections = () => {
   `)
   return (
     <>
-      <Styled.h2 sx={{ color: 'darkGray' }}>egghead Video Lessons</Styled.h2>
+      <Styled.h2 sx={{ color: 'darkGray' }}>egghead Courses</Styled.h2>
       <List collections={allCollectionsJson.nodes} />
     </>
   )
