@@ -17,7 +17,7 @@ export default Collections
 
 export const query = graphql`
   query {
-    allCollectionsJson(sort: { fields: id, order: ASC }) {
+    allCollectionsJson(sort: { fields: updated_at, order: DESC }) {
       nodes {
         description
         duration
