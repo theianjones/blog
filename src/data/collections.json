@@ -410,5 +410,168 @@
       "avatar_url": "//gravatar.com/avatar/b5d9cbedd8135ea534901339530e6404.png?s=128&d=mp",
       "is_instructor": true
     }
-  }
+  },
+  {
+   "type":"playlist",
+   "id":409013,
+   "title":"React Real-Time Messaging with GraphQL using urql and OneGraph",
+   "description":"One of the most well-known GraphQL features is that it lets you do things like replacing multiple REST calls with a single query. You might have done some query experimentation with demo APIs or working on a Gatsby site. \n\nBut there's more to GraphQL than just making queries.\n\nFor example, with mutations and subscriptions, GraphQL can smooth out the process of implementing real-time features in your web applications.\n\nIn this new course, you'll get practice with these features as egghead's own Ian Jones guides you through building a real-time chat app that's backed by GitHub Issues.\n\nThe tools used for the course are OneGraph and Formidable Labs' urql client.\n\nOneGraph is great because it allows you to expose a single GraphQL endpoint that can access data from multiple services including GitHub, Stripe, Airtable, and more. It handles things like authentication for us as well, as you'll see in the course.\n\nAt Formidable Labs, the team released urql as a lighter weight alternative to Apollo or Relay that supports the most common interactions with a GraphQL server through their handy React Hooks. \n\nThe course starts with a fresh Create-React-App and touches upon topics like using GraphQL query variables, working with Hooks, handling authentication with React Context, and setting up & consuming the GraphQL subscription.\n\nAlong the way, Ian also works through debugging some common errors that you may encounter when developing your own GraphQL apps in the future!",
+   "slug":"react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a",
+   "published":true,
+   "updated_at":"2020-11-18T19:26:52.269-06:00",
+   "created_at":"2020-11-08T12:46:17.475-06:00",
+   "duration":4882,
+   "state":"published",
+   "visibility_state":"indexed",
+   "tagline":null,
+   "code_url":null,
+   "access_state":"pro",
+   "primary_tag":{
+      "name":"react",
+      "slug":"react",
+      "label":"React",
+      "context":"frameworks",
+      "description":"React is one of the web’s most popular frameworks for building JavaScript applications. \n\nIf you know what you’re doing, React can drastically simplify how you build, use, and maintain code.\n\nWhether you’re a React newbie or you’re ready for advanced techniques, you can level-up with egghead. Explore our in-depth courses, lessons, and community resources to build more powerful applications and crack open your career.",
+      "url":"https://egghead.io/api/v1/tags/react",
+      "image_url":"https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/026/thumb/react.png",
+      "http_url":"https://egghead.io/browse/frameworks/react"
+   },
+   "tags":[
+      {
+         "name":"react",
+         "slug":"react",
+         "label":"React",
+         "context":"frameworks",
+         "description":"React is one of the web’s most popular frameworks for building JavaScript applications. \n\nIf you know what you’re doing, React can drastically simplify how you build, use, and maintain code.\n\nWhether you’re a React newbie or you’re ready for advanced techniques, you can level-up with egghead. Explore our in-depth courses, lessons, and community resources to build more powerful applications and crack open your career.",
+         "url":"https://egghead.io/api/v1/tags/react",
+         "image_url":"https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/026/thumb/react.png",
+         "http_url":"https://egghead.io/browse/frameworks/react"
+      },
+      {
+         "name":"graphql",
+         "slug":"graphql",
+         "label":"GraphQL",
+         "context":"tools",
+         "description":"GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.",
+         "url":"https://egghead.io/api/v1/tags/graphql",
+         "image_url":"https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/034/thumb/graphqllogo.png",
+         "http_url":"https://egghead.io/browse/tools/graphql"
+      }
+   ],
+   "library_list":[
+
+   ],
+   "language_list":[
+
+   ],
+   "framework_list":[
+      "react"
+   ],
+   "tool_list":[
+      "graphql"
+   ],
+   "platform_list":[
+
+   ],
+   "skillset_list":[
+
+   ],
+   "skill_level_list":[
+
+   ],
+   "square_cover_480_url":"https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/409/013/square_480/EGH_RealtimeGraphqL.png",
+   "square_cover_280_url":"https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/409/013/square_280/EGH_RealtimeGraphqL.png",
+   "square_cover_256_url":"https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/409/013/square_256/EGH_RealtimeGraphqL.png",
+   "square_cover_128_url":"https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/409/013/square_128/EGH_RealtimeGraphqL.png",
+   "square_cover_64_url":"https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/409/013/square_64/EGH_RealtimeGraphqL.png",
+   "square_cover_32_url":"https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/409/013/square_32/EGH_RealtimeGraphqL.png",
+   "square_cover_url":"https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/409/013/thumb/EGH_RealtimeGraphqL.png",
+   "square_cover_large_url":"https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/409/013/full/EGH_RealtimeGraphqL.png",
+   "square_cover_landscape_url":"https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/409/013/landscape/EGH_RealtimeGraphqL.png",
+   "url":"https://egghead.io/api/v1/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a",
+   "path":"/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a",
+   "http_url":"https://egghead.io/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a",
+   "lessons_url":"https://egghead.io/api/v1/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a/items?flatten=true",
+   "items_url":"https://egghead.io/api/v1/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a/items?flatten=false",
+   "icon_url":"https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/034/thumb/graphqllogo.png",
+   "tracklist_id":null,
+   "is_watch_later":false,
+   "first_lesson_path":"/lessons/react-real-time-messaging-with-graphql-using-urql-and-onegraph-with-ian-jones?pl=react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a",
+   "favorited":false,
+   "toggle_favorite_url":"https://egghead.io/api/v1/playlists/409013/users/9671/toggle_save",
+   "rss_url":"/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a/playlist_feed?user_email=jones58ian%40gmail.com&user_token=b430cd65-45a4-476c-ad39-0bec4207f3b2",
+   "bundle_url":"https://egghead.io/api/v1/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a/bundle",
+   "remove_url":"https://egghead.io/api/v1/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a/remove_playlist",
+   "add_to_playlist_url":"https://egghead.io/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a/add",
+   "edit_url":"https://egghead.io/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a/edit",
+   "item_add_url":"https://egghead.io/api/v1/users/9671/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a/item/add",
+   "item_remove_url":"https://egghead.io/api/v1/users/9671/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a/item/remove",
+   "reorder_items_url":"https://egghead.io/api/v1/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a/reorder_items",
+   "delete_url":"https://egghead.io/api/v1/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a",
+   "can_set_cover":true,
+   "update_owner_url":"https://egghead.io/api/v1/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a",
+   "update_price_url":"https://egghead.io/api/v1/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a",
+   "update_access_state_url":"https://egghead.io/api/v1/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a",
+   "owner":{
+      "id":9671,
+      "full_name":"Ian Jones",
+      "first_name":"Ian",
+      "last_name":"Jones",
+      "avatar_url":"//gravatar.com/avatar/b5d9cbedd8135ea534901339530e6404.png?s=128&d=mp",
+      "is_instructor":true
+   },
+   "instructor":{
+      "instructor_url":"https://egghead.io/api/v1/instructors/ian-jones",
+      "id":40,
+      "slug":"ian-jones",
+      "full_name":"Ian Jones",
+      "first_name":"Ian",
+      "last_name":"Jones",
+      "twitter":"_jonesian",
+      "website":"https://ianjones.us",
+      "bio_short":"Ian Jones is works for egghead writing Ruby on Rails and React.",
+      "http_url":"https://egghead.io/instructors/ian-jones",
+      "avatar_url":"https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/040/original/ian.jpg",
+      "avatar_480_url":"https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/040/square_480/ian.jpg",
+      "avatar_280_url":"https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/040/square_280/ian.jpg",
+      "avatar_256_url":"https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/040/square_256/ian.jpg",
+      "avatar_128_url":"https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/040/square_128/ian.jpg",
+      "avatar_64_url":"https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/040/square_64/ian.jpg",
+      "avatar_32_url":"https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/040/square_32/ian.jpg",
+      "lessons_url":"https://egghead.io/api/v1/instructors/ian-jones/lessons",
+      "published_lessons":47,
+      "published_courses":0
+   },
+   "progress_url":"https://egghead.io/api/v1/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a/progress",
+   "collection_progress":{
+      "is_completed":false,
+      "completed_lesson_count":4,
+      "time_left":4069,
+      "lesson_count":20,
+      "time_remaining":4069,
+      "completed_lessons":[
+         {
+            "slug":"graphql-query-multiple-services-with-onegraph-graphiql-editor",
+            "url":"https://egghead.io/api/v1/lessons/graphql-query-multiple-services-with-onegraph-graphiql-editor"
+         },
+         {
+            "slug":"graphql-query-multiple-services-with-urqls-graphql-client-in-react",
+            "url":"https://egghead.io/api/v1/lessons/graphql-query-multiple-services-with-urqls-graphql-client-in-react"
+         },
+         {
+            "slug":"graphql-query-github-comments-with-onegraph-through-urql-s-client-in-react",
+            "url":"https://egghead.io/api/v1/lessons/graphql-query-github-comments-with-onegraph-through-urql-s-client-in-react"
+         },
+         {
+            "slug":"react-style-a-react-list-component",
+            "url":"https://egghead.io/api/v1/lessons/react-style-a-react-list-component"
+         }
+      ],
+      "series_started_on":"2020-11-08",
+      "last_lesson_watched_on":"2020-11-13",
+      "series_completed_on":null
+   },
+   "rating_out_of_5":5.0,
+   "rating_count":1
+}
 ]
