@@ -2,7 +2,7 @@
 title: Progressive Summarization in Org Mode
 type: post
 date: 2020-06-17
-tags: [featured, progsum, org mode, emacs]
+tags: [progsum, org mode, emacs]
 ---
 
 Tiago Fortes progressive summarization is a way to make notes progressively more useful as you come back to them.
