@@ -1,26 +1,28 @@
 ---
 date: 2020-11-20
-title: Use React, urql, and OneGraph to build a real-time messaging app 
+title: Refactor a React application using urql and OneGraph
 tags: [react, urql, OneGraph, featured, graphql]
 ---
 
-[React real-time messaging with graphql using urql and onegraph](https://egghead.io/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a) is my first course on egghead. This blog post assumes that you've completed the course. We pick up at the end and implement the [course project](https://github.com/eggheadio/eggheadio-course-notes/tree/master/react-real-time-messaging-with-graph-ql-using-urql-and-one-graph/exercises).
+I'm going to show you how to integrate a React component that uses GraphQL to fetch data from Github. We are working from an existing application so we will go through the process of refactoring the code to handle new functionality.
 
-## Course Summary
-
-In the course, we learned how to use `urql`'s `useQuery` React hook to fetch data about the comments on a specific Github issue. We us OneGraph as a backend. OneGraph has provided has an auth package that we build into our app with React Context.
-
-We need a way for our chat app to send messages. GraphQL mutations handle this job for us. Through mutations, we can create comments on a specific github issue.
-
-Finally, we implement a subscription client in `urql`. This enables the `useSubscription hook` and allows us to see new messages without refreshing the browser!
-
-We are using Github as our backend to store our messages. OneGraph is the GraphQL api we use to talk to Github with.
-
-Heres what the finished product looks like:
+Specifically, we are working on a chat application that I built in my egghead course _[React real-time messaging with graphql using urql and onegraph](https://egghead.io/playlists/react-real-time-messaging-with-graphql-using-urql-and-onegraph-be5a)_. At the end of the course, we have a single chat feed that will update in real-time when new messages come in. Heres what the app looks like:
 
 ![image link](https://res.cloudinary.com/dzsq0psas/image/upload/v1605928488/blog/Image_202020-11-19_20at_205.18.57_20PM_hrgk11.png)
 
-In this blog post, we are going to implement the feature of switching between chat rooms.
+In this post, we are going to implement the ability to choose from multiple conversations. The application has hard coded values we need to refactor so we can accept props from a parent component. Controlling our components through props gives us the ability to dynamically switch what conversation the user is viewing.
+
+## Course Summary
+
+We learned how to use `urql`'s `useQuery` React hook to fetch data about the comments on a specific Github issue. We us OneGraph as a backend. OneGraph has provided has an auth package that we build into our app with React Context.
+
+`urql` requires a little bit of set up. We create an `urql` `Client` that we put into React context so our query hooks can use them. We then set up `onegraph-auth` and pass the authentication headers we get from the `onegraph-auth` package to our `urql` client. This way we can fetch Github queries which require an authenticate user.
+
+We need a way for our chat app to send messages. GraphQL mutations handle this for us. With mutations, we can create comments on a specific github issue.
+
+Finally, we implement a subscription client in `urql`. This enables the `useSubscription` hook and allows us to see new messages without refreshing the browser!
+
+We are using Github as our backend database to store our messages. We use OneGraph as our GraphQL server for our `urql` client to send queries to. OneGraph will then take care of sending queries to Github and fetching the responses we ask for.
 
 ## Set up the code
 
@@ -30,9 +32,10 @@ We will be working from code in [this Github repository](https://github.com/thei
 git clone git@github.com:theianjones/egghead-graphql-subscriptions.git
 # or
 git clone https://github.com/theianjones/egghead-graphql-subscriptions.git
+cd egghead-graphql-subscriptions
 ```
 
-When the repository is clones, you'll want to work out of the `20-commentHistory` directory.
+When the repository is cloned, you'll want to work out of the `20-commentHistory` directory.
 
 ```sh
 cd 20-commentHistory
@@ -56,22 +59,22 @@ Heres what our GraphQL query will look like:
 
 ```graphql
 query IssueList(
-  $name: String = "egghead-graphql-subscriptions"
-  $owner: String = "theianjones"
+  $name: String = "egghead-graphql-subscriptions" // these are GraphQL Query parameters
+  $owner: String = "theianjones"                  // this is how we can pass variables to our GraphQL query
 ) {
   gitHub {
-    repository(name: $name, owner: $owner) {
-      id
+    repository(name: $name, owner: $owner) {     // this is the part of the query that needs the variables we declared
+      id                                         // We grab the id of the repository for urql to do better caching
       issues(
         first: 10
-        orderBy: { field: CREATED_AT, direction: DESC }
+        orderBy: { field: CREATED_AT, direction: DESC } // we can order our query be a specific field
       ) {
         edges {
-          cursor
+          cursor                 // cursors allow you to paginate your query results
           node {
             id
             title
-            comments(last: 1) {
+            comments(last: 1) {  // we want the last comment to display under our issue title
               totalCount
               nodes {
                 id
@@ -96,9 +99,9 @@ Before you run the query, you are going to have to authorize your editor with Gi
 
 When you run the query, you should get some data back!
 
-Now that we have a query, it's time to generate our code. OneGraph has a code snippet generation tool that will create the react and urql code for us 🤯 It will create a whole app for us with auth and the client set up all baked in. We won't need this though because we set all of that code up in the course.
+Now that we have a query, it's time to generate our code. OneGraph has a code snippet generation tool that will create the react and urql code for us 🤯 You'll notice there's quite a few options to choose from so if you want to quickly try out Apollo or even ReasonML with GraphQL, you can!
 
-Click "Code Exporter". Now, in the two drop downs, select `JavaScript` in the first and `react-urql` in the second. You'll notice there's quite a few options to choose from so if you want to quickly try out Apollo or even ReasonML with GraphQL, you can!
+Click "Code Exporter". Now, in the two drop downs, select `JavaScript` in the first and `react-urql` in the second. Click the copy button to grab all the code that the exporter generated for us.
 
 ![image link](https://res.cloudinary.com/dzsq0psas/image/upload/v1605928590/blog/Image_202020-11-19_20at_205.36.57_20PM_gy2wyq.png)
 
@@ -235,9 +238,9 @@ function App() {
 
 The result isn't pretty, but we have the data we need to start rendering JSX!
 
-## Add JSX to our IssueList component
+## Display JSON Data In a List
 
-Lets render some JSX 🤩
+In the previous section, we were displaying the raw json in the ui. This is great to make sure everything is working but most people would be confused if we left JSON on the screen like that. Lets render some JSX 🤩
 
 Back in our `IssueList` component, we can see the structure of our data that we will need to map over: `data.gitHub.repository.issues.edges`.
 
