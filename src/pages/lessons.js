@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 const Collections = ({ data: { allCollectionsJson } }) => {
   return (
     <Layout>
-      <Styled.h1>egghead Video Lessons</Styled.h1>
+      <Styled.h1>egghead Courses</Styled.h1>
       <List collections={allCollectionsJson.nodes} />
     </Layout>
   )
