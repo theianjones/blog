@@ -1,5 +1,4 @@
-
-  {:journal-basis "daily" 
+{:journal-basis "daily" 
 
  :project {
            ;; Selected public notes can be published to https://logseq.com/your-project-or-your-username.
@@ -23,7 +22,7 @@
 
  ;; The app will ignore those directories or files.
  ;; E.g. "/archived" "/test.md"
- :hidden []
+ :hidden ["/src" "/static"]
 
  ;; When creating the new journal page, the app will use your template content here.
  ;; Example for Markdown users: "## [[Work]]\n###\n## [[Family]]\n###\n
