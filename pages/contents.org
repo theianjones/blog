@@ -1,1 +1,2 @@
-** 
+** [[How State Machines Saved our Bacon 🥓]]
+** [['🧠 Own Your Second Brain: Set Up org-roam on Your Own Machine']]
