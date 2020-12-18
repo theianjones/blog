@@ -71,7 +71,7 @@ tags: [emacs, org mode, magit, evil mode]
 - `-` to go back up
 - `+` and enter a file name to create a directory
 - `d` to mark for deletion, `x` to delete
-- `space .` to create or find a file
+- `SPC .` to create or find a file
 - `\*/` to select all directories, `t` to switch between files and directories
 - `U` to unselect all
 - `m` to mark a specific file or directory
@@ -88,12 +88,12 @@ tags: [emacs, org mode, magit, evil mode]
 
 - Buffers are a special concept in emacs
   they can be terminals, files, directories, etc
-- `space b b` to open another buffer
+- `SPC b b` to open another buffer
   - workspace buffer
-- `space b B` you can see all the buffer
-- `space ,` to switch buffers (its an alias)
-- `space shift ,` to switch to all buffers
-- `space b X` You can create a scratch buffer and `space b s` to save and name it
+- `SPC b B` you can see all the buffer
+- `SPC ,` to switch buffers (its an alias)
+- `SPC SHIFT ,` to switch to all buffers
+- `SPC b X` You can create a scratch buffer and `space b s` to save and name it
 - `CTRL w v` window split vertically
 - `CTRL w w` to switch windows
 - `CTRL w s` window split horizonal
@@ -105,12 +105,12 @@ tags: [emacs, org mode, magit, evil mode]
 
 ## Emacs Doom E05: Installing Packages with org-super-agenda as an example
 
-- `space f p` to open the config.
+- `SPC f p` to open the config.
 - to add a package, add the package to `.doom.d/package.el`
 - then close and `doom refresh`
 - then go to `.doom.d/config.el` to configure the package
 - `def-package!` is a macro you can use to configure packages
-  - `space h help` you can look up method man pages
+  - `SPC h help` you can look up method man pages
   - `:init` is used for setting the package up
   - `:config` to set configuration after the package has been initialized
   - `:after` lets you set which package it should load after
@@ -162,10 +162,10 @@ tags: [emacs, org mode, magit, evil mode]
 ## Emacs Doom E09: [[Org Mode]], Basic Outlines
 
 - org mode gives you structure to your document
-- `\*` for a h1 `\*\*` for an h2 etc
+- `*` for a h1 `**` for an h2 etc
 - you can `tab` a section to fold a subtree (hide it)
 - you can use `shift tab` to cycle through folded states
-- `ctrl return` to create a headline of the same type
+- `CTRL return` to create a headline of the same type
 - `meta arrow up` lets you shift the position of the section
 - `meta h` promotes a headline to the next level
 - `meta l` demotes
@@ -296,10 +296,10 @@ tags: [emacs, org mode, magit, evil mode]
 
 ## Emacs [[Magit]] - Getting Started - Emacs Doom 18
 
-- magit is configured for you
+- Magit is configured for you
 - `SPC g g` to show Magit status Page
-- most commands are done from the status page
-- press `?` to see what you can do
+- Most commands are done from the status page
+- Press `?` to see what you can do
 - `git add -p` lets you stage in hunks
 - Open and close with the `TAB`
 - Open diff view for a file with `TAB`
@@ -323,13 +323,13 @@ tags: [emacs, org mode, magit, evil mode]
 
 ## Emacs [[Magit]] with Forge for Issuing Pull Requests - Emacs Doomcasts 20
 
-- forge is installed in emacs doom
+- Forge is installed in emacs doom
 - `@` for forge
-- set up forge with `M x forge-pull`
+- Set up forge with `M x forge-pull`
   - the first time you will get a token from github
 - `@ c p` to create a pull request with forge
   - select the base branch
   - then select the target branch
   - then provide a short description
   - `CTRL c CTRL c` to finish the pull request
-- now there will be a `pull requests` tab
+- Now there will be a `pull requests` tab
