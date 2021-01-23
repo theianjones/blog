@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, Link as ThemeLink } from 'theme-ui'
-import { Link } from 'gatsby'
+import {jsx, Link as ThemeLink} from 'theme-ui'
+import {Link} from 'gatsby'
 
 export default () => {
   if (typeof window == 'undefined') {
@@ -29,7 +29,23 @@ export default () => {
         as={Link}
         to={'/lessons'}
       >
-        Courses 
+        Courses
+      </ThemeLink>
+      <ThemeLink
+        sx={{
+          variant: 'styles.navlink',
+          fontSize: 3,
+          marginRight: 20,
+          fontWeight: 'body',
+          transition: 'all 400ms ease',
+          ':hover': {
+            color: 'primary',
+          },
+        }}
+        as={Link}
+        to={'/articles'}
+      >
+        Articles
       </ThemeLink>
       <ThemeLink
         sx={{
@@ -42,9 +58,9 @@ export default () => {
           },
         }}
         as={Link}
-        to={'/articles'}
+        to={'/about-me'}
       >
-        Articles
+        About Me
       </ThemeLink>
     </nav>
   )
